@@ -41,3 +41,39 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 1303483155
+    locked: 0
+  - name: Ground Bottom
+    uniqueID: 494896973
+    locked: 0
+  - name: Ground Middle
+    uniqueID: 4168832559
+    locked: 0
+  - name: Ground Top
+    uniqueID: 1283634975
+    locked: 0
+  - name: Shuff 1
+    uniqueID: 72708715
+    locked: 0
+  - name: Shuff 2
+    uniqueID: 972574161
+    locked: 0
+  - name: Dig
+    uniqueID: 4188743215
+    locked: 0
+  - name: Water
+    uniqueID: 1269886325
+    locked: 0
+  - name: Instance
+    uniqueID: 2364688815
+    locked: 0
+  - name: Front 1
+    uniqueID: 1504183783
+    locked: 0
+  - name: Front 2
+    uniqueID: 3787532283
+    locked: 0
+  - name: Collision
+    uniqueID: 1682307783
+    locked: 0

@@ -3,7 +3,7 @@ guid: 7f1ec8314d44949f29dbb2b0651eccf3
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -20,11 +20,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
-  ignoreMasterTextureLimit: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -63,6 +64,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -74,6 +77,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -86,10 +90,11 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Server
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -98,18 +103,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -130,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 712910f73afc9435cb08b7e32f714525
-      internalID: 656204086
+      spriteID: 21a190ac300f7dd45bca47b7b3f6b96d
+      internalID: -665895333
       vertices: []
       indices: 
       edges: []
@@ -140,23 +134,19 @@ TextureImporter:
       name: Collisions@20_1
       rect:
         serializedVersion: 2
-        x: 20
+        x: 30
         y: 20
-        width: 20
+        width: 10
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 0, y: 10}
-        - {x: 0, y: -10}
-        - {x: 10, y: -10}
-        - {x: 10, y: 10}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 267c56ba6b7eb47a78724d0ca6cb60d6
-      internalID: 17745525
+      spriteID: 475ec21fbb2d41a43b500ee104c33d3c
+      internalID: -341191904
       vertices: []
       indices: 
       edges: []
@@ -165,23 +155,19 @@ TextureImporter:
       name: Collisions@20_2
       rect:
         serializedVersion: 2
-        x: 40
-        y: 20
-        width: 20
-        height: 20
+        x: 70
+        y: 30
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 5, y: 10}
-        - {x: 5, y: -10}
-        - {x: 10, y: -10}
-        - {x: 10, y: 10}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 21b14a38012094b9a8a2806bb341a1d0
-      internalID: 817383395
+      spriteID: 551cb18e3ba48934c9c6cfb4da8343b7
+      internalID: -857905277
       vertices: []
       indices: 
       edges: []
@@ -190,23 +176,19 @@ TextureImporter:
       name: Collisions@20_3
       rect:
         serializedVersion: 2
-        x: 60
+        x: 55
         y: 20
-        width: 20
+        width: 5
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 0, y: 10}
-        - {x: 0, y: 0}
-        - {x: 10, y: 0}
-        - {x: 10, y: 10}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7362233e01d24753bbe7399d35109a8
-      internalID: 833349317
+      spriteID: be5506b6644416445900d0c56cad0311
+      internalID: 552292038
       vertices: []
       indices: 
       edges: []
@@ -215,79 +197,25 @@ TextureImporter:
       name: Collisions@20_4
       rect:
         serializedVersion: 2
-        x: 80
-        y: 20
-        width: 20
+        x: 0
+        y: 0
+        width: 29
         height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 5, y: 10}
-        - {x: 5, y: 0}
-        - {x: 10, y: 0}
-        - {x: 10, y: 10}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18ca8974a36804f1b8748b755182868b
-      internalID: -1631512107
+      spriteID: 31d2480f04154e1489d0e6ce3a501d75
+      internalID: -1177086572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: Collisions@20_5
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -10, y: 10}
-        - {x: -10, y: -10}
-        - {x: 10, y: -10}
-        - {x: 10, y: 0}
-        - {x: 0, y: 10}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 638c4f2fdb3cd46c6a7ff3cdb41ac60c
-      internalID: 1907921350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Collisions@20_6
-      rect:
-        serializedVersion: 2
-        x: 20
-        y: 0
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: -10, y: -10}
-        - {x: -1, y: -10}
-        - {x: -10, y: -1}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 657c9dc4d51b5435eb9f0702fd817206
-      internalID: -2142550502
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Collisions@20_7
       rect:
         serializedVersion: 2
         x: 40
@@ -298,66 +226,53 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: 10, y: -9}
-        - {x: -9, y: 10}
-        - {x: -10, y: 10}
-        - {x: -10, y: -10}
-        - {x: 10, y: -10}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f879685adf54e939cec8940389ca09
-      internalID: 1336789450
+      spriteID: fa21342efecd3404aa91804dc5891186
+      internalID: -1911490206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collisions@20_8
+      name: Collisions@20_6
       rect:
         serializedVersion: 2
         x: 60
         y: 0
-        width: 20
-        height: 20
+        width: 38
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -10, y: 10}
-        - {x: -10, y: -10}
-        - {x: 10, y: -10}
-        - {x: 10, y: 0}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d24e806125414a12bb540c8d89bba25
-      internalID: 888000788
+      spriteID: 4f1694b57fbf4174085bcfcccdd546fe
+      internalID: -1592248489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Collisions@20_9
+      name: Collisions@20_7
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 20
-        height: 20
+        x: 95
+        y: 30
+        width: 5
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -10, y: -10}
-        - {x: 8, y: -10}
-        - {x: 10, y: -10}
-        - {x: -10, y: 0}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce561666acb2e46658b09fe0aceacc36
-      internalID: 1480794293
+      spriteID: 00c67ad6f24c94c48899f9641359f5e1
+      internalID: -1836081186
       vertices: []
       indices: 
       edges: []
@@ -373,19 +288,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Collisions@20_9: 1480794293
-      Collisions@20_6: -2142550502
-      Collisions@20_0: 656204086
-      Collisions@20_5: 1907921350
-      Collisions@20_2: 817383395
-      Collisions@20_3: 833349317
-      Collisions@20_8: 888000788
-      Collisions@20_7: 1336789450
-      Collisions@20_1: 17745525
-      Collisions@20_4: -1631512107
-  spritePackingTag: 
+      Collisions@20_0: -665895333
+      Collisions@20_1: -341191904
+      Collisions@20_2: -857905277
+      Collisions@20_3: 552292038
+      Collisions@20_4: -1177086572
+      Collisions@20_5: -1911490206
+      Collisions@20_6: -1592248489
+      Collisions@20_7: -1836081186
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
