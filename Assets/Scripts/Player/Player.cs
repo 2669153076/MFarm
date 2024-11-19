@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
 
-    public float moveSpeed;
+    public float moveSpeed = 5;
 
     private float inputX;
     private float inputY;
