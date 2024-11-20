@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "E:\\Unity3D\\UnityExercises\\MFarm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\inventory\\data_so\\itemdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\data_so\\itemdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\switchbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\switchbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\scripts\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +42,98 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ItemDataList_SO.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:12:31.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Enums.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Enums.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:08:00.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DataCollection.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T15:04:54.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TriggerItemFader.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxsAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:58:40.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwcAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:55:31.672Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ItemFader.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Item\\ItemFader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Item\\ItemFader.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Item\\ItemFader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Item\\ItemFader.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAADwvxwAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:50:58.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SwitchBounds.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvxIAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-20T14:26:15.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Player.cs",
               "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
@@ -26,8 +141,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
               "ViewState": "AQIAAAQAAAAAAAAAAAASwAsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T14:29:53.646Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T14:29:53.646Z"
             }
           ]
         }
