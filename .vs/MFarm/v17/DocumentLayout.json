@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\data_so\\itemdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\data_so\\itemdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\data_so\\itemdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\data_so\\itemdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -56,26 +56,27 @@
               "RelativeDocumentMoniker": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
               "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
               "RelativeToolTip": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvxcAAAAaAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAA3wE4AAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T12:23:38.69Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ItemDataList_SO.cs",
               "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
               "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Data_SO\\ItemDataList_SO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAADwvwcAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:12:31.95Z"
+              "WhenOpened": "2024-11-20T15:12:31.95Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Enums.cs",
               "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Enums.cs",
@@ -83,7 +84,8 @@
               "RelativeToolTip": "Assets\\Scripts\\Utilities\\Enums.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:08:00.096Z"
+              "WhenOpened": "2024-11-20T15:08:00.096Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -93,13 +95,14 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DataCollection.cs",
               "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
               "RelativeToolTip": "Assets\\Scripts\\Utilities\\DataCollection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAVAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T15:04:54.397Z"
+              "WhenOpened": "2024-11-20T15:04:54.397Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "TriggerItemFader.cs",
               "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
@@ -107,7 +110,8 @@
               "RelativeToolTip": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAADwvxsAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-20T14:58:40.467Z"
+              "WhenOpened": "2024-11-20T14:58:40.467Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

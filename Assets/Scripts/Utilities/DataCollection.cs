@@ -5,8 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class ItemDetails
 {
-    public int id;
-    public string name;
+    public int itemId;
+    public string itemName;
     public E_ItemType itemType;
     public Sprite itemIcon;
     public Sprite itemOnWorldSprite;
