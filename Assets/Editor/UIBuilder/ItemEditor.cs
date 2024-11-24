@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -8,13 +10,19 @@ public class ItemEditor : EditorWindow
 {
     [SerializeField]
     private VisualTreeAsset m_VisualTreeAsset = default;
+    private Sprite defaultIcon; //默认物品图标
 
-    private ItemDataList_SO dataBase;
-    private List<ItemDetails> itemList = new List<ItemDetails>();
-    private VisualTreeAsset itemRowTemplate;    //模板
-    private ListView itemListView;
+    private ItemDataList_SO dataBase;   //道具数据
+    private List<ItemDetails> itemList = new List<ItemDetails>();   //存储道具信息的列表
 
-    [MenuItem("Window/UI Toolkit/ItemEditor")]
+    private VisualTreeAsset itemRowTemplate;    //左侧物品UI模板
+
+    private ListView itemListView;  //左侧listview
+    private ScrollView itemDetailsSection;  //右侧物品详情
+    private ItemDetails activeItem; //被选中的物品
+    private VisualElement iconPreview;  //右侧物品Icon
+
+    [MenuItem("UI Toolkit/ItemEditor")]
     public static void ShowExample()
     {
         ItemEditor wnd = GetWindow<ItemEditor>();
@@ -22,7 +30,7 @@ public class ItemEditor : EditorWindow
     }
 
     public void CreateGUI()
-    {       
+    {
         m_VisualTreeAsset = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UIBuilder/ItemEditor.uxml");
         // Each editor window contains a root VisualElement object
         VisualElement root = rootVisualElement;
@@ -37,8 +45,12 @@ public class ItemEditor : EditorWindow
 
         itemRowTemplate = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/Editor/UIBuilder/ItemRowTemplate.uxml");
 
-        itemListView = root.Q<VisualElement>("Container").Q<VisualElement>("ItemList").Q<ListView>("ListView");
-        Debug.Log(itemListView);
+        itemListView = root.Q<VisualElement>("ItemList").Q<ListView>("ListView");
+        itemDetailsSection = root.Q<ScrollView>("ItemDetails");
+        iconPreview = itemDetailsSection.Q<VisualElement>("Icon");
+
+        defaultIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/M Studio/Art/Items/Icons/icon_M.png");
+
         LoadDataBase();
         GenerateListView();
     }
@@ -54,14 +66,16 @@ public class ItemEditor : EditorWindow
             var path = AssetDatabase.GUIDToAssetPath(dataArray[0]);
             //dataBase = AssetDatabase.LoadAssetAtPath(path, typeof(ItemDataList_SO)) as ItemDataList_SO;
             dataBase = AssetDatabase.LoadAssetAtPath<ItemDataList_SO>(path);
-            
+
         }
         itemList = dataBase.itemDetailsList;
 
         EditorUtility.SetDirty(dataBase);
-        Debug.Log(itemList.Count);
     }
 
+    /// <summary>
+    /// 生成左侧列表物品信息
+    /// </summary>
     private void GenerateListView()
     {
         Func<VisualElement> makeItem = () => itemRowTemplate.CloneTree();
@@ -80,5 +94,47 @@ public class ItemEditor : EditorWindow
         itemListView.itemsSource = itemList;
         itemListView.makeItem = makeItem;
         itemListView.bindItem = bindItem;
+
+        itemDetailsSection.visible = false;
+        itemListView.selectionChanged += OnListSelectionChanged;
+
+    }
+
+    private void OnListSelectionChanged(IEnumerable<object> enumerable)
+    {
+        activeItem = (ItemDetails)enumerable.First();
+        GetItemetails();
+        itemDetailsSection.visible = true;
+    }
+
+    /// <summary>
+    /// 获取左侧列表中对应物品信息
+    /// </summary>
+    private void GetItemetails()
+    {
+        //强制刷新视图、更新UI显示
+        itemDetailsSection.MarkDirtyRepaint();
+
+        itemDetailsSection.Q<IntegerField>("ItemId").value = activeItem.itemId;
+        itemDetailsSection.Q<IntegerField>("ItemId").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemId = evt.newValue;
+        });
+        itemDetailsSection.Q<TextField>("ItemName").value = activeItem.itemName;
+        itemDetailsSection.Q<TextField>("Text").RegisterValueChangedCallback(evt =>
+        {
+            activeItem.itemName = evt.newValue;
+            itemListView.Rebuild(); //更新左侧信息
+        });
+
+        iconPreview.style.backgroundImage = activeItem.itemIcon == null ? defaultIcon.texture : activeItem.itemIcon.texture;
+        itemDetailsSection.Q<ObjectField>("ItemIcon").value = activeItem.itemIcon;
+        itemDetailsSection.Q<ObjectField>("ItemIcon").RegisterValueChangedCallback(evt =>
+        {
+            Sprite newIcon = evt.newValue as Sprite;
+            activeItem.itemIcon = newIcon;
+            iconPreview.style.backgroundImage = newIcon == null ? defaultIcon.texture : newIcon.texture;
+            itemListView.Rebuild();
+        });
     }
 }
