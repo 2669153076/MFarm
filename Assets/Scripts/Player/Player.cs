@@ -9,17 +9,20 @@ public class Player : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
 
-    public float moveSpeed = 5;
+    public float moveSpeed = 5; //移动速度
 
-    private float inputX;
-    private float inputY;
+    private float inputX;   //X轴输入
+    private float inputY;   //Y轴输入
 
-    private Vector2 movementInput;
+    private Vector2 movementInput;  //移动向量
+    private Animator[] animatorArray;   //Animator数组，获取所有子物体的Animator
+    private bool isMoving;  //是否移动
 
 
     private void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        animatorArray = GetComponentsInChildren<Animator>();
     }
 
     private void Update()
@@ -28,7 +31,8 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Movement();
+        Movement(); 
+        SwitchAnimation();
     }
 
     /// <summary>
@@ -46,7 +50,14 @@ public class Player : MonoBehaviour
             inputY *= 0.6f;
         }
 
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            inputX *= 0.5f;
+            inputY *= 0.5f;
+        }
         movementInput = new Vector2(inputX, inputY);
+
+        isMoving = movementInput != Vector2.zero;
     }
 
     /// <summary>
@@ -55,5 +66,21 @@ public class Player : MonoBehaviour
     private void Movement()
     {
         rigidbody2d.MovePosition(rigidbody2d.position + movementInput * moveSpeed * Time.deltaTime);
+    }
+
+    /// <summary>
+    /// 切换动画
+    /// </summary>
+    private void SwitchAnimation()
+    {
+        foreach (var anim in animatorArray)
+        {
+            anim.SetBool("IsMoving", isMoving);
+            if (isMoving)
+            {
+                anim.SetFloat("InputX", inputX);
+                anim.SetFloat("InputY", inputY);
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-using Inventory;
+﻿using Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,9 +11,10 @@ namespace Inventory{
     public class InventoryUI : MonoBehaviour
     {
         [SerializeField] private SlotUI[] playerSlots;  //背包格子数组，需要拖动赋值
-        [SerializeField] private GameObject bagUI;
-        public Image dragItemImage;
+        [SerializeField] private GameObject bagUI;  //背包UI
+        public Image dragItemImage; //可拖动的图片
         private bool bagIsOpened;   //背包是否打开
+        public ItemToolTip itemToolTip; //物品提示UI
 
         private void Start()
         {

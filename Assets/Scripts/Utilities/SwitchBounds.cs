@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 限制边界
+/// </summary>
 public class SwitchBounds : MonoBehaviour
 {
     private void Start()
@@ -10,6 +13,9 @@ public class SwitchBounds : MonoBehaviour
         SwitchConfinerShape();
     }
 
+    /// <summary>
+    /// 限制相机边界
+    /// </summary>
     public void SwitchConfinerShape()
     {
         PolygonCollider2D confinerShape = GameObject.FindGameObjectWithTag("BoundsConfiner").GetComponent<PolygonCollider2D>();

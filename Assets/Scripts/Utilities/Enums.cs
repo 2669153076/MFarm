@@ -25,6 +25,9 @@ public enum E_SlotType
     Bag,Box,Shop
 }
 
+/// <summary>
+/// 库存位置
+/// </summary>
 public enum E_InventoryLocation
 {
     None,

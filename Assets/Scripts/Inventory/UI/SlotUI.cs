@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -22,7 +22,7 @@ namespace Inventory{
         public bool isSelected; //是否被选中
         [HideInInspector]public int slotIndex;
 
-        public ItemDetails itemDetails;
+        [HideInInspector]public ItemDetails itemDetails;
         [HideInInspector]public int itemAmount;
 
         public InventoryUI InventoryUI => GetComponentInParent<InventoryUI>();
@@ -111,15 +111,17 @@ namespace Inventory{
                 {
                     InventoryMgr.Instance.SwapItem(slotIndex, targetIndex);
                 }
-
-                //清空所有高亮显示
-                InventoryUI.UpdateBagHighlight(-1);
             }
-            else
-            {
-                var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,-Camera.main.transform.position.z));
-                EventHandler.CallInstantiateItemInScene(slotIndex, pos);
-            }
+            //else
+            //{
+            //    if (itemDetails.canDropped)
+            //    {
+            //        var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+            //        EventHandler.CallInstantiateItemInScene(itemDetails.itemId, pos);
+            //    }
+            //}
+            //清空所有高亮显示
+            InventoryUI.UpdateBagHighlight(-1);
         }
 
     }

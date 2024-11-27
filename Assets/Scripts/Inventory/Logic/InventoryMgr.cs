@@ -1,10 +1,13 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 namespace Inventory
 {
+    /// <summary>
+    /// 库存管理类
+    /// </summary>
     public class InventoryMgr : Singleton<InventoryMgr>
     {
         [Header("物品数据")]
@@ -37,15 +40,10 @@ namespace Inventory
             var index = GetItemIndexInBag(item.itemId);
             AddItemByIndex(item.itemId, index, 1);
 
-            InventoryItem inventoryItem = new InventoryItem();
-            inventoryItem.itemId = item.itemId;
-            inventoryItem.itemAmount = 1;
-
-            playerBag_SO.inventoryItemList[0] = inventoryItem;
-
             if (toDestory)
             {
                 Destroy(item.gameObject);
+
             }
 
             //更新UI
@@ -58,7 +56,7 @@ namespace Inventory
         /// </summary>
         /// <param name="fromIndex">当前格子</param>
         /// <param name="targetIndex">目标格子</param>
-        public void SwapItem(int fromIndex,int targetIndex)
+        public void SwapItem(int fromIndex, int targetIndex)
         {
             InventoryItem currentItem = playerBag_SO.inventoryItemList[fromIndex];
             InventoryItem targetItem = playerBag_SO.inventoryItemList[targetIndex];
@@ -72,7 +70,7 @@ namespace Inventory
                 playerBag_SO.inventoryItemList[targetIndex] = currentItem;
                 playerBag_SO.inventoryItemList[fromIndex] = new InventoryItem();
             }
-            EventHandler.CallUpdateInventoryUI(E_InventoryLocation.Player,playerBag_SO.inventoryItemList);
+            EventHandler.CallUpdateInventoryUI(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
 
         /// <summary>
@@ -122,7 +120,7 @@ namespace Inventory
         /// <param name="amount">物品数量</param>
         private void AddItemByIndex(int id, int index, int amount)
         {
-            if (index == -1&&CheckBagCapacity())    //背包中无该物品 && 背包有空位
+            if (index == -1 && CheckBagCapacity())    //背包中无该物品 && 背包有空位
             {
                 var item = new InventoryItem { itemId = id, itemAmount = amount };
                 for (int i = 0; i < playerBag_SO.inventoryItemList.Count; i++)
@@ -134,12 +132,14 @@ namespace Inventory
                     }
                 }
             }
-            else if(index != -1)    //背包中有该物品
+            else if (index != -1)    //背包中有该物品
             {
                 int currentAmount = playerBag_SO.inventoryItemList[index].itemAmount + amount;
                 var item = new InventoryItem { itemId = id, itemAmount = currentAmount };
                 playerBag_SO.inventoryItemList[index] = item;
             }
         }
+
     }
 }
+

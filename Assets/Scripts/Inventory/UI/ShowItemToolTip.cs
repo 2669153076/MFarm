@@ -1,0 +1,39 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+namespace Inventory
+{
+    /// <summary>
+    /// 显示提示面板
+    /// </summary>
+    [RequireComponent(typeof(SlotUI))]
+    public class ShowItemToolTip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+    {
+        private SlotUI slotUI;
+        private InventoryUI inventoryUI=>GetComponentInParent<InventoryUI>();
+
+        private void Awake()
+        {
+            slotUI=GetComponent<SlotUI>();
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            if (slotUI.itemAmount != 0)
+            {
+                inventoryUI.itemToolTip.gameObject.SetActive(true);
+                inventoryUI.itemToolTip.SetupToolTip(slotUI.itemDetails, slotUI.slotType);
+
+                inventoryUI.itemToolTip.GetComponent<RectTransform>().pivot = new Vector2 (1, 0);   //设置锚点
+                inventoryUI.itemToolTip.transform.position = transform.position + Vector3.up * 60;  //设置位置
+            }
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            inventoryUI.itemToolTip.gameObject.SetActive(false);
+        }
+    }
+}

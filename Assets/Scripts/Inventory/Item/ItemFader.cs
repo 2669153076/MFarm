@@ -3,6 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 物品Alpha缓入缓出
+/// </summary>
 [RequireComponent(typeof(SpriteRenderer))]
 public class ItemFader : MonoBehaviour
 {
