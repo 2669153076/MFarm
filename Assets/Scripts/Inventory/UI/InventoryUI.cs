@@ -27,11 +27,11 @@ namespace Inventory{
         }
         private void OnEnable()
         {
-            EventHandler.UpdateInventoryUI += OnUpdateInventoryUI;
+            EventHandler.UpdateInventoryUIEvent += OnUpdateInventoryUI;
         }
         private void OnDisable()
         {
-            EventHandler.UpdateInventoryUI -= OnUpdateInventoryUI;
+            EventHandler.UpdateInventoryUIEvent -= OnUpdateInventoryUI;
         }
 
         private void Update()

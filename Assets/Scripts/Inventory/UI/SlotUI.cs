@@ -76,6 +76,12 @@ namespace Inventory{
 
             InventoryUI.UpdateBagHighlight(slotIndex);
 
+            if (slotType == E_SlotType.Bag&&itemDetails.canCarried) 
+            {
+                //将背包中选中的物品举起来
+                EventHandler.CallItemSelectedEvent(this.itemDetails, isSelected);
+            }
+
         }
 
         public void OnBeginDrag(PointerEventData eventData)
@@ -107,14 +113,15 @@ namespace Inventory{
                 var targetSlot = eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>();
                 int targetIndex = targetSlot.slotIndex;
 
-                if(slotType == E_SlotType.Bag&&targetSlot.slotType == E_SlotType.Bag)
+                if(slotType == E_SlotType.Bag&&targetSlot.slotType == E_SlotType.Bag)   //当前选中的是背包内的物品并且目标格子也是背包格子（只可以在背包内交换）
                 {
+                    //交换物品
                     InventoryMgr.Instance.SwapItem(slotIndex, targetIndex);
                 }
             }
-            //else
+            //else  //如果将物品移到地图中
             //{
-            //    if (itemDetails.canDropped)
+            //    if (itemDetails.canDropped)   //扔掉物品
             //    {
             //        var pos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
             //        EventHandler.CallInstantiateItemInScene(itemDetails.itemId, pos);

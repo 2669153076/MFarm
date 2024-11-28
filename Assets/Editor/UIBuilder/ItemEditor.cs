@@ -128,7 +128,7 @@ public class ItemEditor : EditorWindow
             activeItem.itemId = evt.newValue;
         });
         itemDetailsSection.Q<TextField>("ItemName").value = activeItem.itemName;
-        itemDetailsSection.Q<TextField>("Text").RegisterValueChangedCallback(evt =>
+        itemDetailsSection.Q<TextField>("ItemName").RegisterValueChangedCallback(evt =>
         {
             activeItem.itemName = evt.newValue;
             itemListView.Rebuild(); //更新左侧信息

@@ -14,11 +14,11 @@ public class ItemMgr : MonoBehaviour
     }
     private void OnEnable()
     {
-        EventHandler.InstantiateItemInScene += OnInstantiateItemInScene;
+        EventHandler.InstantiateItemInSceneEvent += OnInstantiateItemInScene;
     }
     private void OnDisable()
     {
-        EventHandler.InstantiateItemInScene -= OnInstantiateItemInScene;
+        EventHandler.InstantiateItemInSceneEvent -= OnInstantiateItemInScene;
     }
 
     private void OnInstantiateItemInScene(int id, Vector3 pos)

@@ -15,11 +15,11 @@ public class ItemDetails
     public Sprite itemOnWorldSprite;
     public string itemDesctription;
     public int itemUseRadius;
-    public bool canPickedUp;
-    public bool canDropped;
-    public bool canCarried;
+    public bool canPickedUp;    //被拾取
+    public bool canDropped;     //被扔掉
+    public bool canCarried;     //被举起
     public int itemPrice;
-    [Range(0f, 1f)] public float sellPercentage;
+    [Range(0f, 1f)] public float sellPercentage;    //出售物品时的折扣
 }
 
 /// <summary>
@@ -30,4 +30,15 @@ public struct InventoryItem
 {
     public int itemId;
     public int itemAmount;
+}
+
+/// <summary>
+/// 动画状态机类型
+/// </summary>
+[System.Serializable]
+public class AnimatorType
+{
+    public E_PartName partName;
+    public E_PartType partType;
+    public AnimatorOverrideController animatorOverrideController;
 }
