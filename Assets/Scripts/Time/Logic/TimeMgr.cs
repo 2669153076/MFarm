@@ -1,0 +1,96 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TimeMgr : MonoBehaviour
+{
+    //秒、分、时、天、月、年
+    private int gameSecond, gameMinute, gameHour, gameDay, gameMonth, gameYear;
+    private E_Season gameSeason = E_Season.Spring;
+
+    private int monthInSeason = 3;  //一个季节几个月
+    public bool gameClockPause; //是否暂停
+    private float tikTimer; //计时器
+
+    private void Awake()
+    {
+        InitGameTime();
+    }
+
+    private void Update()
+    {
+        if (!gameClockPause)
+        {
+            tikTimer += Time.deltaTime;
+            if(tikTimer>=Settings.secondThreshold)  //当累积到这个点时为1秒
+            {
+                tikTimer-=Settings.secondThreshold;
+                UpdateGameTime();
+            }
+        }
+    }
+
+    /// <summary>
+    /// 初始化时间
+    /// </summary>
+    private void InitGameTime()
+    {
+        gameSecond = 0;
+        gameMinute = 0;
+        gameHour = 21;
+        gameDay = 28;
+        gameMonth = 11;
+        gameYear = 2024;
+        gameSeason = E_Season.Winter;
+    }
+
+    /// <summary>
+    /// 更新游戏时间
+    /// </summary>
+    private void UpdateGameTime()
+    {
+        gameSecond++;
+        if (gameSecond > Settings.secondHold)
+        {
+            gameMinute++;
+            gameSecond = 0;
+            if (gameMinute > Settings.minuteHold)
+            {
+                gameHour++;
+                gameMinute = 0;
+                if(gameHour > Settings.hourHold)
+                {
+                    gameDay++;
+                    gameHour = 0;
+                    if(gameDay > Settings.dayHold)
+                    {
+                        gameMonth++;
+                        gameDay = 1;
+                        if (gameMonth > Settings.monthHold)
+                        {
+                            gameMonth = 1;
+                        }
+                        monthInSeason--;
+                        if(monthInSeason == 0)
+                        {
+                            monthInSeason = 3;
+                            int seasonNumber = (int)gameSeason;
+                            seasonNumber++;
+                            if (seasonNumber > Settings.seasonHold)
+                            {
+                                seasonNumber = 1;
+                                gameYear++;
+                            }
+                            gameSeason = (E_Season)seasonNumber;
+
+                            if (gameYear > 9999)
+                            {
+                                gameYear = 2024;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

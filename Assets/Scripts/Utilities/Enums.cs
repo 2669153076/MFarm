@@ -54,3 +54,10 @@ public enum E_PartName
     //身体、头发、胳膊、工具
     Body,Hair,Arm,Tool
 }
+
+//季节
+public enum E_Season
+{ 
+    None,
+    Spring, Summer, Autumn, Winter
+}
