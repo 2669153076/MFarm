@@ -28,10 +28,12 @@ namespace Inventory{
         private void OnEnable()
         {
             EventHandler.UpdateInventoryUIEvent += OnUpdateInventoryUI;
+            EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         }
         private void OnDisable()
         {
             EventHandler.UpdateInventoryUIEvent -= OnUpdateInventoryUI;
+            EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         }
 
         private void Update()
@@ -55,7 +57,7 @@ namespace Inventory{
         /// <summary>
         /// 背包格子高亮
         /// </summary>
-        /// <param name="index"></param>
+        /// <param name="index">高亮索引格子，传入-1 关闭所有高亮</param>
         public void UpdateBagHighlight(int index)
         {
             foreach (var slot in playerSlots)
@@ -97,5 +99,9 @@ namespace Inventory{
             }
         }
 
+        private void OnBeforeSceneUnloadEvent()
+        {
+            UpdateBagHighlight(-1);
+        }
     }
 }

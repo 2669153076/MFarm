@@ -10,7 +10,17 @@ public class SwitchBounds : MonoBehaviour
 {
     private void Start()
     {
-        SwitchConfinerShape();
+        //SwitchConfinerShape();
+    }
+
+    private void OnEnable()
+    {
+        EventHandler.AfterSceneLoadEvent += SwitchConfinerShape;
+    }
+    private void OnDisable()
+    {
+        EventHandler.AfterSceneLoadEvent -= SwitchConfinerShape;
+
     }
 
     /// <summary>

@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     private Animator[] animatorArray;   //Animator数组，获取所有子物体的Animator
     private bool isMoving;  //是否移动
 
+    private bool inputIsDisable;    //输入是否关闭    
+
 
     private void Awake()
     {
@@ -25,14 +27,32 @@ public class Player : MonoBehaviour
         animatorArray = GetComponentsInChildren<Animator>();
     }
 
+    private void OnEnable()
+    {
+        EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+        EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+        EventHandler.MoveToPositionEvent += OnMoveToPositionEvent;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+        EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        EventHandler.MoveToPositionEvent -= OnMoveToPositionEvent;
+    }
+
     private void Update()
     {
-        PlayerInput();
+        if(!inputIsDisable) 
+        {
+            //输入被禁用
+            PlayerInput();
+        }
+        SwitchAnimation();
     }
     private void FixedUpdate()
     {
         Movement(); 
-        SwitchAnimation();
     }
 
     /// <summary>
@@ -83,4 +103,19 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private void OnBeforeSceneUnloadEvent()
+    {
+        inputIsDisable = true;
+    }
+    private void OnAfterSceneLoadEvent()
+    {
+        inputIsDisable = false;
+    }
+    private void OnMoveToPositionEvent(Vector3 pos)
+    {
+        transform.position = pos;
+    }
+
+
 }

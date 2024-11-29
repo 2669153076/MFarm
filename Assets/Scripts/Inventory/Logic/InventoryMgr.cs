@@ -17,7 +17,7 @@ namespace Inventory
 
         private void Start()
         {
-            EventHandler.CallUpdateInventoryUI(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace Inventory
             }
 
             //更新UI
-            EventHandler.CallUpdateInventoryUI(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
 
 
@@ -70,7 +70,7 @@ namespace Inventory
                 playerBag_SO.inventoryItemList[targetIndex] = currentItem;
                 playerBag_SO.inventoryItemList[fromIndex] = new InventoryItem();
             }
-            EventHandler.CallUpdateInventoryUI(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
 
         /// <summary>

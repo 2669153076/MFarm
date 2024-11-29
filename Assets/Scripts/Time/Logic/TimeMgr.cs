@@ -16,15 +16,28 @@ public class TimeMgr : MonoBehaviour
     {
         InitGameTime();
     }
+    private void Start()
+    {
+        EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
+        EventHandler.CallGameMinuteEvent(gameMinute, gameHour);
+    }
 
     private void Update()
     {
         if (!gameClockPause)
         {
             tikTimer += Time.deltaTime;
-            if(tikTimer>=Settings.secondThreshold)  //当累积到这个点时为1秒
+            if (tikTimer >= Settings.secondThreshold)  //当累积到这个点时为1秒
             {
-                tikTimer-=Settings.secondThreshold;
+                tikTimer -= Settings.secondThreshold;
+                UpdateGameTime();
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            for (int i = 0; i < 60; i++)
+            {
                 UpdateGameTime();
             }
         }
@@ -58,11 +71,11 @@ public class TimeMgr : MonoBehaviour
             {
                 gameHour++;
                 gameMinute = 0;
-                if(gameHour > Settings.hourHold)
+                if (gameHour > Settings.hourHold)
                 {
                     gameDay++;
                     gameHour = 0;
-                    if(gameDay > Settings.dayHold)
+                    if (gameDay > Settings.dayHold)
                     {
                         gameMonth++;
                         gameDay = 1;
@@ -71,7 +84,7 @@ public class TimeMgr : MonoBehaviour
                             gameMonth = 1;
                         }
                         monthInSeason--;
-                        if(monthInSeason == 0)
+                        if (monthInSeason == 0)
                         {
                             monthInSeason = 3;
                             int seasonNumber = (int)gameSeason;
@@ -90,7 +103,9 @@ public class TimeMgr : MonoBehaviour
                         }
                     }
                 }
+                EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
             }
+            EventHandler.CallGameMinuteEvent(gameMinute, gameHour); //分钟变化带动小时变化
         }
     }
 }

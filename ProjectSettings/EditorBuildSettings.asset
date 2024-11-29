@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PersistentScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/UI.unity
+    guid: 89fefd31bf0f0684ab6f97c7bc1a0a52
+  - enabled: 1
+    path: Assets/Scenes/01_Field.unity
+    guid: 3fd43bb8bd9445a48b042aeb702632f0
+  - enabled: 1
+    path: Assets/Scenes/02_Home.unity
+    guid: 2576c6c84840bb341a0f802dad8c3505
   m_configObjects: {}

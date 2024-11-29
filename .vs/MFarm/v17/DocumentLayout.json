@@ -1,17 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\Unity3D\\UnityExercises\\MFarm\\",
+  "WorkspaceRootPath": "E:\\GitHub\\MFarm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\utilities\\attribute\\scenenamedrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\attribute\\scenenamedrawer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\utilities\\attribute\\scenenameattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\attribute\\scenenameattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\transition\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\teleport.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\transition\\transitionmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\transition\\transitionmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\ui\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\ui\\inventoryui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\switchbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\switchbounds.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\GitHub\\MFarm\\assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,48 +74,205 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
               "Title": "TimeMgr.cs",
-              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAXAAAA",
+              "ViewState": "AgIAAD4AAAAAAAAAAAA4wGkAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-28T12:48:04.222Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TimeUI.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAIA2wFcAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:01:13.474Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SceneNameDrawer.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Attribute\\SceneNameDrawer.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Attribute\\SceneNameDrawer.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Attribute\\SceneNameDrawer.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Attribute\\SceneNameDrawer.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAIwDsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:23:40.538Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Settings.cs",
-              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
+              "Title": "SceneNameAttribute.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Attribute\\SceneNameAttribute.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Attribute\\SceneNameAttribute.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Attribute\\SceneNameAttribute.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Attribute\\SceneNameAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T12:49:52.351Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-11-29T09:22:06.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "InventoryUI.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\UI\\InventoryUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\UI\\InventoryUI.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\UI\\InventoryUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\UI\\InventoryUI.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAYwDsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:13:19.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AnimatorOverride.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\AnimatorOverride.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\AnimatorOverride.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAswFMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:12:02.671Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Player.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAswC0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T09:03:53.773Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Teleport.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Transition\\Teleport.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\Teleport.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Transition\\Teleport.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition\\Teleport.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T08:37:07.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TransitionMgr.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Transition\\TransitionMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Transition\\TransitionMgr.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Transition\\TransitionMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Transition\\TransitionMgr.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T08:26:00.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemMgr.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T08:16:27.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SwitchBounds.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\SwitchBounds.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvwwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T08:14:57.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ItemEditor.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
+              "RelativeDocumentMoniker": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
+              "RelativeToolTip": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAQwDgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T05:18:29.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "InventoryMgr.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAnwEgAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:23:34.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventHandler.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\EventHandler.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\EventHandler.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAawA4AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T03:13:39.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T12:49:52.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "Enums.cs",
-              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Enums.cs",
-              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
               "RelativeToolTip": "Assets\\Scripts\\Utilities\\Enums.cs",
               "ViewState": "AQIAACEAAAAAAAAAAADwvzwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T12:50:03.613Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-28T12:50:03.613Z"
             }
           ]
         }
