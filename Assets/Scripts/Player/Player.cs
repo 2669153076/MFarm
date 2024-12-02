@@ -20,6 +20,9 @@ public class Player : MonoBehaviour
 
     private bool inputIsDisable;    //输入是否关闭    
 
+    private float mouseX;   //鼠标X轴方向
+    private float mouseY;   //鼠标Y轴方向
+    private bool isUseTool; //是否使用工具
 
     private void Awake()
     {
@@ -32,6 +35,7 @@ public class Player : MonoBehaviour
         EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         EventHandler.MoveToPositionEvent += OnMoveToPositionEvent;
+        EventHandler.MouseClickedEvent += OnMouseClickedEvent;
     }
 
     private void OnDisable()
@@ -39,20 +43,31 @@ public class Player : MonoBehaviour
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
         EventHandler.MoveToPositionEvent -= OnMoveToPositionEvent;
+        EventHandler.MouseClickedEvent -= OnMouseClickedEvent;
     }
+
 
     private void Update()
     {
-        if(!inputIsDisable) 
+        if (!inputIsDisable)
         {
-            //输入被禁用
+            //输入没有被关闭
             PlayerInput();
+        }
+        else
+        {
+            //输入被关闭
+            isMoving = false;   //停止移动
         }
         SwitchAnimation();
     }
     private void FixedUpdate()
     {
-        Movement(); 
+        if (!inputIsDisable)
+        {
+            //输入没有被关闭
+            Movement();//移动
+        }
     }
 
     /// <summary>
@@ -64,13 +79,13 @@ public class Player : MonoBehaviour
         inputY = Input.GetAxisRaw("Vertical");
 
         //限制斜向移动距离，将每次斜向移动距离减小
-        if(inputX!=0&& inputY!=0 )
+        if (inputX != 0 && inputY != 0)
         {
             inputX *= 0.6f;
             inputY *= 0.6f;
         }
 
-        if(Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             inputX *= 0.5f;
             inputY *= 0.5f;
@@ -96,6 +111,9 @@ public class Player : MonoBehaviour
         foreach (var anim in animatorArray)
         {
             anim.SetBool("IsMoving", isMoving);
+            anim.SetFloat("MouseX", mouseX);
+            anim.SetFloat("MouseY", mouseY);
+
             if (isMoving)
             {
                 anim.SetFloat("InputX", inputX);
@@ -103,6 +121,28 @@ public class Player : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator UseToolRoutine(Vector3 mouseWorldPos, ItemDetails itemDetails)
+    {
+        isUseTool = true;
+        inputIsDisable = true;
+        yield return null;
+        foreach (var anim in animatorArray)
+        {
+            anim.SetTrigger("UseTool");
+            anim.SetFloat("InputX", mouseX);
+            anim.SetFloat("InputY", mouseY);
+
+        }
+        yield return new WaitForSeconds(0.45f);
+        EventHandler.CallExecuteActionAfterAnimation(mouseWorldPos, itemDetails);
+        yield return new WaitForSeconds(0.25f);
+
+        isUseTool = false;
+        inputIsDisable = false;
+    }
+
+
 
     private void OnBeforeSceneUnloadEvent()
     {
@@ -117,5 +157,28 @@ public class Player : MonoBehaviour
         transform.position = pos;
     }
 
+    private void OnMouseClickedEvent(Vector3 mousePos, ItemDetails itemDetails)
+    {
+        //TODO:执行动画
+        if (itemDetails.itemType != E_ItemType.Seed || itemDetails.itemType != E_ItemType.Commodity || itemDetails.itemType != E_ItemType.Furniture | itemDetails.itemType != E_ItemType.None)
+        {
+            mouseX = mousePos.x - transform.position.x;
+            mouseY = mousePos.y - transform.position.y;
+
+            if (Mathf.Abs(mouseX) > Mathf.Abs(mouseY))
+            {
+                mouseY = 0;
+            }
+            else
+            {
+                mouseX = 0;
+            }
+            StartCoroutine(UseToolRoutine(mousePos, itemDetails));
+        }
+        else
+        {
+            EventHandler.CallExecuteActionAfterAnimation(mousePos, itemDetails);
+        }
+    }
 
 }

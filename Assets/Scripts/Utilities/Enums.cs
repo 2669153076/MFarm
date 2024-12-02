@@ -43,7 +43,7 @@ public enum E_PartType
 {
     None,
     //举起、锄地、破坏
-    Carry,Hoe,Break
+    Carry,Hoe,Break,Water
 }
 /// <summary>
 /// 实现动作的部分
@@ -55,9 +55,21 @@ public enum E_PartName
     Body,Hair,Arm,Tool
 }
 
-//季节
+/// <summary>
+/// 季节
+/// </summary>
 public enum E_Season
 { 
     None,
     Spring, Summer, Autumn, Winter
 }
+
+/// <summary>
+/// grid瓦片类型
+/// </summary>
+public enum E_GridType { 
+    None,
+    //挖坑、扔东西、添家具、NPC障碍
+    Diggable,DropItem,PlaceFurniture,NPCObstacle
+}
+

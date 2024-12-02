@@ -30,7 +30,7 @@ namespace Inventory{
         private void Start()
         {
             isSelected = false;
-            if (itemDetails.itemId == 0)
+            if (itemDetails == null)
             {
                 UpdateEmptySlot();
             }
@@ -44,8 +44,13 @@ namespace Inventory{
             if(isSelected)
             {
                 isSelected = false;
+
+                InventoryUI.UpdateBagHighlight(-1); //清空之后格子高亮关闭
+
+                EventHandler.CallItemSelectedEvent(itemDetails, false);
             }
 
+            itemDetails = null;
             slotImage.enabled = false;
             amountText.text = string.Empty;
             button.interactable = false;
@@ -68,15 +73,15 @@ namespace Inventory{
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if(itemAmount == 0)
+            if(itemDetails == null)
             {
                 return;
             }
             isSelected = !isSelected;
-
             InventoryUI.UpdateBagHighlight(slotIndex);
 
-            if (slotType == E_SlotType.Bag&&itemDetails.canCarried) 
+            //if (slotType == E_SlotType.Bag&&itemDetails.canCarried)       
+            if (slotType == E_SlotType.Bag) 
             {
                 //将背包中选中的物品举起来
                 EventHandler.CallItemSelectedEvent(this.itemDetails, isSelected);

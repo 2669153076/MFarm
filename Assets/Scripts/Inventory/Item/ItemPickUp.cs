@@ -8,9 +8,9 @@ namespace Inventory{
     /// </summary>
     public class ItemPickUp : MonoBehaviour
     {
-        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnTriggerEnter2D(Collider2D collider)
         {
-            Item item = collision.gameObject.GetComponent<Item>();
+            Item item = collider.GetComponent<Item>();
 
             if (item != null)
             {

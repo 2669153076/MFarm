@@ -39,14 +39,15 @@ public class AnimatorOverride : MonoBehaviour
 
     private void OnItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
     {
-        
+        //WORKFLOW:不同的工具返回不同的动画
         E_PartType currentType = itemDetails.itemType switch
         {
             E_ItemType.Seed => E_PartType.Carry,
-            E_ItemType.Commodity=>E_PartType.Carry,
-            _=>E_PartType.None,
+            E_ItemType.Commodity => E_PartType.Carry,
+            E_ItemType.HoeTool => E_PartType.Hoe,
+            _ => E_PartType.None,
         };
-        if(!isSelected)
+        if (!isSelected)
         {
             currentType = E_PartType.None;
             holdItem.enabled = false;

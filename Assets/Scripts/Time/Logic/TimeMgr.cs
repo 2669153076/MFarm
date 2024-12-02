@@ -2,110 +2,116 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TimeMgr : MonoBehaviour
+namespace GameTime
 {
-    //秒、分、时、天、月、年
-    private int gameSecond, gameMinute, gameHour, gameDay, gameMonth, gameYear;
-    private E_Season gameSeason = E_Season.Spring;
-
-    private int monthInSeason = 3;  //一个季节几个月
-    public bool gameClockPause; //是否暂停
-    private float tikTimer; //计时器
-
-    private void Awake()
+    /// <summary>
+    /// 时间管理类
+    /// </summary>
+    public class TimeMgr : Singleton<TimeMgr>
     {
-        InitGameTime();
-    }
-    private void Start()
-    {
-        EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
-        EventHandler.CallGameMinuteEvent(gameMinute, gameHour);
-    }
+        //秒、分、时、天、月、年
+        private int gameSecond, gameMinute, gameHour, gameDay, gameMonth, gameYear;
+        private E_Season gameSeason = E_Season.Spring;
 
-    private void Update()
-    {
-        if (!gameClockPause)
+        private int monthInSeason = 3;  //一个季节几个月
+        public bool gameClockPause; //是否暂停
+        private float tikTimer; //计时器
+
+        protected override void Awake()
         {
-            tikTimer += Time.deltaTime;
-            if (tikTimer >= Settings.secondThreshold)  //当累积到这个点时为1秒
-            {
-                tikTimer -= Settings.secondThreshold;
-                UpdateGameTime();
-            }
+            InitGameTime();
+        }
+        private void Start()
+        {
+            EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
+            EventHandler.CallGameMinuteEvent(gameMinute, gameHour);
         }
 
-        if (Input.GetKeyDown(KeyCode.T))
+        private void Update()
         {
-            for (int i = 0; i < 60; i++)
+            if (!gameClockPause)
             {
-                UpdateGameTime();
-            }
-        }
-    }
-
-    /// <summary>
-    /// 初始化时间
-    /// </summary>
-    private void InitGameTime()
-    {
-        gameSecond = 0;
-        gameMinute = 0;
-        gameHour = 21;
-        gameDay = 28;
-        gameMonth = 11;
-        gameYear = 2024;
-        gameSeason = E_Season.Winter;
-    }
-
-    /// <summary>
-    /// 更新游戏时间
-    /// </summary>
-    private void UpdateGameTime()
-    {
-        gameSecond++;
-        if (gameSecond > Settings.secondHold)
-        {
-            gameMinute++;
-            gameSecond = 0;
-            if (gameMinute > Settings.minuteHold)
-            {
-                gameHour++;
-                gameMinute = 0;
-                if (gameHour > Settings.hourHold)
+                tikTimer += Time.deltaTime;
+                if (tikTimer >= Settings.secondThreshold)  //当累积到这个点时为1秒
                 {
-                    gameDay++;
-                    gameHour = 0;
-                    if (gameDay > Settings.dayHold)
-                    {
-                        gameMonth++;
-                        gameDay = 1;
-                        if (gameMonth > Settings.monthHold)
-                        {
-                            gameMonth = 1;
-                        }
-                        monthInSeason--;
-                        if (monthInSeason == 0)
-                        {
-                            monthInSeason = 3;
-                            int seasonNumber = (int)gameSeason;
-                            seasonNumber++;
-                            if (seasonNumber > Settings.seasonHold)
-                            {
-                                seasonNumber = 1;
-                                gameYear++;
-                            }
-                            gameSeason = (E_Season)seasonNumber;
+                    tikTimer -= Settings.secondThreshold;
+                    UpdateGameTime();
+                }
+            }
 
-                            if (gameYear > 9999)
+            if (Input.GetKeyDown(KeyCode.T))
+            {
+                for (int i = 0; i < 60; i++)
+                {
+                    UpdateGameTime();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 初始化时间
+        /// </summary>
+        private void InitGameTime()
+        {
+            gameSecond = 0;
+            gameMinute = 0;
+            gameHour = 21;
+            gameDay = 28;
+            gameMonth = 11;
+            gameYear = 2024;
+            gameSeason = E_Season.Winter;
+        }
+
+        /// <summary>
+        /// 更新游戏时间
+        /// </summary>
+        private void UpdateGameTime()
+        {
+            gameSecond++;
+            if (gameSecond > Settings.secondHold)
+            {
+                gameMinute++;
+                gameSecond = 0;
+                if (gameMinute > Settings.minuteHold)
+                {
+                    gameHour++;
+                    gameMinute = 0;
+                    if (gameHour > Settings.hourHold)
+                    {
+                        gameDay++;
+                        gameHour = 0;
+                        if (gameDay > Settings.dayHold)
+                        {
+                            gameMonth++;
+                            gameDay = 1;
+                            if (gameMonth > Settings.monthHold)
                             {
-                                gameYear = 2024;
+                                gameMonth = 1;
+                            }
+                            monthInSeason--;
+                            if (monthInSeason == 0)
+                            {
+                                monthInSeason = 3;
+                                int seasonNumber = (int)gameSeason;
+                                seasonNumber++;
+                                if (seasonNumber > Settings.seasonHold)
+                                {
+                                    seasonNumber = 1;
+                                    gameYear++;
+                                }
+                                gameSeason = (E_Season)seasonNumber;
+
+                                if (gameYear > 9999)
+                                {
+                                    gameYear = 2024;
+                                }
                             }
                         }
                     }
+                    EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
                 }
-                EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
+                EventHandler.CallGameMinuteEvent(gameMinute, gameHour); //分钟变化带动小时变化
             }
-            EventHandler.CallGameMinuteEvent(gameMinute, gameHour); //分钟变化带动小时变化
         }
     }
 }

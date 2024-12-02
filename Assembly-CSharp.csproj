@@ -61,14 +61,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Utilities\EventHandler.cs" />
+    <Compile Include="Assets\Scripts\Map\Logic\GridMap.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ShowItemToolTip.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Cursor\CursorMgr.cs" />
     <Compile Include="Assets\Scripts\Time\Logic\TimeMgr.cs" />
     <Compile Include="Assets\Scripts\Utilities\SwitchBounds.cs" />
     <Compile Include="Assets\Scripts\Utilities\Enums.cs" />
     <Compile Include="Assets\Scripts\Inventory\Data_SO\InventoryBag_SO.cs" />
     <Compile Include="Assets\Scripts\Player\TriggerItemFader.cs" />
+    <Compile Include="Assets\Scripts\Map\Data\MapData_SO.cs" />
+    <Compile Include="Assets\Scripts\Map\Logic\GridMapMgr.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemFader.cs" />
     <Compile Include="Assets\Scripts\Inventory\Logic\InventoryMgr.cs" />
     <Compile Include="Assets\Scripts\Inventory\Logic\ItemMgr.cs" />
@@ -78,9 +82,11 @@
     <Compile Include="Assets\Scripts\Utilities\DataCollection.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\Transition\TransitionMgr.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item\ItemShadow.cs" />
     <Compile Include="Assets\Scripts\Inventory\Data_SO\ItemDataList_SO.cs" />
     <Compile Include="Assets\Scripts\Transition\Teleport.cs" />
     <Compile Include="Assets\Scripts\Utilities\Settings.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item\ItemBounce.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\SlotUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ItemToolTip.cs" />
     <Compile Include="Assets\Scripts\Player\AnimatorOverride.cs" />

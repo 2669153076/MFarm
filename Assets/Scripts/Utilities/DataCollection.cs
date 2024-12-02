@@ -42,3 +42,76 @@ public class AnimatorType
     public E_PartType partType;
     public AnimatorOverrideController animatorOverrideController;
 }
+
+/// <summary>
+/// 可序列化的Vector3
+/// </summary>
+[System.Serializable]
+public class SerializableVector3
+{
+    public float x, y, z;
+    public SerializableVector3(Vector3 pos)
+    {
+        this.x = pos.x;
+        this.y = pos.y;
+        this.z = pos.z;
+    }
+
+    public Vector3 ToVector3()
+    {
+        return new Vector3(x, y, z);
+    }
+    public Vector2Int ToVector2Int()
+    {
+        return new Vector2Int((int)x, (int)y);
+    }
+}
+
+/// <summary>
+/// 场景中的物品
+/// </summary>
+[System.Serializable]
+public class SceneItem
+{
+    public int id;
+    public SerializableVector3 pos;
+}
+
+/// <summary>
+/// 地图Tile属性
+/// </summary>
+[System.Serializable]
+public class TileProperty
+{   
+    /// <summary>
+    /// 瓦片坐标
+    /// </summary>
+    public Vector2Int tileCoordinate;
+    /// <summary>
+    /// 瓦片类型
+    /// </summary>
+    public E_GridType gridType;
+    /// <summary>
+    /// 
+    /// </summary>
+    public bool boolTypeValue;
+}
+
+/// <summary>
+/// 瓦片格子内的信息
+/// </summary>
+[System.Serializable]
+public class TileDetails 
+{
+    public Vector2Int gridPos;
+    public bool canDig; //能否挖掘
+    public bool canDropItem;    //能否扔道具
+    public bool canPlaceFurniture;  //能否放家具
+    public bool isNPCObstacle;  //是否是NPC
+    public int daysSinceDig = -1;   //自挖掘以来的天数
+    public int daysSinceWatered = -1;   //自浇水以来的天数
+    public int seedItemId = -1; //种下的种子id
+    public int growthDays = -1; //种子成长了多少天
+    public int daysSinceLastHarvest = -1;   //距离上一次收割过了多少天
+
+}

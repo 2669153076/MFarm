@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
+/// <summary>
+/// 工具类 
+/// 需要输入场景时将其改为下拉菜单
+/// 方式场景名字输入错误
+/// </summary>
 [CustomPropertyDrawer(typeof(SceneNameAttribute))]
 public class SceneNameDrawer : PropertyDrawer
 {

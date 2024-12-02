@@ -15,6 +15,15 @@ namespace Inventory
         [Header("背包数据")]
         public InventoryBag_SO playerBag_SO;
 
+        private void OnEnable()
+        {
+            EventHandler.DropItemInSceneEvent += OnDropItemInSceneEvent;
+        }
+
+        private void OnDisable()
+        {
+            EventHandler.DropItemInSceneEvent -= OnDropItemInSceneEvent;
+        }
         private void Start()
         {
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
@@ -33,8 +42,8 @@ namespace Inventory
         /// <summary>
         /// 往背包中添加物品
         /// </summary>
-        /// <param name="item"></param>
-        /// <param name="toDestory"></param>
+        /// <param name="item">道具</param>
+        /// <param name="toDestory">是否删除</param>
         public void AddItem(Item item, bool toDestory = true)
         {
             var index = GetItemIndexInBag(item.itemId);
@@ -49,7 +58,6 @@ namespace Inventory
             //更新UI
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
-
 
         /// <summary>
         /// 交换物品位置
@@ -91,7 +99,6 @@ namespace Inventory
             }
             return false;
         }
-
         /// <summary>
         /// 获取物品在背包中的位置
         /// </summary>
@@ -111,7 +118,6 @@ namespace Inventory
             }
             return -1;
         }
-
         /// <summary>
         /// 通过索引往背包中添加物品
         /// </summary>
@@ -139,7 +145,36 @@ namespace Inventory
                 playerBag_SO.inventoryItemList[index] = item;
             }
         }
+        /// <summary>
+        /// 移除背包内物品
+        /// </summary>
+        /// <param name="id">物品ID</param>
+        /// <param name="amount">要移除的数量</param>
+        private void RemoveItemByIndex(int id,int amount)
+        {
+            var index = GetItemIndexInBag(id);
 
+            if (playerBag_SO.inventoryItemList[index].itemAmount > amount)
+            {
+                var newAmount = playerBag_SO.inventoryItemList[index].itemAmount - amount;
+                var item = new InventoryItem { itemId=id, itemAmount = newAmount };
+                playerBag_SO.inventoryItemList[index] = item;
+
+            }
+            else if(playerBag_SO.inventoryItemList[index].itemAmount == amount)
+            {
+                var item = new InventoryItem();
+                playerBag_SO.inventoryItemList[index] = item;
+            }
+
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+        }
+
+
+        private void OnDropItemInSceneEvent(int id, Vector3 pos)
+        {
+            RemoveItemByIndex(id, 1);
+        }
     }
 }
 

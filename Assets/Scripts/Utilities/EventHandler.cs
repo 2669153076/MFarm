@@ -10,6 +10,7 @@ public static class EventHandler
 {
     public static event Action<E_InventoryLocation, List<InventoryItem>> UpdateInventoryUIEvent; //更新库存UI事件
     public static event Action<int, Vector3> InstantiateItemInSceneEvent;    //在场景中生成道具
+    public static event Action<int, Vector3> DropItemInSceneEvent;    //在场景中扔道具
     public static event Action<ItemDetails, bool> ItemSelectedEvent;    //物品被选中
     public static event Action<int, int> GameMinuteEvent;   //游戏根据分钟更新UI等事件
     public static event Action<int, int, int, int, E_Season> GameDateEvent; //游戏根据日期更新UI等事件
@@ -17,6 +18,9 @@ public static class EventHandler
     public static event Action BeforeSceneUnloadEvent;  //卸载场景前事件
     public static event Action AfterSceneLoadEvent;   //加载场景后事件
     public static event Action<Vector3> MoveToPositionEvent;    //移动位置事件
+    public static event Action<Vector3, ItemDetails> MouseClickedEvent; //鼠标按下事件
+    public static event Action<Vector3, ItemDetails> ExecuteActionAfterAnimation; //在动画之后执行的事件
+
 
     public static void CallUpdateInventoryUIEvent(E_InventoryLocation e_InventoryLocation, List<InventoryItem> inventoryItemList)
     {
@@ -25,6 +29,10 @@ public static class EventHandler
     public static void CallInstantiateItemInSceneEvent(int id, Vector3 pos)
     {
         InstantiateItemInSceneEvent?.Invoke(id, pos);
+    }
+    public static void CallDropItemInSceneEvent(int id,Vector3 pos)
+    {
+        DropItemInSceneEvent?.Invoke(id,pos);
     }
     public static void CallItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
     {
@@ -53,6 +61,15 @@ public static class EventHandler
     public static void CallMoveToPositionEvent(Vector3 pos)
     {
         MoveToPositionEvent?.Invoke(pos);
+    }
+
+    public static void CallMouseClickedEvent(Vector3 mousePos, ItemDetails itemDetails)
+    {
+        MouseClickedEvent?.Invoke(mousePos, itemDetails);
+    }
+    public static void CallExecuteActionAfterAnimation(Vector3 mousePos, ItemDetails itemDetails)
+    {
+        ExecuteActionAfterAnimation?.Invoke(mousePos, itemDetails);
     }
 
 }
