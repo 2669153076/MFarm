@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -45,6 +45,7 @@ public class AnimatorOverride : MonoBehaviour
             E_ItemType.Seed => E_PartType.Carry,
             E_ItemType.Commodity => E_PartType.Carry,
             E_ItemType.HoeTool => E_PartType.Hoe,
+            E_ItemType.WaterTool=>E_PartType.Water,
             _ => E_PartType.None,
         };
         if (!isSelected)
@@ -59,6 +60,10 @@ public class AnimatorOverride : MonoBehaviour
                 holdItem.sprite = itemDetails.itemOnWorldSprite;
                 holdItem.enabled = true;
             }
+            else
+            {
+                holdItem.enabled = false;
+            }
         }
 
         SwitchAnimator(currentType);
@@ -70,6 +75,7 @@ public class AnimatorOverride : MonoBehaviour
     /// <param name="e_PartType"></param>
     private void SwitchAnimator(E_PartType e_PartType)
     {
+        Debug.Log(e_PartType);
         foreach (var item in animatorTypeList)
         {
             if(item.partType == e_PartType)

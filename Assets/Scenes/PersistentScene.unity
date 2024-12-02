@@ -442,7 +442,7 @@ Animator:
   m_GameObject: {fileID: 650474663}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 22100000, guid: 7ea915c4fe025ce4ea91bfa22397a911, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -499,7 +499,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -934,7 +934,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1930278481
   m_SortingLayer: 9
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1665453071, guid: 4e149b0e767fc42668e738ecf9b4fa7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1490,6 +1490,27 @@ MonoBehaviour:
   - partName: 4
     partType: 2
     animatorOverrideController: {fileID: 22100000, guid: 7ea915c4fe025ce4ea91bfa22397a911, type: 2}
+  - partName: 3
+    partType: 2
+    animatorOverrideController: {fileID: 22100000, guid: c870cde3e1400104ba0180ad2ae5388a, type: 2}
+  - partName: 1
+    partType: 2
+    animatorOverrideController: {fileID: 22100000, guid: f5d842faaeb4fea459f8cbe4950eafd2, type: 2}
+  - partName: 2
+    partType: 2
+    animatorOverrideController: {fileID: 22100000, guid: 0001aaa6531484148bf60004d19c21e0, type: 2}
+  - partName: 4
+    partType: 4
+    animatorOverrideController: {fileID: 22100000, guid: ca6eae3f22694f8419cd6bea0e6ed862, type: 2}
+  - partName: 3
+    partType: 4
+    animatorOverrideController: {fileID: 22100000, guid: a59ee310bd7a8c24f959a427ad15e8cb, type: 2}
+  - partName: 1
+    partType: 4
+    animatorOverrideController: {fileID: 22100000, guid: 4ff9a925822c94544b473eef1d5aa8e4, type: 2}
+  - partName: 2
+    partType: 4
+    animatorOverrideController: {fileID: 22100000, guid: a93eb5b1c8388a843a303b9d9fca3a69, type: 2}
 --- !u!1 &2131799281
 GameObject:
   m_ObjectHideFlags: 0
