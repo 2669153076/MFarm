@@ -25,6 +25,7 @@ namespace GameTime
         {
             EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
             EventHandler.CallGameMinuteEvent(gameMinute, gameHour);
+            EventHandler.CallGameDayEvent(gameDay, gameSeason);
         }
 
         private void Update()
@@ -46,6 +47,12 @@ namespace GameTime
                     UpdateGameTime();
                 }
             }
+            if(Input.GetKeyDown(KeyCode.G))
+            {
+                gameDay++;
+                EventHandler.CallGameDayEvent(gameDay, gameSeason);
+                EventHandler.CallGameDateEvent(gameHour,gameDay, gameMonth, gameYear,gameSeason);
+            }
         }
 
         /// <summary>
@@ -59,7 +66,8 @@ namespace GameTime
             gameDay = 28;
             gameMonth = 11;
             gameYear = 2024;
-            gameSeason = E_Season.Winter;
+            gameSeason = E_Season.Spring;
+            UpdateGameTime();
         }
 
         /// <summary>
@@ -106,6 +114,8 @@ namespace GameTime
                                     gameYear = 2024;
                                 }
                             }
+                            //刷新地图和农作物生长
+                            EventHandler.CallGameDayEvent(gameDay, gameSeason); //每一天的变化
                         }
                     }
                     EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化

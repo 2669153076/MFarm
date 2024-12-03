@@ -85,8 +85,12 @@ public class ItemMgr : Singleton<ItemMgr>
         var item = Instantiate(itemPerfab,pos,Quaternion.identity,itemParent);
         item.itemId = id;
     }
-    private void OnDropItemInSceneEvent(int id, Vector3 mousePos)
+    private void OnDropItemInSceneEvent(int id, Vector3 mousePos,E_ItemType itemType)
     {
+        if(itemType == E_ItemType.Seed)
+        {
+            return;
+        }
         var item = Instantiate(itemBouncePerfab, PlayerTransform.position, Quaternion.identity, itemParent);
         item.itemId = id;
         var dir = (mousePos - PlayerTransform.position).normalized;

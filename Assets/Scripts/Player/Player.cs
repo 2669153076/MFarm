@@ -160,12 +160,13 @@ public class Player : MonoBehaviour
     private void OnMouseClickedEvent(Vector3 mousePos, ItemDetails itemDetails)
     {
         //TODO:执行动画
+        //使用的是工具的话
         if (itemDetails.itemType != E_ItemType.Seed || itemDetails.itemType != E_ItemType.Commodity || itemDetails.itemType != E_ItemType.Furniture | itemDetails.itemType != E_ItemType.None)
         {
             mouseX = mousePos.x - transform.position.x;
             mouseY = mousePos.y - transform.position.y;
 
-            if (Mathf.Abs(mouseX) > Mathf.Abs(mouseY))
+            if (Mathf.Abs(mouseX) > Mathf.Abs(mouseY))  //鼠标在x轴方向大于y轴方向距离
             {
                 mouseY = 0;
             }

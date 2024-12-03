@@ -1,10 +1,12 @@
+using CropPlant;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
-namespace GridMap{
+namespace GridMap
+{
     /// <summary>
     /// 瓦片地图管理器
     /// </summary>
@@ -18,22 +20,25 @@ namespace GridMap{
         [Header("地图信息")]
         public List<MapData_SO> mapDataList;
 
-        private Dictionary<string,TileDetails> tileDetailsDic = new Dictionary<string,TileDetails>(); //根据坐标存储对应的格子信息
+        private Dictionary<string, TileDetails> tileDetailsDic = new Dictionary<string, TileDetails>(); //根据坐标存储对应的格子信息
 
         private Grid currentGrid;   //当前地图的Grid
 
-
+        private E_Season currentSeason; //当前季节
 
         private void OnEnable()
         {
             EventHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+            EventHandler.GameDayEvent += OnGameDayEvent;
         }
         private void OnDisable()
         {
             EventHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+            EventHandler.GameDayEvent -= OnGameDayEvent;
         }
+
         private void Start()
         {
             foreach (var mapdata in mapDataList)
@@ -48,7 +53,7 @@ namespace GridMap{
         /// <param name="mouseGridPos">鼠标网格坐标</param>
         public TileDetails GetTileDetailsOnMousePosition(Vector3Int mouseGridPos)
         {
-            string key = mouseGridPos.x+"x"+mouseGridPos.y+"y"+SceneManager.GetActiveScene().name;
+            string key = mouseGridPos.x + "x" + mouseGridPos.y + "y" + SceneManager.GetActiveScene().name;
             return GetTileDetails(key);
         }
 
@@ -68,7 +73,7 @@ namespace GridMap{
                 //字典的key
                 string key = tileDetails.gridPos.x + "x" + tileDetails.gridPos.y + "y" + mapData.sceneName;
 
-                if(GetTileDetails(key) != null )
+                if (GetTileDetails(key) != null)
                 {
                     tileDetails = GetTileDetails(key);
                 }
@@ -89,7 +94,7 @@ namespace GridMap{
                         break;
                 }
 
-                if(GetTileDetails(key)!=null )
+                if (GetTileDetails(key) != null)
                 {
                     tileDetailsDic[key] = tileDetails;
                 }
@@ -121,8 +126,7 @@ namespace GridMap{
         private void SetDigGround(TileDetails tileDetails)
         {
             Vector3Int pos = new Vector3Int(tileDetails.gridPos.x, tileDetails.gridPos.y, 0);
-            Debug.Log(digTileMap);
-            if(digTileMap!=null)
+            if (digTileMap != null)
             {
                 digTileMap.SetTile(pos, digTile);
             }
@@ -134,19 +138,103 @@ namespace GridMap{
         private void SetWaterGround(TileDetails tileDetails)
         {
             Vector3Int pos = new Vector3Int(tileDetails.gridPos.x, tileDetails.gridPos.y, 0);
-            if(waterTileMap!=null)
+            if (waterTileMap != null)
             {
                 waterTileMap.SetTile(pos, waterTile);
             }
         }
 
-
-        private void OnExecuteActionAfterAnimation(Vector3 mousePos, ItemDetails itemDetails)
+        /// <summary>
+        /// 更新tile字典信息
+        /// </summary>
+        /// <param name="tileDetails"></param>
+        private void UpdateTileDetails(TileDetails tileDetails)
         {
-            var currentGridPos = currentGrid.WorldToCell(mousePos);
+            string key = tileDetails.gridPos.x + "x" + tileDetails.gridPos.y + "y" + SceneManager.GetActiveScene().name;
+            if (tileDetailsDic.ContainsKey(key))
+            {
+                tileDetailsDic[key] = tileDetails;
+            }
+        }
+
+        /// <summary>
+        /// 根据对应场景绘制对应地图
+        /// </summary>
+        /// <param name="sceneName"></param>
+        private void DisplayMap(string sceneName)
+        {
+            foreach (var tile in tileDetailsDic)
+            {
+                var key = tile.Key;
+                var tileDetails = tile.Value;
+
+                if (key.Contains(sceneName))
+                {
+                    if (tileDetails.daysSinceDig > -1)
+                    {
+                        SetDigGround(tileDetails);
+                    }
+                    if (tileDetails.daysSinceWatered > -1)
+                    {
+                        SetWaterGround(tileDetails);
+                    }
+                    EventHandler.CallPlantSeedEvent(tileDetails.seedItemId, tileDetails);
+                }
+            }
+        }
+
+        /// <summary>
+        /// 刷新地图
+        /// </summary>
+        private void RefreshMap()
+        {
+            if (digTileMap != null)
+            {
+                //清除挖坑
+                digTileMap.ClearAllTiles();
+            }
+            if (waterTileMap != null)
+            {
+                //清除浇水
+                waterTileMap.ClearAllTiles();
+            }
+
+            foreach (var crop in FindObjectsOfType<Crop>())
+            {
+                Destroy(crop.gameObject);
+            }
+
+            DisplayMap(SceneManager.GetActiveScene().name);
+        }
+
+        /// <summary>
+        /// 通过物理方法判断鼠标点击位置的农作物
+        /// </summary>
+        /// <param name="mouseWorldPos">鼠标坐标</param>
+        /// <returns></returns>
+        private Crop GetCropObject(Vector3 mouseWorldPos)
+        {
+            Collider2D[] colliders = Physics2D.OverlapPointAll(mouseWorldPos);
+
+            Crop currentCrop = null;
+
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].GetComponent<Crop>())
+                {
+                    currentCrop = colliders[i].GetComponent<Crop>();
+                }
+            }
+            return currentCrop;
+        }
+
+
+        private void OnExecuteActionAfterAnimation(Vector3 mouseWorldPos, ItemDetails itemDetails)
+        {
+            var currentGridPos = currentGrid.WorldToCell(mouseWorldPos);
             var currentTile = GetTileDetailsOnMousePosition(currentGridPos);
 
-            if(currentTile != null)
+            if (currentTile != null)
             {
                 //WORKFLOW:物品使用实际功能
                 switch (itemDetails.itemType)
@@ -154,9 +242,11 @@ namespace GridMap{
                     case E_ItemType.None:
                         break;
                     case E_ItemType.Seed:
+                        EventHandler.CallPlantSeedEvent(itemDetails.itemId,currentTile);
+                        EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
                         break;
                     case E_ItemType.Commodity:
-                        EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mousePos);
+                        EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
                         break;
                     case E_ItemType.Furniture:
                         break;
@@ -177,19 +267,56 @@ namespace GridMap{
                         currentTile.daysSinceDig = 0;
                         break;
                     case E_ItemType.CollectTool:
+                        Crop curretnCrop = GetCropObject(mouseWorldPos);
+                        //执行收割方法
+                        curretnCrop.ProcessToolAction(itemDetails);
                         break;
                     case E_ItemType.ReapableScenery:
                         break;
                 }
             }
+
+            UpdateTileDetails(currentTile);
         }
         private void OnAfterSceneLoadEvent()
         {
             currentGrid = FindObjectOfType<Grid>();
             digTileMap = GameObject.FindWithTag("Dig").GetComponent<Tilemap>();
             waterTileMap = GameObject.FindWithTag("Water").GetComponent<Tilemap>();
+
+            //DisplayMap(SceneManager.GetActiveScene().name);
+            RefreshMap();
         }
 
+        private void OnGameDayEvent(int day, E_Season season)
+        {
+            currentSeason = season;
+            foreach (var tile in tileDetailsDic)
+            {
+                if (tile.Value.daysSinceWatered > -1)  //如果浇了水
+                {
+                    //每天土地都会干，都可以浇水
+                    tile.Value.daysSinceWatered = -1;
+                }
+                if (tile.Value.daysSinceDig > -1)   //如果土地被开垦
+                {
+                    //增加该土地自从被开垦以来的天数
+                    tile.Value.daysSinceDig++;
+                }
+                if (tile.Value.daysSinceDig > 5 && tile.Value.seedItemId == -1) //如果被开垦且没有农作物
+                {
+                    //当土地被开垦了5天并且该土地上没有种子，则将土地还原为开垦前的样子
+                    tile.Value.daysSinceDig = -1;
+                    tile.Value.canDig = true;
+                    tile.Value.growthDays = -1;
+                }
+                if(tile.Value.seedItemId !=-1)      //如果播种了
+                {
+                    tile.Value.growthDays++;
+                }
+            }
+            RefreshMap();
+        }
 
     }
 }

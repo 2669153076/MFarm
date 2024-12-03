@@ -43,7 +43,7 @@ public enum E_PartType
 {
     None,
     //举起、锄地、破坏
-    Carry,Hoe,Break,Water
+    Carry,Hoe,Break,Water,Collect,Chop,
 }
 /// <summary>
 /// 实现动作的部分

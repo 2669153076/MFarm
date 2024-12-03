@@ -967,6 +967,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &1301201663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1301201665}
+  - component: {fileID: 1301201664}
+  m_Layer: 0
+  m_Name: '@ CropManager'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1301201664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301201663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d8abcb63f9ab648962911f7c794786, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cropData: {fileID: 11400000, guid: ab623f982b29c7e449221a72ae6b0d46, type: 2}
+--- !u!4 &1301201665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301201663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1318083563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1484,33 +1529,60 @@ MonoBehaviour:
   - partName: 3
     partType: 1
     animatorOverrideController: {fileID: 22100000, guid: b96e5abbfd9fc0b4ea2cd50d380b3cb0, type: 2}
-  - partName: 4
-    partType: 0
-    animatorOverrideController: {fileID: 22100000, guid: 1a909bdea1263aa40824e72f10b7afa2, type: 2}
-  - partName: 4
-    partType: 2
-    animatorOverrideController: {fileID: 22100000, guid: 7ea915c4fe025ce4ea91bfa22397a911, type: 2}
   - partName: 3
     partType: 2
     animatorOverrideController: {fileID: 22100000, guid: c870cde3e1400104ba0180ad2ae5388a, type: 2}
-  - partName: 1
-    partType: 2
-    animatorOverrideController: {fileID: 22100000, guid: f5d842faaeb4fea459f8cbe4950eafd2, type: 2}
-  - partName: 2
-    partType: 2
-    animatorOverrideController: {fileID: 22100000, guid: 0001aaa6531484148bf60004d19c21e0, type: 2}
-  - partName: 4
-    partType: 4
-    animatorOverrideController: {fileID: 22100000, guid: ca6eae3f22694f8419cd6bea0e6ed862, type: 2}
   - partName: 3
     partType: 4
     animatorOverrideController: {fileID: 22100000, guid: a59ee310bd7a8c24f959a427ad15e8cb, type: 2}
+  - partName: 3
+    partType: 5
+    animatorOverrideController: {fileID: 22100000, guid: a3bd80e0bea763047b4f5c3c36e545a4, type: 2}
+  - partName: 1
+    partType: 0
+    animatorOverrideController: {fileID: 22100000, guid: f3bfbd2ee4889c7429c975a3ca23ee9d, type: 2}
+  - partName: 1
+    partType: 1
+    animatorOverrideController: {fileID: 22100000, guid: f3bfbd2ee4889c7429c975a3ca23ee9d, type: 2}
+  - partName: 1
+    partType: 2
+    animatorOverrideController: {fileID: 22100000, guid: f5d842faaeb4fea459f8cbe4950eafd2, type: 2}
+  - partName: 1
+    partType: 5
+    animatorOverrideController: {fileID: 22100000, guid: 94fa627af77f84740b17009976d9ab7c, type: 2}
   - partName: 1
     partType: 4
     animatorOverrideController: {fileID: 22100000, guid: 4ff9a925822c94544b473eef1d5aa8e4, type: 2}
   - partName: 2
+    partType: 0
+    animatorOverrideController: {fileID: 22100000, guid: e089d6231475a4947aee7d6f93fb1117, type: 2}
+  - partName: 2
+    partType: 1
+    animatorOverrideController: {fileID: 22100000, guid: e089d6231475a4947aee7d6f93fb1117, type: 2}
+  - partName: 2
+    partType: 2
+    animatorOverrideController: {fileID: 22100000, guid: 0001aaa6531484148bf60004d19c21e0, type: 2}
+  - partName: 2
     partType: 4
     animatorOverrideController: {fileID: 22100000, guid: a93eb5b1c8388a843a303b9d9fca3a69, type: 2}
+  - partName: 2
+    partType: 5
+    animatorOverrideController: {fileID: 22100000, guid: 643f5437934b66c42b57df8fbb5aa7de, type: 2}
+  - partName: 4
+    partType: 0
+    animatorOverrideController: {fileID: 22100000, guid: 1a909bdea1263aa40824e72f10b7afa2, type: 2}
+  - partName: 4
+    partType: 1
+    animatorOverrideController: {fileID: 22100000, guid: 1a909bdea1263aa40824e72f10b7afa2, type: 2}
+  - partName: 4
+    partType: 2
+    animatorOverrideController: {fileID: 22100000, guid: 7ea915c4fe025ce4ea91bfa22397a911, type: 2}
+  - partName: 4
+    partType: 4
+    animatorOverrideController: {fileID: 22100000, guid: ca6eae3f22694f8419cd6bea0e6ed862, type: 2}
+  - partName: 4
+    partType: 5
+    animatorOverrideController: {fileID: 22100000, guid: 1a909bdea1263aa40824e72f10b7afa2, type: 2}
 --- !u!1 &2131799281
 GameObject:
   m_ObjectHideFlags: 0
@@ -1572,3 +1644,4 @@ SceneRoots:
   - {fileID: 1451270984}
   - {fileID: 2131799283}
   - {fileID: 1894719953}
+  - {fileID: 1301201665}

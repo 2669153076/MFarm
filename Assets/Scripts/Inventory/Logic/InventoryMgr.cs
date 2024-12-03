@@ -18,11 +18,12 @@ namespace Inventory
         private void OnEnable()
         {
             EventHandler.DropItemInSceneEvent += OnDropItemInSceneEvent;
+            EventHandler.HarvestAtPlayerPositionEvent += OnHarvestAtPlayerPositionEvent;
         }
-
         private void OnDisable()
         {
             EventHandler.DropItemInSceneEvent -= OnDropItemInSceneEvent;
+            EventHandler.HarvestAtPlayerPositionEvent -= OnHarvestAtPlayerPositionEvent;
         }
         private void Start()
         {
@@ -58,7 +59,6 @@ namespace Inventory
             //更新UI
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
-
         /// <summary>
         /// 交换物品位置
         /// </summary>
@@ -80,7 +80,6 @@ namespace Inventory
             }
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
-
         /// <summary>
         /// 检查背包是否有空位
         /// </summary>
@@ -171,10 +170,19 @@ namespace Inventory
         }
 
 
-        private void OnDropItemInSceneEvent(int id, Vector3 pos)
+
+        private void OnDropItemInSceneEvent(int id, Vector3 pos, E_ItemType itemType)
         {
             RemoveItemByIndex(id, 1);
         }
+        private void OnHarvestAtPlayerPositionEvent(int itemId)
+        {
+            var index = GetItemIndexInBag(itemId);
+            AddItemByIndex(itemId, index, 1);
+
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+        }
+
     }
 }
 

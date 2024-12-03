@@ -1,3 +1,4 @@
+using CropPlant;
 using GridMap;
 using System.Collections;
 using System.Collections.Generic;
@@ -114,12 +115,21 @@ public class CursorMgr : Singleton<CursorMgr>
         TileDetails currentTile = GridMapMgr.Instance.GetTileDetailsOnMousePosition(mouseGridPos);
         if(currentTile != null)
         {
+            CropDetails currentCropDetails = CropMgr.Instance.GetCropDetails(currentTile.seedItemId);
             //WORKFLOW:补充物品类型的判断
             switch (currentItemDetails.itemType)
             {
                 case E_ItemType.None:
                     break;
                 case E_ItemType.Seed:
+                    if(currentTile.daysSinceDig>-1&&currentTile.seedItemId == -1)
+                    {
+                        SetCursorValid();
+                    }
+                    else
+                    {
+                        SetCursorInValid();
+                    }
                     break;
                 case E_ItemType.Commodity:
                     if (currentTile.canDropItem)
@@ -160,6 +170,24 @@ public class CursorMgr : Singleton<CursorMgr>
                     }
                     break;
                 case E_ItemType.CollectTool:
+                    if (currentCropDetails != null)
+                    {
+                        if (currentCropDetails.CheckToolAvailable(currentItemDetails.itemId))
+                        {
+                            if (currentTile.growthDays >= currentCropDetails.TotalGrowDays)
+                            {
+                                SetCursorValid();
+                            }
+                            else
+                            {
+                                SetCursorInValid();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        SetCursorInValid();
+                    }
                     break;
                 case E_ItemType.ReapableScenery:
                     break;
@@ -218,6 +246,7 @@ public class CursorMgr : Singleton<CursorMgr>
                 E_ItemType.HoeTool => tool,
                 E_ItemType.BreakTool => tool,
                 E_ItemType.ChopTool => tool,
+                E_ItemType.Furniture => tool,
                 E_ItemType.Seed=>seed,
                 E_ItemType.Commodity => commodity,
                 _=>normal,

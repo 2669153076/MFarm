@@ -62,6 +62,8 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Utilities\EventHandler.cs" />
     <Compile Include="Assets\Scripts\Map\Logic\GridMap.cs" />
+    <Compile Include="Assets\Scripts\Crop\Logic\CropMgr.cs" />
+    <Compile Include="Assets\Scripts\Crop\Logic\Crop.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ShowItemToolTip.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\InventoryUI.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="Assets\Scripts\Inventory\Data_SO\ItemDataList_SO.cs" />
     <Compile Include="Assets\Scripts\Transition\Teleport.cs" />
     <Compile Include="Assets\Scripts\Utilities\Settings.cs" />
+    <Compile Include="Assets\Scripts\Crop\Data\CropDataList_SO.cs" />
+    <Compile Include="Assets\Scripts\Crop\Data\CropDetails.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemBounce.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\SlotUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ItemToolTip.cs" />
@@ -432,18 +436,6 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.GradleProject">
-      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

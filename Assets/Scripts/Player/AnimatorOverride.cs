@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Inventory;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,11 +31,13 @@ public class AnimatorOverride : MonoBehaviour
     {
         EventHandler.ItemSelectedEvent += OnItemSelectedEvent;
         EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
+        EventHandler.HarvestAtPlayerPositionEvent += OnHarvestAtPlayerPositionEvent;
     }
     private void OnDisable()
     {
         EventHandler.ItemSelectedEvent -= OnItemSelectedEvent;
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+        EventHandler.HarvestAtPlayerPositionEvent -= OnHarvestAtPlayerPositionEvent;
     }
 
     private void OnItemSelectedEvent(ItemDetails itemDetails, bool isSelected)
@@ -46,6 +49,8 @@ public class AnimatorOverride : MonoBehaviour
             E_ItemType.Commodity => E_PartType.Carry,
             E_ItemType.HoeTool => E_PartType.Hoe,
             E_ItemType.WaterTool=>E_PartType.Water,
+            E_ItemType.CollectTool=>E_PartType.Collect,
+            E_ItemType.ChopTool=>E_PartType.Chop,
             _ => E_PartType.None,
         };
         if (!isSelected)
@@ -75,7 +80,6 @@ public class AnimatorOverride : MonoBehaviour
     /// <param name="e_PartType"></param>
     private void SwitchAnimator(E_PartType e_PartType)
     {
-        Debug.Log(e_PartType);
         foreach (var item in animatorTypeList)
         {
             if(item.partType == e_PartType)
@@ -85,10 +89,27 @@ public class AnimatorOverride : MonoBehaviour
         }
     }
 
+    private IEnumerator ShowItem(Sprite itemSprite)
+    {
+        holdItem.sprite = itemSprite;
+        holdItem.enabled = true;
+        yield return new WaitForSeconds(1);
+        holdItem.enabled = false;
+    }
+
     private void OnBeforeSceneUnloadEvent()
     {
         holdItem.enabled = false;   
         SwitchAnimator(E_PartType.None);
     }
+    private void OnHarvestAtPlayerPositionEvent(int itemId)
+    {
+        Sprite itemSprite = InventoryMgr.Instance.GetItemDetails(itemId).itemOnWorldSprite;
+        if(holdItem.enabled == false)
+        {
+            StartCoroutine(ShowItem(itemSprite));
+        }
+    }
+
 
 }
