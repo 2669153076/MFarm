@@ -10,7 +10,7 @@ public enum E_ItemType
     None,
     //种子、商品、家具、
     Seed, Commodity, Furniture,
-    //锄头工具、砍伐工具、破坏工具、收割工具、浇水工具、收集工具、
+    //锄头、斧头、十字镐、镰刀、水壶、篮子、
     HoeTool, ChopTool, BreakTool, ReapTool, WaterTool, CollectTool,
     //可收割风景（环境物品）、
     ReapableScenery,

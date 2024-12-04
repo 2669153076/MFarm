@@ -151,7 +151,7 @@ MonoBehaviour:
     particaleEffectType: 0
     effectPos: {x: 0, y: 0, z: 0}
   - seedItemId: 1017
-    growthDays: 0200000003000000030000000400000005000000
+    growthDays: 0100000002000000030000000400000005000000
     growthPrefabs:
     - {fileID: 8383511492729231225, guid: 041fd41c84256b54a8a482c198b967f9, type: 3}
     - {fileID: 8383511492729231225, guid: 041fd41c84256b54a8a482c198b967f9, type: 3}

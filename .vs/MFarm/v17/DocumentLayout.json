@@ -1,101 +1,101 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GitHub\\MFarm\\",
+  "WorkspaceRootPath": "E:\\Unity3D\\UnityExercises\\MFarm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\map\\logic\\gridmapmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\map\\logic\\gridmapmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\reapitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\reapitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\cropmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\inventory\\item\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\objectpool\\poolmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\crop\\logic\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\map\\logic\\gridmapmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\map\\logic\\gridmapmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\crop\\logic\\reapitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\reapitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\crop\\logic\\cropmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\item\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\objectpool\\poolmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectpool\\poolmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\data\\cropdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\crop\\data\\cropdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\data\\cropdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\ui\\actionbarbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\ui\\actionbarbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\ui\\actionbarbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\item\\itemshadow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\item\\itemshadow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\itemshadow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\GitHub\\MFarm\\assets\\editor\\uibuilder\\itemeditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\editor\\uibuilder\\itemeditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\uibuilder\\itemeditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\GitHub\\MFarm\\assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\item\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\inventory\\item\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -106,15 +106,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "PoolMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAAUwDsAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -123,13 +123,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Crop.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\Crop.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\Crop.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\Crop.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\Crop.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\Crop.cs",
               "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\Crop.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T07:55:47.25Z",
               "IsPinned": true,
@@ -139,11 +139,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CursorMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAAwKAAAABBAAAAAAAAAA==",
+              "ViewState": "AQIAAIcAAAAAAAAAAADwv50AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T07:17:25.654Z",
               "IsPinned": true,
@@ -151,39 +151,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GridMapMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
               "ViewState": "AgIAACQBAAAAAAAAAAAcwDIBAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T07:18:38.752Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ReapItem.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
               "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAwA4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-04T08:07:57.66Z",
-              "IsPinned": true,
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Enums.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Enums.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Enums.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwsAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:34:59.685Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Settings.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
               "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -191,63 +202,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Item.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\Item.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\Item.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\Item.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\Item.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\Item.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\Item.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAADMAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:07:13.896Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CropGenerator.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwDEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:50:15.445Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CropMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAkwAkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:16:24.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-04T08:07:13.896Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "CropGenerator.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwDEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-04T06:50:15.445Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CropMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAkwAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T07:16:24.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "EventHandler.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\EventHandler.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\Utilities\\EventHandler.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAwBsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:25:43.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T06:25:43.922Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "CropDetails.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
               "RelativeToolTip": "Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
               "ViewState": "AgIAACsAAAAAAAAAAAAAwDcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -257,9 +264,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "ItemShadow.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -269,9 +276,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "ActionBarButton.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAwA0AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -281,9 +288,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "ItemFader.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -293,9 +300,9 @@
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "ItemEditor.uss",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.uss",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.uss",
               "RelativeDocumentMoniker": "Assets\\Editor\\UIBuilder\\ItemEditor.uss",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.uss",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.uss",
               "RelativeToolTip": "Assets\\Editor\\UIBuilder\\ItemEditor.uss",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -305,9 +312,9 @@
               "$type": "Document",
               "DocumentIndex": 20,
               "Title": "ItemEditor.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
               "RelativeDocumentMoniker": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
               "RelativeToolTip": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAuwA0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -317,9 +324,9 @@
               "$type": "Document",
               "DocumentIndex": 21,
               "Title": "TimeMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAAwCUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -329,9 +336,9 @@
               "$type": "Document",
               "DocumentIndex": 17,
               "Title": "TriggerItemFader.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAADwvxoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -341,9 +348,9 @@
               "$type": "Document",
               "DocumentIndex": 23,
               "Title": "ItemPickUp.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -353,9 +360,9 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "Player.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
               "ViewState": "AgIAAJwAAAAAAAAAAAAkwKwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -363,36 +370,23 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Enums.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Enums.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Enums.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:34:59.685Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AnimatorOverride.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\AnimatorOverride.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\AnimatorOverride.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAADUAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:18:34.42Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-03T08:18:34.42Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
               "Title": "InventoryMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAowBEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -402,9 +396,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "ItemMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
