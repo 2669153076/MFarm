@@ -10,7 +10,7 @@ public class TriggerItemFader : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ItemFader[] faders = GetComponentsInChildren<ItemFader>();
+        ItemFader[] faders = collision.GetComponentsInChildren<ItemFader>();
 
         if(faders.Length > 0)
         {
@@ -23,7 +23,7 @@ public class TriggerItemFader : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        ItemFader[] faders = GetComponentsInChildren<ItemFader>();
+        ItemFader[] faders = collision.GetComponentsInChildren<ItemFader>();
 
         if (faders.Length > 0)
         {

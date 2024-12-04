@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace CropPlant
 {
+    /// <summary>
+    /// 作物管理类
+    /// </summary>
     public class CropMgr : Singleton<CropMgr>
     {
         public CropDataList_SO cropData;    //作物数据库
@@ -54,26 +57,6 @@ namespace CropPlant
             return false;
         }
 
-        private void OnPlantSeedEvent(int itemId, TileDetails tileDetails)
-        {
-            CropDetails currentCropDetails = GetCropDetails(itemId);
-
-            if(currentCropDetails!=null&&SeasonAvailable(currentCropDetails)&&tileDetails.seedItemId == -1) //当前作物信息不为空&&季节合适&&格子中没有作物种子
-            {
-                //播种
-                //格子中作物id为该作物种子id
-                //成长天数为0
-                tileDetails.seedItemId = itemId;
-                tileDetails.growthDays = 0;
-                //显示农作物
-                DisplayCropPlant(tileDetails, currentCropDetails);
-            }
-            else if(tileDetails.seedItemId !=-1)   //如果当前格子中有种子，刷新地图
-            {
-                //显示农作物
-                DisplayCropPlant(tileDetails, currentCropDetails);
-            }
-        }
         /// <summary>
         /// 显示农作物
         /// </summary>
@@ -105,9 +88,30 @@ namespace CropPlant
             cropInstance.GetComponentInChildren<SpriteRenderer>().sprite = cropSprite;
 
             cropInstance.GetComponent<Crop>().cropDetails = cropDetails;
+            cropInstance.GetComponent<Crop>().tileDetails = tileDetails;
         }
 
 
+        private void OnPlantSeedEvent(int itemId, TileDetails tileDetails)
+        {
+            CropDetails currentCropDetails = GetCropDetails(itemId);
+
+            if(currentCropDetails!=null&&SeasonAvailable(currentCropDetails)&&tileDetails.seedItemId == -1) //当前作物信息不为空&&季节合适&&格子中没有作物种子
+            {
+                //播种
+                //格子中作物id为该作物种子id
+                //成长天数为0
+                tileDetails.seedItemId = itemId;
+                tileDetails.growthDays = 0;
+                //显示农作物
+                DisplayCropPlant(tileDetails, currentCropDetails);
+            }
+            else if(tileDetails.seedItemId !=-1)   //如果当前格子中有种子，刷新地图
+            {
+                //显示农作物
+                DisplayCropPlant(tileDetails, currentCropDetails);
+            }
+        }
 
         private void OnAfterSceneLoadEvent()
         {

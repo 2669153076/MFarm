@@ -12,7 +12,7 @@ public enum E_ItemType
     Seed, Commodity, Furniture,
     //锄头工具、砍伐工具、破坏工具、收割工具、浇水工具、收集工具、
     HoeTool, ChopTool, BreakTool, ReapTool, WaterTool, CollectTool,
-    //可收割风景、
+    //可收割风景（环境物品）、
     ReapableScenery,
 }
 
@@ -43,7 +43,7 @@ public enum E_PartType
 {
     None,
     //举起、锄地、破坏
-    Carry,Hoe,Break,Water,Collect,Chop,
+    Carry,Hoe,Break,Water,Collect,Chop,Reap,
 }
 /// <summary>
 /// 实现动作的部分
@@ -71,5 +71,12 @@ public enum E_GridType {
     None,
     //挖坑、扔东西、添家具、NPC障碍
     Diggable,DropItem,PlaceFurniture,NPCObstacle
+}
+
+public enum E_ParticaleEffectType
+{
+    None,
+    //落叶1、落叶2、石头、庄稼
+    LeavesFalling01, LeavesFalling02,Rock,ReapableScenery,
 }
 

@@ -23,6 +23,9 @@ public static class EventHandler
     public static event Action<Vector3, ItemDetails> ExecuteActionAfterAnimation; //在动画之后执行的事件
     public static event Action<int, TileDetails> PlantSeedEvent;    //播种事件
     public static event Action<int> HarvestAtPlayerPositionEvent;   //在玩家位置生成农作物
+    public static event Action RefreshCurrentMap;   //刷新当前地图 
+    public static event Action<E_ParticaleEffectType,Vector3> ParticleEffectEvent;  //生成特效
+    public static event Action GenerateCropEvent;   //生成作物，刷新地图前
 
 
     public static void CallUpdateInventoryUIEvent(E_InventoryLocation e_InventoryLocation, List<InventoryItem> inventoryItemList)
@@ -85,5 +88,17 @@ public static class EventHandler
     public static void CallHarvestAtPlayerPositionEvent(int itemId)
     {
         HarvestAtPlayerPositionEvent?.Invoke(itemId);
+    }
+    public static void CallRefreshCurrentMap()
+    {
+        RefreshCurrentMap?.Invoke();
+    }
+    public static void CallParticleEffectEvent(E_ParticaleEffectType type,Vector3 pos)
+    {
+        ParticleEffectEvent?.Invoke(type, pos);
+    }
+    public static void CallGenerateCropEvent()
+    {
+        GenerateCropEvent?.Invoke();
     }
 }

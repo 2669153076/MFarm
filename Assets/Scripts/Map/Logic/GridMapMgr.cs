@@ -26,23 +26,31 @@ namespace GridMap
 
         private E_Season currentSeason; //当前季节
 
+        private Dictionary<string,bool> firstLoadDic = new Dictionary<string,bool>();   //场景是否是第一次被加载
+
+        private List<ReapItem> itemsInRadius;   //可收割道具列表
+
         private void OnEnable()
         {
             EventHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             EventHandler.GameDayEvent += OnGameDayEvent;
+            EventHandler.RefreshCurrentMap += OnRefreshCurrentMap;
         }
         private void OnDisable()
         {
             EventHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             EventHandler.GameDayEvent -= OnGameDayEvent;
+            EventHandler.RefreshCurrentMap -= OnRefreshCurrentMap;
         }
+
 
         private void Start()
         {
             foreach (var mapdata in mapDataList)
             {
+                firstLoadDic.Add(mapdata.sceneName, true);
                 InitTileDetailsDic(mapdata);
             }
         }
@@ -148,12 +156,16 @@ namespace GridMap
         /// 更新tile字典信息
         /// </summary>
         /// <param name="tileDetails"></param>
-        private void UpdateTileDetails(TileDetails tileDetails)
+        public void UpdateTileDetails(TileDetails tileDetails)
         {
             string key = tileDetails.gridPos.x + "x" + tileDetails.gridPos.y + "y" + SceneManager.GetActiveScene().name;
             if (tileDetailsDic.ContainsKey(key))
             {
                 tileDetailsDic[key] = tileDetails;
+            }
+            else
+            {
+                tileDetailsDic.Add(key, tileDetails);
             }
         }
 
@@ -178,7 +190,10 @@ namespace GridMap
                     {
                         SetWaterGround(tileDetails);
                     }
-                    EventHandler.CallPlantSeedEvent(tileDetails.seedItemId, tileDetails);
+                    if(tileDetails.seedItemId > -1)
+                    {
+                        EventHandler.CallPlantSeedEvent(tileDetails.seedItemId, tileDetails);
+                    }
                 }
             }
         }
@@ -212,7 +227,7 @@ namespace GridMap
         /// </summary>
         /// <param name="mouseWorldPos">鼠标坐标</param>
         /// <returns></returns>
-        private Crop GetCropObject(Vector3 mouseWorldPos)
+        public Crop GetCropObject(Vector3 mouseWorldPos)
         {
             Collider2D[] colliders = Physics2D.OverlapPointAll(mouseWorldPos);
 
@@ -228,6 +243,36 @@ namespace GridMap
             return currentCrop;
         }
 
+        /// <summary>
+        /// 返回工具范围内的杂草
+        /// </summary>
+        /// <param name="tool">工具信息</param>
+        /// <returns></returns>
+        public bool HaveReapableItemsInRadius(Vector3 mouseWorldPos,ItemDetails tool)
+        {
+            itemsInRadius = new List<ReapItem>();
+
+            Collider2D[] colliders = new Collider2D[20];
+            Physics2D.OverlapCircleNonAlloc(mouseWorldPos, tool.itemUseRadius, colliders);
+
+            if (colliders.Length > 0)   //范围内有碰撞体
+            {
+                for (int i = 0;i < colliders.Length;i++)
+                {
+                    if (colliders[i] != null)
+                    {
+                        if (colliders[i].GetComponent<ReapItem>())  //碰撞体是可收割物体
+                        {
+                            var item = colliders[i].GetComponent<ReapItem>();
+                            itemsInRadius.Add(item);
+                        }
+                    }
+                }
+            }
+
+            return itemsInRadius.Count > 0;
+        }
+
 
         private void OnExecuteActionAfterAnimation(Vector3 mouseWorldPos, ItemDetails itemDetails)
         {
@@ -236,40 +281,53 @@ namespace GridMap
 
             if (currentTile != null)
             {
+                Crop currentCrop = GetCropObject(mouseWorldPos);
                 //WORKFLOW:物品使用实际功能
                 switch (itemDetails.itemType)
                 {
                     case E_ItemType.None:
                         break;
-                    case E_ItemType.Seed:
+                    case E_ItemType.Seed:   //种子
                         EventHandler.CallPlantSeedEvent(itemDetails.itemId,currentTile);
                         EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
                         break;
-                    case E_ItemType.Commodity:
+                    case E_ItemType.Commodity:  //商品
                         EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
                         break;
-                    case E_ItemType.Furniture:
+                    case E_ItemType.Furniture:  //家具
                         break;
-                    case E_ItemType.HoeTool:
+                    case E_ItemType.HoeTool:    //锄头
                         SetDigGround(currentTile);
                         currentTile.daysSinceDig = 0;
                         currentTile.canDig = false;
                         currentTile.canDropItem = false;
                         break;
-                    case E_ItemType.ChopTool:
+                    case E_ItemType.BreakTool:  //十字镐
+                    case E_ItemType.ChopTool:   //斧头
+                        currentCrop?.ProcessToolAction(itemDetails, currentCrop.tileDetails);
                         break;
-                    case E_ItemType.BreakTool:
+                    case E_ItemType.ReapTool:   //镰刀
+                        var reapCount = 0;
+                        for (int i = 0; i < itemsInRadius.Count; i++)
+                        {
+                            EventHandler.CallParticleEffectEvent(E_ParticaleEffectType.ReapableScenery, itemsInRadius[i].transform.position + Vector3.up);
+                            itemsInRadius[i].SpawnHarvestItems();
+                            Destroy(itemsInRadius[i].gameObject);
+                            reapCount++;
+                            if (reapCount >= Settings.reapAmount)
+                            {
+                                break;
+                            }
+                        }
                         break;
-                    case E_ItemType.ReapTool:
-                        break;
-                    case E_ItemType.WaterTool:
+                    case E_ItemType.WaterTool:  //水壶
                         SetWaterGround(currentTile);
                         currentTile.daysSinceDig = 0;
                         break;
-                    case E_ItemType.CollectTool:
-                        Crop curretnCrop = GetCropObject(mouseWorldPos);
+                    case E_ItemType.CollectTool:    //篮子
+                        //Crop currentCrop = GetCropObject(mouseWorldPos);
                         //执行收割方法
-                        curretnCrop.ProcessToolAction(itemDetails);
+                        currentCrop?.ProcessToolAction(itemDetails,currentTile);
                         break;
                     case E_ItemType.ReapableScenery:
                         break;
@@ -285,6 +343,11 @@ namespace GridMap
             waterTileMap = GameObject.FindWithTag("Water").GetComponent<Tilemap>();
 
             //DisplayMap(SceneManager.GetActiveScene().name);
+            if (firstLoadDic[SceneManager.GetActiveScene().name])
+            {
+                EventHandler.CallGenerateCropEvent();   //预先生成农作物
+                firstLoadDic[SceneManager.GetActiveScene().name] = false;
+            }
             RefreshMap();
         }
 
@@ -315,6 +378,12 @@ namespace GridMap
                     tile.Value.growthDays++;
                 }
             }
+            RefreshMap();
+        }
+
+
+        private void OnRefreshCurrentMap()
+        {
             RefreshMap();
         }
 

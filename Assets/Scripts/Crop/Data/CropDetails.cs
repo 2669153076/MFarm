@@ -52,6 +52,8 @@ public class CropDetails
     public bool generateAtPlayerPosition;   //在player身上生成
     public bool hasAnimation;   //有没有动画
     public bool hasParticalEffect;  //有没有粒子特效
+    public E_ParticaleEffectType particaleEffectType;   //特效
+    public Vector3 effectPos;   //特效生成坐标
 
 
     /// <summary>

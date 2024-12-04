@@ -159,12 +159,17 @@ public class Player : MonoBehaviour
 
     private void OnMouseClickedEvent(Vector3 mousePos, ItemDetails itemDetails)
     {
+        if(isUseTool)
+        {
+            return;
+        }
+
         //TODO:执行动画
         //使用的是工具的话
         if (itemDetails.itemType != E_ItemType.Seed || itemDetails.itemType != E_ItemType.Commodity || itemDetails.itemType != E_ItemType.Furniture | itemDetails.itemType != E_ItemType.None)
         {
             mouseX = mousePos.x - transform.position.x;
-            mouseY = mousePos.y - transform.position.y;
+            mouseY = mousePos.y - (transform.position.y+1f);//鼠标y减去(人物坐标.y+身高)(因为是以人物脚下坐标计算的transform.position)
 
             if (Mathf.Abs(mouseX) > Mathf.Abs(mouseY))  //鼠标在x轴方向大于y轴方向距离
             {

@@ -21,4 +21,6 @@ public class Settings
 
     //场景切换相关
     public const float fadeDuration = 1.5f;
+
+    public const int reapAmount = 2;  //一次性销毁多少个可收割物品
 }

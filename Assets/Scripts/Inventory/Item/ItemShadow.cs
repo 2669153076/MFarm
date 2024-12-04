@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Inventory{
+    /// <summary>
+    /// 物品阴影
+    /// </summary>
     [RequireComponent(typeof(SpriteRenderer))]
     public class ItemShadow : MonoBehaviour
     {

@@ -10,6 +10,7 @@ public class ItemEditor : EditorWindow
 {
     [SerializeField]
     private VisualTreeAsset m_VisualTreeAsset = default;
+    [SerializeField]
     private Sprite defaultIcon; //默认物品图标
 
     private ItemDataList_SO dataBase;   //道具数据
@@ -52,7 +53,7 @@ public class ItemEditor : EditorWindow
         itemTypeField = itemDetailsSection.Q<EnumField>("ItemType");
         itemTypeField.Init(E_ItemType.None);
         
-        defaultIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/M Studio/Art/Items/Icons/icon_M.png");
+        defaultIcon = AssetDatabase.LoadAssetAtPath<Sprite>("Assets/_ArtRes/M_Studio/Art/Items/Icons/icon_M.png");
 
         root.Q<Button>("AddItem").clicked += OnAddItemClicked;
         root.Q<Button>("DeleteItem").clicked += OnDeleteItemClicked;

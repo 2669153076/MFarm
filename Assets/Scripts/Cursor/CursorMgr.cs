@@ -116,12 +116,13 @@ public class CursorMgr : Singleton<CursorMgr>
         if(currentTile != null)
         {
             CropDetails currentCropDetails = CropMgr.Instance.GetCropDetails(currentTile.seedItemId);
+            Crop currentCrop = GridMapMgr.Instance.GetCropObject(mouseWorldPos);
             //WORKFLOW:补充物品类型的判断
             switch (currentItemDetails.itemType)
             {
                 case E_ItemType.None:
                     break;
-                case E_ItemType.Seed:
+                case E_ItemType.Seed:   //种子
                     if(currentTile.daysSinceDig>-1&&currentTile.seedItemId == -1)
                     {
                         SetCursorValid();
@@ -131,7 +132,7 @@ public class CursorMgr : Singleton<CursorMgr>
                         SetCursorInValid();
                     }
                     break;
-                case E_ItemType.Commodity:
+                case E_ItemType.Commodity:  //商品
                     if (currentTile.canDropItem)
                     {
                         SetCursorValid();
@@ -141,9 +142,9 @@ public class CursorMgr : Singleton<CursorMgr>
                         SetCursorInValid();
                     }
                     break;
-                case E_ItemType.Furniture:
+                case E_ItemType.Furniture:  //家具
                     break;
-                case E_ItemType.HoeTool:
+                case E_ItemType.HoeTool:    //锄头
                      if (currentTile.canDig)
                     {
                         SetCursorValid();
@@ -153,13 +154,35 @@ public class CursorMgr : Singleton<CursorMgr>
                         SetCursorInValid();
                     }
                     break;
-                case E_ItemType.ChopTool:
+                case E_ItemType.BreakTool:  //十字镐
+                case E_ItemType.ChopTool:   //斧头
+                    if (currentCrop!=null)
+                    {
+                        if (currentCrop.CanHarvest && currentCrop.cropDetails.CheckToolAvailable(currentItemDetails.itemId))
+                        {
+                            SetCursorValid();
+                        }
+                        else 
+                        { 
+                            SetCursorInValid(); 
+                        }
+                    }
+                    else
+                    {
+                        SetCursorInValid();
+                    }
                     break;
-                case E_ItemType.BreakTool:
+                case E_ItemType.ReapTool:   //镰刀
+                    if (GridMapMgr.Instance.HaveReapableItemsInRadius(mouseWorldPos,currentItemDetails))
+                    {
+                        SetCursorValid();
+                    }
+                    else
+                    {
+                        SetCursorInValid();
+                    }
                     break;
-                case E_ItemType.ReapTool:
-                    break;
-                case E_ItemType.WaterTool:
+                case E_ItemType.WaterTool:  //水壶
                     if (currentTile.daysSinceDig > -1 && currentTile.daysSinceWatered == -1)
                     {
                         SetCursorValid();
@@ -169,7 +192,7 @@ public class CursorMgr : Singleton<CursorMgr>
                         SetCursorInValid();
                     }
                     break;
-                case E_ItemType.CollectTool:
+                case E_ItemType.CollectTool:    //篮子
                     if (currentCropDetails != null)
                     {
                         if (currentCropDetails.CheckToolAvailable(currentItemDetails.itemId))
@@ -189,7 +212,7 @@ public class CursorMgr : Singleton<CursorMgr>
                         SetCursorInValid();
                     }
                     break;
-                case E_ItemType.ReapableScenery:
+                case E_ItemType.ReapableScenery:    //可收割风景物品
                     break;
             }
         }
