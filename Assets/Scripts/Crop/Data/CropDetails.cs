@@ -61,7 +61,7 @@ public class CropDetails
     /// </summary>
     /// <param name="toolId">工具ID</param>
     /// <returns>
-    /// true 可用 </br>
+    /// true 可用 <br/>
     /// false 不可用
     /// </returns>
     public bool CheckToolAvailable(int toolId)

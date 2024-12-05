@@ -6,5 +6,13 @@ using UnityEngine;
 public class MapData_SO : ScriptableObject
 {
     [SceneName]public string sceneName;
+
+    [Header("地图信息")]
+    public int gridWidth;
+    public int gridHeight;
+    [Header("左下角原点")]   //Node计算是使用左下角计算的
+    public int originX;
+    public int originY;
+
     public List<TileProperty> tilePropertieList;
 }

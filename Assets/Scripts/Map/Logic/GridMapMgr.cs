@@ -118,7 +118,7 @@ namespace GridMap
         /// </summary>
         /// <param name="key">x坐标+x+y坐标+y+地图名</param>
         /// <returns></returns>
-        private TileDetails GetTileDetails(string key)
+        public TileDetails GetTileDetails(string key)
         {
             if (tileDetailsDic.ContainsKey(key))
             {
@@ -272,7 +272,32 @@ namespace GridMap
 
             return itemsInRadius.Count > 0;
         }
+        /// <summary>
+        /// 根据场景名字构建网格范围，输出范围和原点
+        /// </summary>
+        /// <param name="sceneName">场景名字</param>
+        /// <param name="gridDimensions">地图范围</param>
+        /// <param name="gridOrigin">地图左下角原点</param>
+        /// <returns>是否有该场景信息</returns>
+        public bool GetGridDimensions(string sceneName,out Vector2Int gridDimensions, out Vector2Int gridOrigin)
+        {
+            gridDimensions = Vector2Int.zero;
+            gridOrigin = Vector2Int.zero;
 
+            foreach (var mapData in mapDataList)
+            {
+                if(mapData.sceneName == sceneName)
+                {
+                    gridDimensions.x = mapData.gridWidth;
+                    gridDimensions.y = mapData.gridHeight;
+                    gridOrigin.x = mapData.originX;
+                    gridOrigin.y = mapData.originY;
+
+                    return true;
+                }
+            }
+            return false;
+        }
 
         private void OnExecuteActionAfterAnimation(Vector3 mouseWorldPos, ItemDetails itemDetails)
         {

@@ -4,9 +4,11 @@
         "m_EditorHideFlags": 0,
         "m_Name": "BuilderDocument",
         "m_EditorClassIdentifier": "UnityEditor.UIBuilderModule:Unity.UI.Builder:BuilderDocument",
-        "m_CurrentCanvasTheme": 0,
+        "m_CurrentCanvasTheme": 4,
         "m_CurrentCanvasThemeStyleSheetReference": {
-            "instanceID": 0
+            "fileID": -1456348168770453783,
+            "guid": "0000000000000000d000000000000000",
+            "type": 0
         },
         "m_CodePreviewVisible": true,
         "m_OpenUXMLFiles": [

@@ -84,7 +84,7 @@ namespace Inventory
         /// 检查背包是否有空位
         /// </summary>
         /// <returns>
-        /// true 有空位</br>
+        /// true 有空位<br/>
         /// false 无空位
         /// </returns>
         private bool CheckBagCapacity()
@@ -103,7 +103,7 @@ namespace Inventory
         /// </summary>
         /// <param name="id"></param>
         /// <returns>
-        /// -1 背包中没有该物品</br>
+        /// -1 背包中没有该物品<br/>
         /// i 物品在背包中的索引
         /// </returns>
         private int GetItemIndexInBag(int id)

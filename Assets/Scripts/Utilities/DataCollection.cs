@@ -92,7 +92,8 @@ public class TileProperty
     /// </summary>
     public E_GridType gridType;
     /// <summary>
-    /// 
+    /// 网格信息值是否改变
+    /// 能否挖掘、能否扔道具等等根据该值变化
     /// </summary>
     public bool boolTypeValue;
 }
@@ -113,5 +114,38 @@ public class TileDetails
     public int seedItemId = -1; //种下的种子id
     public int growthDays = -1; //种子成长了多少天
     public int daysSinceLastHarvest = -1;   //距离上一次收割过了多少天
-
 }
+/// <summary>
+/// NPC坐标
+/// </summary>
+[System.Serializable]
+public class NPCPosition
+{
+    public Transform npc;
+    public string startScene;
+    public Vector3 pos;
+}
+/// <summary>
+/// 场景路径
+/// 从入口到目标点
+/// </summary>
+[System.Serializable]
+public class ScenePath
+{
+    public string sceneName;
+    public Vector2Int fromGridCell;
+    public Vector2Int toGridCell;
+}
+/// <summary>
+/// 场景路线
+/// 从上一个场景到目标场景
+/// </summary>
+[System.Serializable]
+public class SceneRoute
+{
+    public string fromSceneName;
+    public string toSceneName;
+    public List<ScenePath> scenePathList;   //上一个场景到目标场景要经过的路线
+}
+
+

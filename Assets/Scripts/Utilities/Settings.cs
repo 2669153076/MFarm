@@ -23,4 +23,10 @@ public class Settings
     public const float fadeDuration = 1.5f;
 
     public const int reapAmount = 2;  //一次性销毁多少个可收割物品
+
+    public const float gridCellSize = 1;   //网格大小
+    public const float gridCellDiagonalSize = 1.41f;   //斜方向的网格距离
+    public const float pixelSize = 0.05f;   //单位像素距离   20*20 占 1 unit    
+    public const float animationBreakTime = 5f;   //动画间隔时间
+    public const float maxGridSize = 9999;  //格子最大尺寸
 }

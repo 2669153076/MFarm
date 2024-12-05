@@ -3,100 +3,60 @@
   "WorkspaceRootPath": "E:\\GitHub\\MFarm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\map\\logic\\gridmapmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\map\\logic\\gridmapmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\npc\\data\\sceneroutedatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\sceneroutedatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\eventhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\logic\\npcmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\logic\\npcmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\cropmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\inventory\\item\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\crop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\animatoroverride.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\logic\\reapitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\reapitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\enums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\objectpool\\poolmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\objectpool\\poolmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\data\\cropdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\data\\cropdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\ui\\actionbarbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\ui\\actionbarbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\logic\\itemmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\item\\itemshadow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\itemshadow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\triggeritemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\itemfader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\GitHub\\MFarm\\assets\\editor\\uibuilder\\itemeditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\uibuilder\\itemeditor.uss||{3B902123-F8A7-4915-9F01-361F908088D0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|E:\\GitHub\\MFarm\\assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EF4EEF7A-FBDA-BFF5-0D46-D073B83A127E}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\uibuilder\\itemeditor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\logic\\inventorymgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\inventory\\item\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inventory\\item\\itempickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\astar\\astartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\astartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\logic\\npcmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\logic\\npcmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\astar\\movementstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\movementstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\astar\\astar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\astar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\data\\scheduledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\scheduledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\data\\scheduledatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\scheduledatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\data\\cropdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\data\\cropdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -110,303 +70,176 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PoolMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ObjectPool\\PoolMgr.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAUwDsAAABHAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "NPCMovement.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
+              "ViewState": "AgIAAFoBAAAAAAAAAADwv3IBAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:14:38.001Z",
+              "WhenOpened": "2024-12-05T06:22:59.191Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Crop.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\Crop.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\Crop.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\Crop.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\Crop.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAwIAAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "NPCMgr.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:55:47.25Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T06:22:57.171Z",
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CursorMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAgwGsAAACdAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "DataCollection.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAUwIwAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:17:25.654Z",
+              "WhenOpened": "2024-12-05T09:14:17.328Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GridMapMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Map\\Logic\\GridMapMgr.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAwwJ4AAAAUAAAAAAAAAA==",
+              "Title": "SceneRouteDataList_SO.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:18:38.752Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-12-05T09:21:26.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ReapItem.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\ReapItem.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAwAQAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TimeUI.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:07:57.66Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Settings.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvxYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:28:23.316Z"
+              "WhenOpened": "2024-12-05T08:59:48.406Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Item.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\Item.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\Item.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\Item.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\Item.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAADMAAAA3AAAAAAAAAA==",
+              "Title": "CursorMgr.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAArwDkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T08:07:13.896Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T08:08:42.858Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CropGenerator.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwDEAAAA1AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "AStarTest.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStarTest.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\AStarTest.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStarTest.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AStar\\AStarTest.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAwC0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T06:50:15.445Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T07:36:49.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MoveMentStep.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\MoveMentStep.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\MoveMentStep.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\MoveMentStep.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AStar\\MoveMentStep.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T07:33:42.164Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CropMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropMgr.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAcwEAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T07:16:24.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EventHandler.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\EventHandler.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\EventHandler.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\EventHandler.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAAwBsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:25:43.922Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CropDetails.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Crop\\Data\\CropDetails.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAwDcAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:47:36.501Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ItemShadow.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\ItemShadow.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T05:53:40.043Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ActionBarButton.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\UI\\ActionBarButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA0AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T05:52:34.599Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ItemFader.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\ItemFader.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T02:34:11.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ItemEditor.uss",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.uss",
-              "RelativeDocumentMoniker": "Assets\\Editor\\UIBuilder\\ItemEditor.uss",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.uss",
-              "RelativeToolTip": "Assets\\Editor\\UIBuilder\\ItemEditor.uss",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-12-04T02:24:11.343Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ItemEditor.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
-              "RelativeDocumentMoniker": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Editor\\UIBuilder\\ItemEditor.cs",
-              "RelativeToolTip": "Assets\\Editor\\UIBuilder\\ItemEditor.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAuwA0AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-04T02:14:09.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
               "Title": "TimeMgr.cs",
               "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCUAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:35:36.747Z"
+              "WhenOpened": "2024-12-05T06:52:53.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "TriggerItemFader.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\TriggerItemFader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\TriggerItemFader.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAADwvxoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 9,
+              "Title": "AStar.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStar.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\AStar.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStar.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AStar\\AStar.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:20:19.484Z"
+              "WhenOpened": "2024-12-05T06:47:48.821Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ItemPickUp.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Item\\ItemPickUp.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "CropDataList_SO.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:20:16.39Z"
+              "WhenOpened": "2024-12-05T06:41:26.509Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Player.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Player.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\Player.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\Player.cs",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAkwKwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "ScheduleDataList_SO.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:20:03.444Z"
+              "WhenOpened": "2024-12-05T06:41:20.584Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "Enums.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Enums.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Enums.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Enums.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACwAAAAOAAAAAAAAAA==",
+              "Title": "ScheduleDetails.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBoAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:34:59.685Z"
+              "WhenOpened": "2024-12-05T06:22:17.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AnimatorOverride.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\AnimatorOverride.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Player\\AnimatorOverride.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\AnimatorOverride.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAuwDUAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 11,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvxwAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:18:34.42Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "InventoryMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Logic\\InventoryMgr.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAowBEAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:17:37.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ItemMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Inventory\\Logic\\ItemMgr.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:15:43.081Z"
+              "WhenOpened": "2024-12-05T06:16:15.742Z"
             }
           ]
         }

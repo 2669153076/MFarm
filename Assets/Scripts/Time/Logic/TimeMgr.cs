@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,14 +18,17 @@ namespace GameTime
         public bool gameClockPause; //是否暂停
         private float tikTimer; //计时器
 
+        public TimeSpan GameTime => new TimeSpan(gameHour, gameMinute, gameSecond);
+
         protected override void Awake()
         {
+            base.Awake();
             InitGameTime();
         }
         private void Start()
         {
             EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
-            EventHandler.CallGameMinuteEvent(gameMinute, gameHour);
+            EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason);
             EventHandler.CallGameDayEvent(gameDay, gameSeason);
         }
 
@@ -47,11 +51,11 @@ namespace GameTime
                     UpdateGameTime();
                 }
             }
-            if(Input.GetKeyDown(KeyCode.G))
+            if (Input.GetKeyDown(KeyCode.G))
             {
                 gameDay++;
                 EventHandler.CallGameDayEvent(gameDay, gameSeason);
-                EventHandler.CallGameDateEvent(gameHour,gameDay, gameMonth, gameYear,gameSeason);
+                EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
             }
         }
 
@@ -62,7 +66,7 @@ namespace GameTime
         {
             gameSecond = 0;
             gameMinute = 0;
-            gameHour = 21;
+            gameHour = 8;
             gameDay = 28;
             gameMonth = 11;
             gameYear = 2024;
@@ -120,8 +124,10 @@ namespace GameTime
                     }
                     EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
                 }
-                EventHandler.CallGameMinuteEvent(gameMinute, gameHour); //分钟变化带动小时变化
+                EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason); //分钟变化带动小时变化
             }
         }
+
+
     }
 }
