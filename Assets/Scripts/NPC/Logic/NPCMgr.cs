@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -41,8 +41,8 @@ public class NPCMgr : Singleton<NPCMgr>
     /// <summary>
     /// 获取场景路径
     /// </summary>
-    /// <param name="fromsceneName"></param>
-    /// <param name="tosceneName"></param>
+    /// <param name="fromsceneName">起点</param>
+    /// <param name="tosceneName">终点</param>
     /// <returns></returns>
     public SceneRoute GetSceneRoute(string fromsceneName,string tosceneName)
     {

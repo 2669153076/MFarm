@@ -25,6 +25,16 @@ namespace GameTime
             base.Awake();
             InitGameTime();
         }
+        private void OnEnable()
+        {
+            EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+            EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        }
+        private void OnDisable()
+        {
+            EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
+            EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        }
         private void Start()
         {
             EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
@@ -126,6 +136,18 @@ namespace GameTime
                 }
                 EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason); //分钟变化带动小时变化
             }
+        }
+
+
+
+        private void OnBeforeSceneUnloadEvent()
+        {
+            gameClockPause = true;
+        }
+
+        private void OnAfterSceneLoadEvent()
+        {
+            gameClockPause = false;
         }
 
 

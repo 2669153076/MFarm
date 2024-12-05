@@ -1,4 +1,4 @@
-using AStarAlgorithm;
+﻿using AStarAlgorithm;
 using GameTime;
 using System;
 using System.Collections;
@@ -212,7 +212,7 @@ public class NPCMovement : MonoBehaviour
         currentScheduleDetails = schedule;
         targetGridPosition = (Vector3Int)schedule.targetGridPosition;
         stopAnimationClip = schedule.clipAtStop;
-
+        
 
         if (schedule.targetScene == currentScene)
         {
@@ -229,6 +229,29 @@ public class NPCMovement : MonoBehaviour
                 {
                     Vector2Int fromPos, toPos;
                     ScenePath scenePath = sceneRoute.scenePathList[i];
+
+                    if(scenePath.fromGridCell.x >= Settings.maxGridSize|| scenePath.fromGridCell.y >= Settings.maxGridSize)
+                    {
+                        //来的地方是当前坐标
+                        fromPos = (Vector2Int)currentGridPosition;
+                    }
+                    else
+                    {
+                        //表示跨场景 
+                        fromPos = scenePath.fromGridCell;
+                    }
+                    if (scenePath.toGridCell.x >= Settings.maxGridSize|| scenePath.toGridCell.y >= Settings.maxGridSize)
+                    {
+                        //当前场景的目标点
+                        toPos = schedule.targetGridPosition;
+                    }
+                    else
+                    {
+                        //跨场景的目标点
+                        toPos = scenePath.toGridCell;
+                    }
+
+                    AStar.Instance.BuildPath(scenePath.sceneName, fromPos, toPos, moveMentStepStack);
                 }
             }
         }
@@ -261,10 +284,12 @@ public class NPCMovement : MonoBehaviour
             TimeSpan gridMovementStepTime;  //走过每一个格子所需要的时间长度
             if (MoveInDiagonal(previousStep, step))
             {
+                //斜向格子时间
                 gridMovementStepTime = new TimeSpan(0, 0, (int)(Settings.gridCellDiagonalSize / normalSpeed / Settings.secondThreshold));
             }
             else
             {
+                //直线格子时间
                 gridMovementStepTime = new TimeSpan(0, 0, (int)(Settings.gridCellSize / normalSpeed / Settings.secondThreshold));
             }
             curremtGameTime = curremtGameTime.Add(gridMovementStepTime);
@@ -344,13 +369,13 @@ public class NPCMovement : MonoBehaviour
         spriteRenderer.enabled = true;
         boxCollider.enabled = true;
 
-        //transform.GetChild(0).gameObject.SetActive(true);   
+        transform.GetChild(0).gameObject.SetActive(true);
     }
     private void SetInactiveInScenc()
     {
         spriteRenderer.enabled = false;
         boxCollider.enabled = false;
-        //transform.GetChild(0).gameObject.SetActive(false);  //影子关闭
+        transform.GetChild(0).gameObject.SetActive(false);  //影子关闭
     }
 
     #region 事件相关

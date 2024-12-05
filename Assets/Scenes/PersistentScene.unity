@@ -821,7 +821,7 @@ MonoBehaviour:
   npcMovement: {fileID: 149154080}
   moveNPC: 0
   targetSceneName: 01_Field
-  targetPos: {x: 15, y: -15}
+  targetPos: {x: 3, y: -1}
   stopClip: {fileID: 7400000, guid: 54d560542c0284c169c56cddc7145ac6, type: 2}
 --- !u!114 &746411759
 MonoBehaviour:
@@ -862,6 +862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79bf19a76e677740a20d5c2f10cfb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneRouteData: {fileID: 11400000, guid: 08f2c07cbb4379649a6583a5a4610e8c, type: 2}
   npcPositionList:
   - npc: {fileID: 149154079}
     startScene: 01_Field

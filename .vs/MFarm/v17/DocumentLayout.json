@@ -1,61 +1,65 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GitHub\\MFarm\\",
+  "WorkspaceRootPath": "E:\\Unity3D\\UnityExercises\\MFarm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\logic\\npcmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\logic\\npcmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\logic\\npcmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\logic\\npcmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\github\\mfarm\\assets\\scripts\\npc\\data\\sceneroutedatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\sceneroutedatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\astar\\astartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\astartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\astar\\movementstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\movementstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\astar\\astar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\astar\\astar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\astar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\data\\scheduledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\logic\\cropgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|e:\\unity3d\\unityexercises\\mfarm\\assets\\scripts\\npc\\logic\\npcmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\logic\\npcmovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\astar\\astartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\astartest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\npc\\data\\scheduledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\scheduledetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\npc\\data\\scheduledatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\logic\\timemgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\npc\\logic\\npcmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\logic\\npcmgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\utilities\\datacollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\npc\\data\\sceneroutedatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\sceneroutedatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\time\\ui\\timeui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cursor\\cursormgr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\astar\\movementstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\astar\\movementstep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\npc\\data\\scheduledatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\npc\\data\\scheduledatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\GitHub\\MFarm\\assets\\scripts\\crop\\data\\cropdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|E:\\Unity3D\\UnityExercises\\MFarm\\assets\\scripts\\crop\\data\\cropdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EDD87590-62B8-D160-FE5D-8980CE3D3611}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\crop\\data\\cropdatalist_so.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -66,17 +70,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "NPCMovement.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\Logic\\NPCMovement.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAIwOYAAABGAAAAAAAAAA==",
+              "ViewState": "AQIAAOgAAAAAAAAAAAAAAP0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T06:22:59.191Z",
               "IsPinned": true,
@@ -84,51 +88,129 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NPCMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAIwBgAAAAzAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AStarTest.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\AStar\\AStarTest.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\AStarTest.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\AStar\\AStarTest.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AStar\\AStarTest.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowC0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T06:22:57.171Z",
+              "WhenOpened": "2024-12-05T07:36:49.882Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataCollection.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DataCollection.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\DataCollection.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAUwIwAAAAPAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CropGenerator.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Crop\\Logic\\CropGenerator.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAADwvwAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T09:14:17.328Z",
-              "IsPinned": true
+              "WhenOpened": "2024-12-05T12:58:55.725Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
+              "Title": "TimeMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAADwvxQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T06:52:53.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Settings.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T06:16:15.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AStar.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\AStar\\AStar.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\AStar.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\AStar\\AStar.cs",
+              "RelativeToolTip": "Assets\\Scripts\\AStar\\AStar.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAqwDoAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T06:47:48.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ScheduleDetails.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAApwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T06:22:17.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NPCMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\NPC\\Logic\\NPCMgr.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAADwvxMAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T06:22:57.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DataCollection.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Utilities\\DataCollection.cs",
+              "ViewState": "AQIAAH8AAAAAAAAAAAA4wI8AAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:14:17.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "SceneRouteDataList_SO.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\SceneRouteDataList_SO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAArAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAADwvwcAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T09:21:26.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "TimeUI.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\UI\\TimeUI.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Time\\UI\\TimeUI.cs",
               "RelativeToolTip": "Assets\\Scripts\\Time\\UI\\TimeUI.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAqwGAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -136,11 +218,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "CursorMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Cursor\\CursorMgr.cs",
               "RelativeToolTip": "Assets\\Scripts\\Cursor\\CursorMgr.cs",
               "ViewState": "AgIAACgAAAAAAAAAAAArwDkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -148,23 +230,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "AStarTest.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStarTest.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\AStarTest.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStarTest.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AStar\\AStarTest.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAwC0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T07:36:49.882Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "MoveMentStep.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\MoveMentStep.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\AStar\\MoveMentStep.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\MoveMentStep.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\MoveMentStep.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\AStar\\MoveMentStep.cs",
               "RelativeToolTip": "Assets\\Scripts\\AStar\\MoveMentStep.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -172,35 +242,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TimeMgr.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Time\\Logic\\TimeMgr.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvxcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T06:52:53.684Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AStar.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStar.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\AStar\\AStar.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\AStar\\AStar.cs",
-              "RelativeToolTip": "Assets\\Scripts\\AStar\\AStar.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T06:47:48.821Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "CropDataList_SO.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
               "RelativeToolTip": "Assets\\Scripts\\Crop\\Data\\CropDataList_SO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -208,40 +254,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "ScheduleDataList_SO.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
+              "DocumentMoniker": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
+              "ToolTip": "E:\\Unity3D\\UnityExercises\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
               "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\ScheduleDataList_SO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-05T06:41:20.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ScheduleDetails.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
-              "RelativeToolTip": "Assets\\Scripts\\NPC\\Data\\ScheduleDetails.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBoAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T06:22:17.119Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Settings.cs",
-              "DocumentMoniker": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ToolTip": "E:\\GitHub\\MFarm\\Assets\\Scripts\\Utilities\\Settings.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Utilities\\Settings.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvx4AAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T06:16:15.742Z",
-              "EditorCaption": ""
             }
           ]
         }
