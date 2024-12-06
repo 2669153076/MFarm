@@ -167,7 +167,7 @@ namespace AStarAlgorithm{
         /// <returns>邻近的有效的Node</returns>
         private Node GetValidNeighbourNode(int x, int y)
         {
-            if (x > gridWidth || y > gridHeight || x < 0 || y < 0)
+            if (x >= gridWidth || y >= gridHeight || x < 0 || y < 0)
             {
                 return null;
             }

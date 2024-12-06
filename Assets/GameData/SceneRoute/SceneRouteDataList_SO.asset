@@ -26,8 +26,8 @@ MonoBehaviour:
     toSceneName: 01_Field
     scenePathList:
     - sceneName: 01_Field
-      fromGridCell: {x: 10, y: -13}
+      fromGridCell: {x: 9, y: -10}
       toGridCell: {x: 99999, y: 99999}
     - sceneName: 02_Home
       fromGridCell: {x: 99999, y: 99999}
-      toGridCell: {x: -7, y: -8}
+      toGridCell: {x: 3, y: -1}

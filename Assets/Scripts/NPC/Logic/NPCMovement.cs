@@ -3,6 +3,7 @@ using GameTime;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -60,6 +61,7 @@ public class NPCMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
+
         moveMentStepStack = new Stack<MoveMentStep>();
 
         animatorOverride = new AnimatorOverrideController(animator.runtimeAnimatorController);
@@ -229,25 +231,26 @@ public class NPCMovement : MonoBehaviour
                 {
                     Vector2Int fromPos, toPos;
                     ScenePath scenePath = sceneRoute.scenePathList[i];
+                    
 
                     if(scenePath.fromGridCell.x >= Settings.maxGridSize|| scenePath.fromGridCell.y >= Settings.maxGridSize)
                     {
-                        //来的地方是当前坐标
+                        //来的地方是当前场景中当前坐标
                         fromPos = (Vector2Int)currentGridPosition;
                     }
                     else
                     {
-                        //表示跨场景 
+                        //另一个场景中，角色生成的对应位置
                         fromPos = scenePath.fromGridCell;
                     }
                     if (scenePath.toGridCell.x >= Settings.maxGridSize|| scenePath.toGridCell.y >= Settings.maxGridSize)
                     {
-                        //当前场景的目标点
+                        //当前场景的目标点 使用scheduledataList_So中配置的目标
                         toPos = schedule.targetGridPosition;
                     }
                     else
                     {
-                        //跨场景的目标点
+                        //跨场景的目标点  使用sceneroutedatalist_so中配置的目标点
                         toPos = scenePath.toGridCell;
                     }
 
@@ -270,6 +273,7 @@ public class NPCMovement : MonoBehaviour
         MoveMentStep previousStep = null;
 
         TimeSpan curremtGameTime = GameTime;
+
         foreach (var step in moveMentStepStack)
         {
             if (previousStep == null)
@@ -398,12 +402,17 @@ public class NPCMovement : MonoBehaviour
     private void OnGameMinuteEvent(int hour, int minute,int day , E_Season season)
     {
         int time = (hour * 100) + minute;
+        
         ScheduleDetails matchSchedule = null;
         foreach (var schedule in scheduleSet)
         {
             if (schedule.Time == time)
             {
-                if (schedule.season != season || (schedule.day != 0 && schedule.day != day))
+                if (schedule.season != season)
+                {
+                    continue;
+                }
+                if (schedule.day != 0 && schedule.day != day)
                 {
                     continue;
                 }
