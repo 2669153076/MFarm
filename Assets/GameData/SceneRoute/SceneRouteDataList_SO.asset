@@ -17,8 +17,8 @@ MonoBehaviour:
     toSceneName: 02_Home
     scenePathList:
     - sceneName: 02_Home
-      fromGridCell: {x: 3, y: -1}
-      toGridCell: {x: 99999, y: 99999}
+      fromGridCell: {x: -7, y: -8}
+      toGridCell: {x: 3, y: -1}
     - sceneName: 01_Field
       fromGridCell: {x: 99999, y: 99999}
       toGridCell: {x: 9, y: -10}
@@ -26,8 +26,26 @@ MonoBehaviour:
     toSceneName: 01_Field
     scenePathList:
     - sceneName: 01_Field
-      fromGridCell: {x: 9, y: -10}
-      toGridCell: {x: 99999, y: 99999}
+      fromGridCell: {x: 10, y: -13}
+      toGridCell: {x: 9, y: -10}
     - sceneName: 02_Home
       fromGridCell: {x: 99999, y: 99999}
       toGridCell: {x: 3, y: -1}
+  - fromSceneName: 01_Field
+    toSceneName: 03_Stall
+    scenePathList:
+    - sceneName: 03_Stall
+      fromGridCell: {x: -21, y: -35}
+      toGridCell: {x: -24, y: -9}
+    - sceneName: 01_Field
+      fromGridCell: {x: 99999, y: 99999}
+      toGridCell: {x: 25, y: 13}
+  - fromSceneName: 03_Stall
+    toSceneName: 01_Field
+    scenePathList:
+    - sceneName: 01_Field
+      fromGridCell: {x: 25, y: 13}
+      toGridCell: {x: 8, y: -3}
+    - sceneName: 03_Stall
+      fromGridCell: {x: 9999, y: 9999}
+      toGridCell: {x: -21, y: -35}

@@ -39,7 +39,7 @@ public class NPCMovement : MonoBehaviour
     private BoxCollider2D boxCollider;
     private Animator animator;
 
-    private Stack<MoveMentStep> moveMentStepStack;  //移动路径
+    private Stack<MoveMentStep> movementStepStack;  //移动路径
     private Grid currentGrid;
 
     private bool isInitialised; //是否已经初始化过
@@ -62,7 +62,7 @@ public class NPCMovement : MonoBehaviour
         boxCollider = GetComponent<BoxCollider2D>();
         animator = GetComponent<Animator>();
 
-        moveMentStepStack = new Stack<MoveMentStep>();
+        movementStepStack = new Stack<MoveMentStep>();
 
         animatorOverride = new AnimatorOverrideController(animator.runtimeAnimatorController);
         animator.runtimeAnimatorController = animatorOverride;
@@ -79,6 +79,7 @@ public class NPCMovement : MonoBehaviour
         EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         EventHandler.GameMinuteEvent += OnGameMinuteEvent;
+
     }
 
     private void OnDisable()
@@ -87,6 +88,7 @@ public class NPCMovement : MonoBehaviour
         EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
         EventHandler.GameMinuteEvent -= OnGameMinuteEvent;
     }
+
     private void Update()
     {
         if (sceneLoaded)
@@ -139,12 +141,13 @@ public class NPCMovement : MonoBehaviour
     /// </summary>
     private void Movement()
     {
+
         if (!npcMove)
         {
             //要移动到指定点的栈
-            if (moveMentStepStack.Count > 0)
+            if (movementStepStack.Count > 0)
             {
-                MoveMentStep step = moveMentStepStack.Pop();
+                MoveMentStep step = movementStepStack.Pop();
 
                 currentScene = step.sceneName;
 
@@ -210,7 +213,7 @@ public class NPCMovement : MonoBehaviour
     /// <param name="schedule"></param>
     public void BuildPath(ScheduleDetails schedule)
     {
-        moveMentStepStack.Clear();
+        movementStepStack.Clear();
         currentScheduleDetails = schedule;
         targetGridPosition = (Vector3Int)schedule.targetGridPosition;
         stopAnimationClip = schedule.clipAtStop;
@@ -218,7 +221,7 @@ public class NPCMovement : MonoBehaviour
 
         if (schedule.targetScene == currentScene)
         {
-            AStar.Instance.BuildPath(schedule.targetScene, (Vector2Int)currentGridPosition, schedule.targetGridPosition, moveMentStepStack);
+            AStar.Instance.BuildPath(schedule.targetScene, (Vector2Int)currentGridPosition, schedule.targetGridPosition, movementStepStack);
         }
         //跨场景移动
         else if(schedule.targetScene!=currentScene)
@@ -254,12 +257,12 @@ public class NPCMovement : MonoBehaviour
                         toPos = scenePath.toGridCell;
                     }
 
-                    AStar.Instance.BuildPath(scenePath.sceneName, fromPos, toPos, moveMentStepStack);
+                    AStar.Instance.BuildPath(scenePath.sceneName, fromPos, toPos, movementStepStack);
                 }
             }
         }
 
-        if (moveMentStepStack.Count > 1)
+        if (movementStepStack.Count > 1)
         {
             //更新每一步对应的时间戳
             UpdateTimeOnPath();
@@ -274,7 +277,7 @@ public class NPCMovement : MonoBehaviour
 
         TimeSpan curremtGameTime = GameTime;
 
-        foreach (var step in moveMentStepStack)
+        foreach (var step in movementStepStack)
         {
             if (previousStep == null)
             {
@@ -325,7 +328,7 @@ public class NPCMovement : MonoBehaviour
     /// <returns></returns>
     private Vector3 GetWorldPosition(Vector3Int gridPos)
     {
-        Vector3 worldPos = currentGrid.WorldToCell(gridPos);
+        Vector3 worldPos = currentGrid.CellToWorld(gridPos);
         return new Vector3(worldPos.x + Settings.gridCellSize / 2f, worldPos.y + Settings.gridCellSize / 2, 0);
     }
     /// <summary>

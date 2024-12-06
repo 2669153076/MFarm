@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 7091
+  controlID: 130
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 6962
+  controlID: 23
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -167,8 +167,8 @@ MonoBehaviour:
     y: 0
     width: 907
     height: 475
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: GameView
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -194,15 +194,15 @@ MonoBehaviour:
     y: 475
     width: 907
     height: 472
-  m_MinSize: {x: 201, y: 221}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 7011
+  controlID: 80
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -301,8 +301,8 @@ MonoBehaviour:
     y: 0
     width: 420
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -737,9 +737,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.37383386, y: 3.130833, z: 0}
+    m_Target: {x: -24.488829, y: -8.051526, z: -0.025681555}
     speed: 2
-    m_Value: {x: -0.37383386, y: 3.130833, z: 0}
+    m_Value: {x: -24.488829, y: -8.051526, z: -0.025681555}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -789,9 +789,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 10
+    m_Target: 2.7218213
     speed: 2
-    m_Value: 10
+    m_Value: 2.7218213
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1147,8 +1147,6 @@ MonoBehaviour:
   m_BreadCrumbs:
   - m_Target: {fileID: 2350390463619652840, guid: b6bb43bc711fa8f46887444fc7a5347b, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
-  - m_Target: {fileID: 5612940446238577304, guid: b6bb43bc711fa8f46887444fc7a5347b, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -1227,7 +1225,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -1328,7 +1326,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 42142
+  m_LastSelectedObjectID: 43236
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1366,23 +1364,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: ec540000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: fa18fcff743ffcff9895fcff068dfdffa8bffdff40f4fdff765afeff1061ffff5e6effff74a400007aa40000ceb10000f4c10000d4c80000d8c800007aca0000ceca0000dcca000074df000080df00005a540100665401005edd010038fa010044fa0100f0fa01009e0d0200fa0f0200321402006438020074380200b6390200c2390200f03c0200f63c0200
+      m_ExpandedIDs: 2e40feffca51feff9284feff6ea7feff5cd7feffca02ffff0664ffff0e64ffffbaa80000e6a9000040aa00007a1201008a120100c6220100d62201002a320100b6320100323301006a330100fe3d01007840010080410100b84101007c5e01005c6b0100047601006c770100bc780100bc790100987c01008ead010024be0100b0be010024bf01005cbf010086bf010084cb01006ad701007ad70100a6d80100b8e401001ce601002ce60100460f0200560f020096260200b4260200ec270200da330200de330200c83f02000849020098540200a8540200d0550200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Dig
-        m_OriginalName: Dig
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 145754
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 10}
       m_SearchString: 
@@ -1437,7 +1435,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/NPC/Logic
+    - Assets/GameData/SceneRoute
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1446,14 +1444,14 @@ MonoBehaviour:
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\GitHub\MFarm
+  m_LastProjectPath: E:\Unity3D\UnityExercises\MFarm
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: ce5c0000
     m_LastClickedID: 23758
-    m_ExpandedIDs: ffffffff00000000d8170000dc170000e8170000f01700000018000004180000081800000c18000010180000181800001c18000024180000281800002c180000341800003c180000401800005418000058180000601800006c180000781800007c1800008018000084180000881800008c1800009018000094180000a8180000ac180000c4180000c8180000dc180000e0180000e4180000f0180000f4180000001900000c1900001819000020190000281900003c190000a87700005696000010970000a4ab0000a6ab0000a8ab0000aaab0000aeab0000b4ab0000b6ab0000b8ab0000baab0000bcab0000c0ab0000faab00001cac00001eb60000
+    m_ExpandedIDs: 00000000e2520000e6520000f2520000fa5200000a5300000e530000125300002e530000325300003e5300004253000046530000525300005a5300005e53000062530000665300006e53000072530000765300007e530000825300008a5300008e530000a2530000b2530000d2530000de530000fa530000fe5300000a540000225400002a5400003254000046540000329c0000a09c0000589d0000f0af0000f2af0000f4af0000f6af0000f8af0000faaf0000fcaf0000feaf000000b0000002b0000004b0000006b0000008b000000ab000000cb000000eb0000010b0000012b0000014b0000016b0000018b000001ab000001cb00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1478,21 +1476,21 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 3300}
+    scrollPos: {x: 0, y: 2820}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000d8170000dc170000e8170000f0170000001800000418000008180000241800002818000034180000381800003c180000481800005018000054180000581800005c18000064180000681800006c1800007418000078180000801800008418000098180000a8180000c8180000d4180000f0180000f4180000001900001819000020190000281900003c190000c895000056960000109700009eab0000a0ab0000a2ab0000a4ab0000a6ab0000a8ab0000aaab0000aeab0000baab0000bcab0000beab0000c0ab0000faab000002ac000010ac00001cac00002aac0000d6b30000d8b3000020b6000096d800009ad800009cd80000
+    m_ExpandedIDs: ffffffff00000000e2520000e6520000f2520000fa5200000a5300000e53000012530000165300002e530000325300003e5300004253000046530000525300005a5300005e53000062530000665300006e53000072530000765300007e530000825300008a5300008e530000a2530000b2530000d2530000de530000fa530000fe5300000a540000225400002a5400003254000046540000329c0000a09c0000589d0000f0af0000f2af0000f4af0000f6af0000f8af0000faaf0000fcaf0000feaf000000b0000002b0000004b0000006b0000008b000000ab000000cb000000eb0000010b0000012b0000014b0000016b0000018b000001ab000001cb00000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ScheduleDetails
-      m_OriginalName: ScheduleDetails
+      m_Name: ItemEditor
+      m_OriginalName: ItemEditor
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 21692
+      m_UserData: 21672
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0

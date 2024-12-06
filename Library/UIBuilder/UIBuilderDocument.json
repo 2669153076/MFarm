@@ -4,11 +4,9 @@
         "m_EditorHideFlags": 0,
         "m_Name": "BuilderDocument",
         "m_EditorClassIdentifier": "UnityEditor.UIBuilderModule:Unity.UI.Builder:BuilderDocument",
-        "m_CurrentCanvasTheme": 4,
+        "m_CurrentCanvasTheme": 0,
         "m_CurrentCanvasThemeStyleSheetReference": {
-            "fileID": -1456348168770453783,
-            "guid": "0000000000000000d000000000000000",
-            "type": 0
+            "instanceID": 0
         },
         "m_CodePreviewVisible": true,
         "m_OpenUXMLFiles": [
@@ -45,10 +43,10 @@
                     "CanvasWidth": 653,
                     "CanvasHeight": 500,
                     "MatchGameView": false,
-                    "ZoomScale": 0.949999988079071,
+                    "ZoomScale": 1.0,
                     "PanOffset": {
-                        "x": 14.865509033203125,
-                        "y": 57.862701416015628
+                        "x": 123.5,
+                        "y": 153.0
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
