@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -46,8 +46,8 @@ namespace Transition{
             yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());  //异步卸载场景
 
             yield return LoadSceneSetActive(sceneName); //携程异步加载场景并激活
-            EventHandler.CallMoveToPositionEvent(targetPosition);   //移动角色坐标
             EventHandler.CallAfterSceneLoadEvent();
+            EventHandler.CallMoveToPositionEvent(targetPosition);   //移动角色坐标
             yield return Fade(0);
         }
 

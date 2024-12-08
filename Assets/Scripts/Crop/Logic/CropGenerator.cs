@@ -1,4 +1,4 @@
-using GridMap;
+﻿using GridMap;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +6,8 @@ using UnityEngine;
 namespace CropPlant{
     /// <summary>
     /// 作物生成管理器
-    /// 初始化场景中使用
+    /// 初始化场景使用，在编辑模式下放置作物
+    /// 挂载在作物身上
     /// </summary>
     public class CropGenerator : MonoBehaviour
     {

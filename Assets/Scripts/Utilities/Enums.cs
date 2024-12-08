@@ -27,12 +27,12 @@ public enum E_SlotType
 }
 
 /// <summary>
-/// 库存位置
+/// 库存位置类型
 /// </summary>
 public enum E_InventoryLocation
 {
     None,
-    //玩家，box
+    //玩家（即背包），box
     Player,Box
 }
 
@@ -72,7 +72,9 @@ public enum E_GridType {
     //挖坑、扔东西、添家具、NPC障碍
     Diggable,DropItem,PlaceFurniture,NPCObstacle
 }
-
+/// <summary>
+/// 特效类型
+/// </summary>
 public enum E_ParticaleEffectType
 {
     None,

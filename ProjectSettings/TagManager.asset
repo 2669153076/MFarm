@@ -72,14 +72,14 @@ TagManager:
   - name: Water
     uniqueID: 1269886325
     locked: 0
+  - name: Instance
+    uniqueID: 2364688815
+    locked: 0
   - name: Front 1
     uniqueID: 1504183783
     locked: 0
   - name: Front 2
     uniqueID: 3787532283
-    locked: 0
-  - name: Instance
-    uniqueID: 2364688815
     locked: 0
   - name: Collision
     uniqueID: 1682307783

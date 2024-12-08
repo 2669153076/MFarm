@@ -1,4 +1,4 @@
-using DG.Tweening;
+﻿using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,12 +32,12 @@ namespace GameTime
         private void OnEnable()
         {
             EventHandler.GameMinuteEvent += OnGameMinuteEvent;
-            EventHandler.GameDateEvent += OnGameDateEvent;
+            EventHandler.GameHourEvent += OnGameDateEvent;
         }
         private void OnDisable()
         {
             EventHandler.GameMinuteEvent -= OnGameMinuteEvent;
-            EventHandler.GameDateEvent -= OnGameDateEvent;
+            EventHandler.GameHourEvent -= OnGameDateEvent;
         }
 
         private void OnGameMinuteEvent(int minute, int hour, int day, E_Season season)

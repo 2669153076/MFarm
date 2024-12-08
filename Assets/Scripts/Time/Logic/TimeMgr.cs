@@ -37,7 +37,9 @@ namespace GameTime
         }
         private void Start()
         {
+            EventHandler.CallGameHourEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
             EventHandler.CallGameDayEvent(gameDay, gameSeason);
+            EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason);
         }
 
         private void Update()
@@ -63,7 +65,7 @@ namespace GameTime
             {
                 gameDay++;
                 EventHandler.CallGameDayEvent(gameDay, gameSeason);
-                EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
+                EventHandler.CallGameHourEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
             }
         }
 
@@ -130,7 +132,7 @@ namespace GameTime
                             //刷新地图和农作物生长
                             EventHandler.CallGameDayEvent(gameDay, gameSeason); //每一天的变化
                     }
-                    EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
+                    EventHandler.CallGameHourEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
                 }
                 EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason); //分钟变化带动小时变化
             }
@@ -146,8 +148,9 @@ namespace GameTime
         private void OnAfterSceneLoadEvent()
         {
             gameClockPause = false;
-            EventHandler.CallGameDateEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
+            EventHandler.CallGameHourEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
             EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason);
+            EventHandler.CallGameDayEvent(gameDay, gameSeason);
         }
 
 

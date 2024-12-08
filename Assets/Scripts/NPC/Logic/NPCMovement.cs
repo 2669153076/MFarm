@@ -45,11 +45,12 @@ public class NPCMovement : MonoBehaviour
     private bool isInitialised; //是否已经初始化过
     private bool npcMove;   //npc是否移动
     private bool sceneLoaded;   //场景已经是否加载
+    public bool interactable;   //是否可以互动
 
     private float animationBreakTimer;  //动画间隔计时器
     private bool canPlayStopAnimation;  //能否播放停止动画
     private AnimationClip stopAnimationClip; //是否停止动画
-    public AnimationClip blankAnimationClip;
+    public AnimationClip blankAnimationClip;    //空动画切片
     private AnimatorOverrideController animatorOverride;
 
     private TimeSpan GameTime => TimeMgr.Instance.GameTime;
@@ -217,6 +218,8 @@ public class NPCMovement : MonoBehaviour
         currentScheduleDetails = schedule;
         targetGridPosition = (Vector3Int)schedule.targetGridPosition;
         stopAnimationClip = schedule.clipAtStop;
+
+        this.interactable = schedule.interactable;
         
 
         if (schedule.targetScene == currentScene)
@@ -262,7 +265,7 @@ public class NPCMovement : MonoBehaviour
             }
         }
 
-        if (movementStepStack.Count > 1)
+        if (movementStepStack.Count > 0)
         {
             //更新每一步对应的时间戳
             UpdateTimeOnPath();
@@ -402,7 +405,7 @@ public class NPCMovement : MonoBehaviour
         }
         sceneLoaded = true;
     }
-    private void OnGameMinuteEvent(int hour, int minute,int day , E_Season season)
+    private void OnGameMinuteEvent(int minute, int hour,int day , E_Season season)
     {
         int time = (hour * 100) + minute;
         

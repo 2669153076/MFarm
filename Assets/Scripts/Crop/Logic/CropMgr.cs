@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -94,7 +94,7 @@ namespace CropPlant
 
         private void OnPlantSeedEvent(int itemId, TileDetails tileDetails)
         {
-            CropDetails currentCropDetails = GetCropDetails(itemId);
+            CropDetails currentCropDetails = GetCropDetails(itemId);    //根据配置中的信息获取对应的作物信息
 
             if(currentCropDetails!=null&&SeasonAvailable(currentCropDetails)&&tileDetails.seedItemId == -1) //当前作物信息不为空&&季节合适&&格子中没有作物种子
             {

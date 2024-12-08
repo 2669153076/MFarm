@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\AStar\MoveMentStep.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\InventoryUI.cs" />
     <Compile Include="Assets\Scripts\Cursor\CursorMgr.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Logic\DialogueController.cs" />
     <Compile Include="Assets\Scripts\Time\Logic\TimeMgr.cs" />
     <Compile Include="Assets\Scripts\AStar\AStar.cs" />
     <Compile Include="Assets\Scripts\Utilities\SwitchBounds.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Scripts\Inventory\Data_SO\InventoryBag_SO.cs" />
     <Compile Include="Assets\Scripts\Player\TriggerItemFader.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ActionBarButton.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\Data\DialoguePiece.cs" />
     <Compile Include="Assets\Scripts\Map\Data\MapData_SO.cs" />
     <Compile Include="Assets\Scripts\Map\Logic\GridMapMgr.cs" />
     <Compile Include="Assets\Scripts\AStar\AStarTest.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="Assets\Scripts\AStar\GridNodes.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\Transition\TransitionMgr.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\UI\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemShadow.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemInteractive.cs" />
     <Compile Include="Assets\Scripts\Inventory\Data_SO\ItemDataList_SO.cs" />

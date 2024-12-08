@@ -1,4 +1,4 @@
-using CropPlant;
+﻿using CropPlant;
 using GridMap;
 using System.Collections;
 using System.Collections.Generic;
@@ -237,9 +237,12 @@ public class CursorMgr : Singleton<CursorMgr>
         cursorPositionValid= false;
         cursorImage.color = new Color(1, 0, 0, 0.5f);
     }
-
+    /// <summary>
+    /// 检查角色输入
+    /// </summary>
     private void CheckPlayerInput()
     {
+        //按下鼠标左键并且鼠标可用
         if (Input.GetMouseButtonDown(0) && cursorPositionValid)
         {
             EventHandler.CallMouseClickedEvent(mouseWorldPos, currentItemDetails);

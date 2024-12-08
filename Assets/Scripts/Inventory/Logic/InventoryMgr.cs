@@ -177,8 +177,8 @@ namespace Inventory
         }
         private void OnHarvestAtPlayerPositionEvent(int itemId)
         {
-            var index = GetItemIndexInBag(itemId);
-            AddItemByIndex(itemId, index, 1);
+            var index = GetItemIndexInBag(itemId);  //获取物品在背包中的索引
+            AddItemByIndex(itemId, index, 1);   //添加物品到背包中
 
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }

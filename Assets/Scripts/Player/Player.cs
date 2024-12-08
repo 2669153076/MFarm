@@ -124,8 +124,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator UseToolRoutine(Vector3 mouseWorldPos, ItemDetails itemDetails)
     {
-        isUseTool = true;
-        inputIsDisable = true;
+        isUseTool = true;   //正在使用工具
+        inputIsDisable = true;  //鼠标禁用
         yield return null;
         foreach (var anim in animatorArray)
         {
@@ -135,7 +135,7 @@ public class Player : MonoBehaviour
 
         }
         yield return new WaitForSeconds(0.45f);
-        EventHandler.CallExecuteActionAfterAnimation(mouseWorldPos, itemDetails);
+        EventHandler.CallExecuteActionAfterAnimationEvent(mouseWorldPos, itemDetails);
         yield return new WaitForSeconds(0.25f);
 
         isUseTool = false;
@@ -159,15 +159,17 @@ public class Player : MonoBehaviour
 
     private void OnMouseClickedEvent(Vector3 mousePos, ItemDetails itemDetails)
     {
-        if(isUseTool)
+        //如果正在使用工具
+        if(isUseTool) 
         {
             return;
         }
 
         //TODO:执行动画
-        //使用的是工具的话
+        //现在没有使用工具，判断是否要使用工具
         if (itemDetails.itemType != E_ItemType.Seed || itemDetails.itemType != E_ItemType.Commodity || itemDetails.itemType != E_ItemType.Furniture | itemDetails.itemType != E_ItemType.None)
         {
+            //计算角色面向哪个方向使用工具
             mouseX = mousePos.x - transform.position.x;
             mouseY = mousePos.y - (transform.position.y+1f);//鼠标y减去(人物坐标.y+身高)(因为是以人物脚下坐标计算的transform.position)
 
@@ -183,7 +185,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            EventHandler.CallExecuteActionAfterAnimation(mousePos, itemDetails);
+            EventHandler.CallExecuteActionAfterAnimationEvent(mousePos, itemDetails);    //播种什么的 不使用工具的事件
         }
     }
 

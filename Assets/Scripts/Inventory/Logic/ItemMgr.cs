@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 namespace Inventory
 {
+    /// <summary>
+    /// 道具管理类
+    /// </summary>
     public class ItemMgr : Singleton<ItemMgr>
     {
         public Item itemPerfab; //真正的场景中物体预制体

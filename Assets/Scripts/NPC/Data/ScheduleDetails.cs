@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +13,8 @@ public class ScheduleDetails : IComparable<ScheduleDetails>
     public int day, hour, minute;
     public E_Season season;
 
-    public string targetScene;
-    public Vector2Int targetGridPosition;
+    public string targetScene; //目标场景
+    public Vector2Int targetGridPosition;   //目标格子坐标
 
     public AnimationClip clipAtStop;    //停下来后播放什么动画
     public bool interactable;   //是否可以与玩家互动

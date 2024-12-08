@@ -1,4 +1,4 @@
-using CropPlant;
+﻿using CropPlant;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,17 +32,17 @@ namespace GridMap
 
         private void OnEnable()
         {
-            EventHandler.ExecuteActionAfterAnimation += OnExecuteActionAfterAnimation;
+            EventHandler.ExecuteActionAfterAnimationEvent += OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             EventHandler.GameDayEvent += OnGameDayEvent;
-            EventHandler.RefreshCurrentMap += OnRefreshCurrentMap;
+            EventHandler.RefreshCurrentMapEvent += OnRefreshCurrentMap;
         }
         private void OnDisable()
         {
-            EventHandler.ExecuteActionAfterAnimation -= OnExecuteActionAfterAnimation;
+            EventHandler.ExecuteActionAfterAnimationEvent -= OnExecuteActionAfterAnimation;
             EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             EventHandler.GameDayEvent -= OnGameDayEvent;
-            EventHandler.RefreshCurrentMap -= OnRefreshCurrentMap;
+            EventHandler.RefreshCurrentMapEvent -= OnRefreshCurrentMap;
         }
 
 
@@ -301,12 +301,12 @@ namespace GridMap
 
         private void OnExecuteActionAfterAnimation(Vector3 mouseWorldPos, ItemDetails itemDetails)
         {
-            var currentGridPos = currentGrid.WorldToCell(mouseWorldPos);
-            var currentTile = GetTileDetailsOnMousePosition(currentGridPos);
+            var currentGridPos = currentGrid.WorldToCell(mouseWorldPos);    //鼠标点击的对应格子坐标
+            var currentTile = GetTileDetailsOnMousePosition(currentGridPos);    //鼠标点击的对应格子信息
 
             if (currentTile != null)
             {
-                Crop currentCrop = GetCropObject(mouseWorldPos);
+                Crop currentCrop = GetCropObject(mouseWorldPos);    //
                 //WORKFLOW:物品使用实际功能
                 switch (itemDetails.itemType)
                 {
@@ -321,17 +321,17 @@ namespace GridMap
                         break;
                     case E_ItemType.Furniture:  //家具
                         break;
-                    case E_ItemType.HoeTool:    //锄头
+                    case E_ItemType.HoeTool:    //锄头 挖坑
                         SetDigGround(currentTile);
                         currentTile.daysSinceDig = 0;
                         currentTile.canDig = false;
                         currentTile.canDropItem = false;
                         break;
-                    case E_ItemType.BreakTool:  //十字镐
-                    case E_ItemType.ChopTool:   //斧头
+                    case E_ItemType.BreakTool:  //十字镐   破碎石头
+                    case E_ItemType.ChopTool:   //斧头    砍树
                         currentCrop?.ProcessToolAction(itemDetails, currentCrop.tileDetails);
                         break;
-                    case E_ItemType.ReapTool:   //镰刀
+                    case E_ItemType.ReapTool:   //镰刀 割草
                         var reapCount = 0;
                         for (int i = 0; i < itemsInRadius.Count; i++)
                         {
