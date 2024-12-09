@@ -16,6 +16,7 @@ namespace Inventory
         [HideInInspector] public Transform itemParent;
 
         private Dictionary<string, List<SceneItem>> sceneItemDic = new Dictionary<string, List<SceneItem>>(); //保存场景中的物品列表字典
+        private Dictionary<string, List<SceneFurniture>> sceneFurnitureDic = new Dictionary<string, List<SceneFurniture>>();    //保存场景中的家具列表字典
         private Transform PlayerTransform => FindObjectOfType<Player>().transform;
         private void OnEnable()
         {
@@ -23,7 +24,7 @@ namespace Inventory
             EventHandler.DropItemInSceneEvent += OnDropItemInSceneEvent;
             EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
             EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
-
+            EventHandler.BuildFurnitureEvent += OnBuildFurnitureEvent;
         }
 
         private void OnDisable()
@@ -32,6 +33,7 @@ namespace Inventory
             EventHandler.DropItemInSceneEvent -= OnDropItemInSceneEvent;
             EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
             EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+            EventHandler.BuildFurnitureEvent -= OnBuildFurnitureEvent;
         }
 
         /// <summary>
@@ -84,6 +86,49 @@ namespace Inventory
                 }
             }
         }
+        /// <summary>
+        /// 获取当前激活场景中的所有家具
+        /// </summary>
+        private void GetAllSceneFurnitures()
+        {
+            List<SceneFurniture> curSceneFurnitureList = new List<SceneFurniture>();
+            foreach (var item in FindObjectsOfType<Furniture>())
+            {
+                SceneFurniture sceneItem = new SceneFurniture
+                {
+                    id = item.itemId,
+                    pos = new SerializableVector3(item.transform.position)
+                };
+                curSceneFurnitureList.Add(sceneItem);
+            }
+
+            if (sceneFurnitureDic.ContainsKey(SceneManager.GetActiveScene().name))
+            {
+                sceneFurnitureDic[SceneManager.GetActiveScene().name] = curSceneFurnitureList;
+            }
+            else
+            {
+                sceneFurnitureDic.Add(SceneManager.GetActiveScene().name, curSceneFurnitureList);
+            }
+        }
+        /// <summary>
+        /// 重新生成场景中的家具
+        /// </summary>
+        private void ReBuildFurnitures()
+        {
+            List<SceneFurniture> curSceneFurnitureList = new List<SceneFurniture>();
+
+            if (sceneFurnitureDic.TryGetValue(SceneManager.GetActiveScene().name, out curSceneFurnitureList))
+            {
+                if (curSceneFurnitureList != null)
+                {
+                    foreach (var sceneFurniture in curSceneFurnitureList)
+                    {
+                        OnBuildFurnitureEvent(sceneFurniture.id,sceneFurniture.pos.ToVector3());
+                    }
+                }
+            }
+        }
 
         private void OnInstantiateItemInScene(int id, Vector3 pos)
         {
@@ -105,11 +150,20 @@ namespace Inventory
         private void OnBeforeSceneUnloadEvent()
         {
             GetAllSceneItems();
+            GetAllSceneFurnitures();
         }
         private void OnAfterSceneLoadEvent()
         {
             itemParent = GameObject.FindWithTag("ItemParent").transform;
             ReCreateAllItems();
+            ReBuildFurnitures();
         }
+        private void OnBuildFurnitureEvent(int itemId, Vector3 mouseWorldPos)
+        {
+            var blueprint = InventoryMgr.Instance.blueprintDataList_SO.GetBlueprintDetails(itemId);
+            var buildItem =  Instantiate(blueprint.buildPrefab,mouseWorldPos, Quaternion.identity, itemParent);
+
+        }
+
     }
 }

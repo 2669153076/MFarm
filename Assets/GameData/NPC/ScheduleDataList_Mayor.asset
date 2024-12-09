@@ -16,7 +16,7 @@ MonoBehaviour:
   - priority: 0
     day: 0
     hour: 8
-    minute: 2
+    minute: 1
     season: 1
     targetScene: 01_Field
     targetGridPosition: {x: 10, y: -13}

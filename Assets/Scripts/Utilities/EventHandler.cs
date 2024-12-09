@@ -28,6 +28,12 @@ public static class EventHandler
     public static event Action<E_ParticaleEffectType, Vector3> ParticleEffectEvent;  //生成特效
     public static event Action GenerateCropEvent;   //生成作物，刷新地图前
     public static event Action<DialoguePiece> ShowDialogueEvent;    //显示对话事件 
+    public static event Action<E_SlotType, InventoryBag_SO> BaseBagOpenEvent;   //通用背包开启事件
+    public static event Action<E_SlotType, InventoryBag_SO> BaseBagCloseEvent;   //通用背包开启事件
+    public static event Action <E_GameState> UpdateGameStateEvent;  //更新游戏状态事件
+    public static event Action<ItemDetails, bool> ShowTradeUIEvent; //显示交易UI
+    public static event Action<int,Vector3> BuildFurnitureEvent;  //建造事件
+
 
     /// <summary>
     /// 更新库存UI事件
@@ -200,5 +206,49 @@ public static class EventHandler
     public static void CallShowDialogueEvent(DialoguePiece dialoguePiece)
     {
         ShowDialogueEvent?.Invoke(dialoguePiece);
+    }
+    /// <summary>
+    /// 通用背包开启事件
+    /// </summary>
+    /// <param name="slotType">背包类型</param>
+    /// <param name="bag_SO">背包内数据</param>
+    public static void CallBaseBagOpenEvent(E_SlotType slotType,InventoryBag_SO bag_SO)
+    {
+        BaseBagOpenEvent?.Invoke(slotType, bag_SO);
+    }
+    /// <summary>
+    /// 通用背包关闭事件
+    /// </summary>
+    /// <param name="slotType">背包类型</param>
+    /// <param name="bag_SO">背包内数据</param>
+    public static void CallBaseBagCloseEvent(E_SlotType slotType,InventoryBag_SO bag_SO)
+    {
+        BaseBagCloseEvent?.Invoke(slotType, bag_SO);
+    }
+    /// <summary>
+    /// 更新游戏状态事件
+    /// </summary>
+    /// <param name="gamestate">游戏状态</param>
+    public static void CallUpdateGameStateEvent(E_GameState gamestate)
+    {
+        UpdateGameStateEvent?.Invoke(gamestate);
+    }
+    /// <summary>
+    /// 显示交易UI界面
+    /// </summary>
+    /// <param name="itemDetails">选中的道具信息</param>
+    /// <param name="isSell">是否出售</param>
+    public static void CallShowTradeUIEvent(ItemDetails itemDetails,bool isSell)
+    {
+        ShowTradeUIEvent?.Invoke(itemDetails, isSell);
+    }
+    /// <summary>
+    /// 建造事件
+    /// </summary>
+    /// <param name="id">图纸物品id</param>
+    /// <param name="pos">鼠标对应的场景中的坐标</param>
+    public static void CallBuildFurnitureEvent(int id,Vector3 pos)
+    {
+        BuildFurnitureEvent?.Invoke(id,pos);
     }
 }

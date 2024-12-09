@@ -1,5 +1,6 @@
 ﻿using CropPlant;
 using GridMap;
+using Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,11 @@ public class CursorMgr : Singleton<CursorMgr>
     private bool cursorPositionValid;   //鼠标坐标位置是否可用
 
     private ItemDetails currentItemDetails; //当前选中的物品信息
+
+    public Image bulidImage;    //建造物品图片
+
     private Transform PlayerTransform => FindObjectOfType<Player>().transform;
+
 
     private void OnEnable()
     {
@@ -48,7 +53,10 @@ public class CursorMgr : Singleton<CursorMgr>
         currentSprite = normal;
         SetCursorImage(normal);
 
-        mainCamera = Camera.main; 
+        mainCamera = Camera.main;
+
+        bulidImage = cursorCanvas.GetChild(1).GetComponent<Image>();
+        bulidImage.gameObject.SetActive(false);
     }
 
     private void Update()
@@ -64,11 +72,13 @@ public class CursorMgr : Singleton<CursorMgr>
             SetCursorImage(currentSprite);
             CheckCursorValid();
             CheckPlayerInput();
+            bulidImage.gameObject.SetActive(true);
         }
         else
         {
             //如果与UI交互了 则鼠标光标为默认图片
             SetCursorImage(normal);
+            bulidImage.gameObject.SetActive(false);
         }
     }
 
@@ -103,6 +113,8 @@ public class CursorMgr : Singleton<CursorMgr>
     {
         mouseWorldPos = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,Input.mousePosition.y,-mainCamera.transform.position.z));
         mouseGridPos = currentGrid.WorldToCell(mouseWorldPos);
+
+        bulidImage.rectTransform.position = Input.mousePosition;  
 
         var playerGridPos = currentGrid.WorldToCell(PlayerTransform.position);
         if(Mathf.Abs(mouseGridPos.x - playerGridPos.x) > currentItemDetails.itemUseRadius || Mathf.Abs(mouseGridPos.y - playerGridPos.y) > currentItemDetails.itemUseRadius)
@@ -143,6 +155,14 @@ public class CursorMgr : Singleton<CursorMgr>
                     }
                     break;
                 case E_ItemType.Furniture:  //家具
+                    if (currentTile.canPlaceFurniture&&InventoryMgr.Instance.CheckStock(currentItemDetails.itemId))
+                    {
+                        SetCursorValid();
+                    }
+                    else
+                    {
+                        SetCursorInValid();
+                    }
                     break;
                 case E_ItemType.HoeTool:    //锄头
                      if (currentTile.canDig)
@@ -228,6 +248,7 @@ public class CursorMgr : Singleton<CursorMgr>
     {
         cursorPositionValid = true;
         cursorImage.color = new Color(1, 1, 1, 1);
+        bulidImage.color = new Color(1, 1, 1, 0.5f);
     }
     /// <summary>
     /// 设置鼠标不可用
@@ -236,6 +257,7 @@ public class CursorMgr : Singleton<CursorMgr>
     {
         cursorPositionValid= false;
         cursorImage.color = new Color(1, 0, 0, 0.5f);
+        bulidImage.color = new Color(1, 0, 0, 0.5f);
     }
     /// <summary>
     /// 检查角色输入
@@ -258,6 +280,7 @@ public class CursorMgr : Singleton<CursorMgr>
             currentItemDetails = null;
             currentSprite = normal; 
             cursorEnable = false;
+            bulidImage.gameObject.SetActive(false);
         }
         else
         {
@@ -278,6 +301,13 @@ public class CursorMgr : Singleton<CursorMgr>
                 _=>normal,
             };
             cursorEnable = true;
+
+            if(itemDetails.itemType == E_ItemType.Furniture)
+            {
+                bulidImage.gameObject.SetActive(true);
+                bulidImage.sprite = itemDetails.itemOnWorldSprite;
+                bulidImage.SetNativeSize();
+            }
         }
     }
 

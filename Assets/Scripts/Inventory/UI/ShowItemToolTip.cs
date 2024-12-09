@@ -28,6 +28,20 @@ namespace Inventory
 
                 inventoryUI.itemToolTip.GetComponent<RectTransform>().pivot = new Vector2 (1, 0);   //设置锚点
                 inventoryUI.itemToolTip.transform.position = transform.position + Vector3.up * 60;  //设置位置
+
+                if(slotUI.itemDetails.itemType == E_ItemType.Furniture) //如果物品类型是蓝图
+                {
+                    inventoryUI.itemToolTip.gameObject.SetActive(true);
+                    inventoryUI.itemToolTip.SetResourcePanel(slotUI.itemDetails.itemId);
+                }
+                else
+                {
+                    inventoryUI.itemToolTip.resourcePanel.SetActive(false);
+                }
+            }
+            else
+            {
+                inventoryUI.itemToolTip.gameObject.SetActive(false);
             }
         }
 

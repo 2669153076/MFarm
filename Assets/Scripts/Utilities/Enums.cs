@@ -33,7 +33,7 @@ public enum E_InventoryLocation
 {
     None,
     //玩家（即背包），box
-    Player,Box
+    Player,Box,Shop,
 }
 
 /// <summary>
@@ -80,5 +80,14 @@ public enum E_ParticaleEffectType
     None,
     //落叶1、落叶2、石头、庄稼
     LeavesFalling01, LeavesFalling02,Rock,ReapableScenery,
+}
+
+/// <summary>
+/// 游戏状态
+/// </summary>
+public enum E_GameState
+{
+    None,
+    Playing,Pause
 }
 

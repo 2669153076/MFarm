@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 149154081}
   - component: {fileID: 149154080}
   - component: {fileID: 149154085}
+  - component: {fileID: 149154086}
   m_Layer: 0
   m_Name: NPC_Mayor
   m_TagString: NPC
@@ -458,6 +459,19 @@ MonoBehaviour:
     dialogueText: "\u6211\u53EBMike\uFF0C\u662F\u4E2A\u65C5\u4EBA"
     hasToPause: 1
     isDone: 0
+--- !u!114 &149154086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149154078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0023e5aa05af63743b1de0f7bd10f2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopData: {fileID: 0}
 --- !u!1 &189178970
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,6 +531,8 @@ GameObject:
   - component: {fileID: 354821836}
   - component: {fileID: 354821835}
   - component: {fileID: 354821834}
+  - component: {fileID: 354821840}
+  - component: {fileID: 354821839}
   m_Layer: 0
   m_Name: NPC_Girl02
   m_TagString: NPC
@@ -704,6 +720,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &354821839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354821832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3dd08af915e9a48b7345df974934cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnFinishEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 354821840}
+        m_TargetAssemblyTypeName: NPCFunction, Assembly-CSharp
+        m_MethodName: OpenShop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  dialogueList:
+  - faceImage: {fileID: 21300000, guid: 954616e3c701f4e22bd74bbccd87ccc2, type: 3}
+    onLeft: 1
+    name: Mira
+    dialogueText: "\u8981\u4E70\u4E9B\u4EC0\u4E48\u5417\uFF1F"
+    hasToPause: 1
+    isDone: 0
+--- !u!114 &354821840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354821832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0023e5aa05af63743b1de0f7bd10f2b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopData: {fileID: 11400000, guid: d5f82c3e36136d54282eeb8b18bc87c5, type: 2}
 --- !u!1 &360824689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1441,6 +1504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemDataList_SO: {fileID: 11400000, guid: 64e889c00cb02e34895dbce97dea3f4f, type: 2}
   playerBag_SO: {fileID: 11400000, guid: 045aef17a3800a347a5b9301ceffcc59, type: 2}
+  blueprintDataList_SO: {fileID: 11400000, guid: deeb42fd960bff44cb11f41b6fa21904, type: 2}
+  playerMoney: 300
 --- !u!4 &811404064
 Transform:
   m_ObjectHideFlags: 0

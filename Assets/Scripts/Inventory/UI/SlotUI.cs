@@ -26,6 +26,18 @@ namespace Inventory{
         [HideInInspector]public int itemAmount;
 
         public InventoryUI InventoryUI => GetComponentInParent<InventoryUI>();
+        public E_InventoryLocation Location
+        {
+            get
+            {
+                return slotType switch
+                {
+                    E_SlotType.Bag=>E_InventoryLocation.Player,
+                    E_SlotType.Box=>E_InventoryLocation.Box,
+                    _=>E_InventoryLocation.None,
+                };
+            }
+        }
 
         private void Start()
         {
@@ -118,10 +130,20 @@ namespace Inventory{
                 var targetSlot = eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>();
                 int targetIndex = targetSlot.slotIndex;
 
-                if(slotType == E_SlotType.Bag&&targetSlot.slotType == E_SlotType.Bag)   //当前选中的是背包内的物品并且目标格子也是背包格子（只可以在背包内交换）
+                if(slotType == E_SlotType.Bag&&targetSlot.slotType == E_SlotType.Bag)   //当前选中的是背包内的物品 并且 目标格子也是背包格子（只可以在背包内交换）
                 {
                     //交换物品
                     InventoryMgr.Instance.SwapItem(slotIndex, targetIndex);
+                }else if (slotType == E_SlotType.Shop&&targetSlot.slotType == E_SlotType.Bag)       //购买
+                {
+                    EventHandler.CallShowTradeUIEvent(itemDetails, false);
+
+                }else if(slotType == E_SlotType.Bag&&targetSlot.slotType == E_SlotType.Shop)    //出售
+                {
+                    EventHandler.CallShowTradeUIEvent(itemDetails, true);
+                }else if(slotType!=E_SlotType.Shop && targetSlot.slotType != E_SlotType.Shop && slotType != targetSlot.slotType)
+                {
+                    InventoryMgr.Instance.SwapItem(Location, slotIndex, targetSlot.Location, targetIndex);
                 }
             }
             //else  //如果将物品移到地图中

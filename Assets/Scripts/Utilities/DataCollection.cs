@@ -148,4 +148,23 @@ public class SceneRoute
     public List<ScenePath> scenePathList;   //上一个场景到目标场景要经过的路线
 }
 
+/// <summary>
+/// 图纸信息
+/// </summary>
+[System.Serializable]
+public class BlueprintDetails
+{
+    public int id;
+    public InventoryItem[] resourceItem; //需要的资源
+    public GameObject buildPrefab;  //建造的物品的预制体
+}
+/// <summary>
+/// 场景中家具
+/// </summary>
+[System.Serializable]
+public class SceneFurniture
+{
+    public int id;
+    public SerializableVector3 pos;
+}
 

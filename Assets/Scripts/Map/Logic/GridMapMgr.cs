@@ -320,6 +320,10 @@ namespace GridMap
                         EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
                         break;
                     case E_ItemType.Furniture:  //家具
+                        //地图上生成物品 itemMgr
+                        //移除图纸 
+                        //移除所需资源物品
+                        EventHandler.CallBuildFurnitureEvent(itemDetails.itemId,mouseWorldPos);
                         break;
                     case E_ItemType.HoeTool:    //锄头 挖坑
                         SetDigGround(currentTile);

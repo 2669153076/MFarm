@@ -36,14 +36,15 @@ public class Player : MonoBehaviour
         EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         EventHandler.MoveToPositionEvent += OnMoveToPositionEvent;
         EventHandler.MouseClickedEvent += OnMouseClickedEvent;
+        EventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
     }
-
     private void OnDisable()
     {
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
         EventHandler.MoveToPositionEvent -= OnMoveToPositionEvent;
         EventHandler.MouseClickedEvent -= OnMouseClickedEvent;
+        EventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
     }
 
 
@@ -188,5 +189,21 @@ public class Player : MonoBehaviour
             EventHandler.CallExecuteActionAfterAnimationEvent(mousePos, itemDetails);    //播种什么的 不使用工具的事件
         }
     }
+
+    private void OnUpdateGameStateEvent(E_GameState state)
+    {
+        switch (state)
+        {
+            case E_GameState.None:
+                break;
+            case E_GameState.Playing:
+                inputIsDisable = false;
+                break;
+            case E_GameState.Pause:
+                inputIsDisable = true;
+                break;
+        }
+    }
+
 
 }

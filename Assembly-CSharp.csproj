@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Crop\Logic\CropMgr.cs" />
     <Compile Include="Assets\Scripts\NPC\Data\SceneRouteDataList_SO.cs" />
     <Compile Include="Assets\Scripts\Crop\Logic\ReapItem.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Data_SO\BlueprintDataList_SO.cs" />
     <Compile Include="Assets\Scripts\Crop\Logic\Crop.cs" />
     <Compile Include="Assets\Scripts\AStar\Node.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ShowItemToolTip.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\AStar\AStar.cs" />
     <Compile Include="Assets\Scripts\Utilities\SwitchBounds.cs" />
     <Compile Include="Assets\Scripts\Utilities\Enums.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UI\TradeUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Data_SO\InventoryBag_SO.cs" />
     <Compile Include="Assets\Scripts\Player\TriggerItemFader.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ActionBarButton.cs" />
@@ -96,8 +98,10 @@
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Utilities\DataCollection.cs" />
     <Compile Include="Assets\Scripts\AStar\GridNodes.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item\Furniture.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\Transition\TransitionMgr.cs" />
+    <Compile Include="Assets\Scripts\NPC\Logic\NPCFunction.cs" />
     <Compile Include="Assets\Scripts\Dialogue\UI\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemShadow.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemInteractive.cs" />
@@ -110,6 +114,7 @@
     <Compile Include="Assets\Scripts\Inventory\Item\ItemBounce.cs" />
     <Compile Include="Assets\Scripts\Crop\Logic\CropGenerator.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\SlotUI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Item\Box.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ItemToolTip.cs" />
     <Compile Include="Assets\Scripts\Player\AnimatorOverride.cs" />
     <Compile Include="Assets\Scripts\Utilities\Singleton.cs" />
@@ -454,18 +459,6 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Types">
-      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.Gradle">
-      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Android.GradleProject">
-      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

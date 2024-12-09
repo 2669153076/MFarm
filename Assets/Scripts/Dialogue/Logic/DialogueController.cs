@@ -20,11 +20,9 @@ namespace Dialogue
 
         public Stack<DialoguePiece> dialogueStack;
 
-        [SerializeField]private bool canTalk;   //是否可以对话
-
+        private bool canTalk;   //是否可以对话
         private GameObject uiSign; //对话提示UI
-
-        [SerializeField]private bool isTalking; //是否正在对话
+        private bool isTalking; //是否正在对话
 
         private void Awake()
         {
@@ -52,7 +50,10 @@ namespace Dialogue
                 dialogueStack.Push(dialogueList[i]);
             }
         }
-
+        /// <summary>
+        /// 开启对话
+        /// </summary>
+        /// <returns></returns>
         private IEnumerator DialogueRoutine()
         {
             isTalking = true;
@@ -60,18 +61,21 @@ namespace Dialogue
             {
                 //传给UI显示对话
                 EventHandler.CallShowDialogueEvent(result);
-
+                EventHandler.CallUpdateGameStateEvent(E_GameState.Pause);
                 yield return new WaitUntil(() => result.isDone);
                 isTalking = false;
             }
             else
             {
+                EventHandler.CallUpdateGameStateEvent(E_GameState.Playing);
                 EventHandler.CallShowDialogueEvent(null);
                 FillDialogueStack();
                 isTalking = false;
 
                 OnFinishEvent?.Invoke();
+                canTalk = false;
             }
+
         }
 
 

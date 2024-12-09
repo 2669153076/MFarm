@@ -8,15 +8,24 @@ namespace Inventory{
     {
         public KeyCode key;
         private SlotUI slot;
+        private bool canUsed;   //能否被使用
 
         private void Awake()
         {
             slot = GetComponent<SlotUI>();
         }
+        private void OnEnable()
+        {
+            EventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
+        }
+        private void OnDisable()
+        {
+            EventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
+        }
 
         private void Update()
         {
-            if(Input.GetKeyDown(key))
+            if(Input.GetKeyDown(key)&& canUsed)
             {
                 if(slot.itemDetails != null)
                 {
@@ -32,6 +41,11 @@ namespace Inventory{
                     EventHandler.CallItemSelectedEvent(slot.itemDetails,slot.isSelected); 
                 }
             }
+        }
+
+        private void OnUpdateGameStateEvent(E_GameState state)
+        {
+            canUsed = state == E_GameState.Playing;
         }
     }
 }

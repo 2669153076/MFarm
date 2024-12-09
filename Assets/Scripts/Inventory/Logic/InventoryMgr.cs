@@ -14,16 +14,28 @@ namespace Inventory
         public ItemDataList_SO itemDataList_SO;
         [Header("背包数据")]
         public InventoryBag_SO playerBag_SO;
+        [Header("建造蓝图")]
+        public BlueprintDataList_SO blueprintDataList_SO;
+        [Header("箱子")]
+        private InventoryBag_SO currentBoxBag_SO; 
+
+        private Dictionary<string,List<InventoryItem>> boxDataDic = new Dictionary<string,List<InventoryItem>>();   //对应场景中所有箱子数据
+
+        public int playerMoney; //角色持有金钱
 
         private void OnEnable()
         {
             EventHandler.DropItemInSceneEvent += OnDropItemInSceneEvent;
             EventHandler.HarvestAtPlayerPositionEvent += OnHarvestAtPlayerPositionEvent;
+            EventHandler.BuildFurnitureEvent += OnBuildFurnitureEvent;
+            EventHandler.BaseBagOpenEvent += OnBaseBagOpenEvent;
         }
         private void OnDisable()
         {
             EventHandler.DropItemInSceneEvent -= OnDropItemInSceneEvent;
             EventHandler.HarvestAtPlayerPositionEvent -= OnHarvestAtPlayerPositionEvent;
+            EventHandler.BuildFurnitureEvent -= OnBuildFurnitureEvent;
+            EventHandler.BaseBagOpenEvent -= OnBaseBagOpenEvent;
         }
         private void Start()
         {
@@ -44,11 +56,11 @@ namespace Inventory
         /// 往背包中添加物品
         /// </summary>
         /// <param name="item">道具</param>
-        /// <param name="toDestory">是否删除</param>
-        public void AddItem(Item item, bool toDestory = true)
+        /// <param name="toDestory">是否删除对应道具实体</param>
+        public void AddItem(Item item, bool toDestory = true,int amount = 1)
         {
             var index = GetItemIndexInBag(item.itemId);
-            AddItemByIndex(item.itemId, index, 1);
+            AddItemByIndex(item.itemId, index, amount);
 
             if (toDestory)
             {
@@ -79,6 +91,45 @@ namespace Inventory
                 playerBag_SO.inventoryItemList[fromIndex] = new InventoryItem();
             }
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+        }
+        /// <summary>
+        /// 跨容器交换物品
+        /// </summary>
+        /// <param name="locationFrom">来自于背包类型</param>
+        /// <param name="fromIndex">来自于索引</param>
+        /// <param name="locationTarget">目标背包类型</param>
+        /// <param name="targetIndex">目标索引</param>
+        public void SwapItem(E_InventoryLocation locationFrom,int fromIndex, E_InventoryLocation locationTarget,int targetIndex)
+        {
+            var currentList = GetItemList(locationFrom);
+            var targetList = GetItemList(locationTarget);
+
+            InventoryItem currentItem = currentList[fromIndex];
+
+            if (targetIndex < targetList.Count)
+            {
+                InventoryItem targetItem = targetList[targetIndex];
+
+                if(targetItem.itemId!=0&&currentItem.itemId!=targetItem.itemId) //有不相同的两个物品
+                {
+                    //交换
+                    currentList[fromIndex] = targetItem;
+                    targetList[targetIndex] = currentItem;
+                }else if(currentItem.itemId == 0)   //相同的两个物品
+                {
+                    targetItem.itemAmount += currentItem.itemAmount;
+                    targetList[targetIndex] = targetItem;
+                    currentList[fromIndex] = new InventoryItem();
+                }
+                else //目标格子为空
+                {
+                    targetList[targetIndex] = currentItem;
+                    currentList[fromIndex] = new InventoryItem();
+                }
+
+                EventHandler.CallUpdateInventoryUIEvent(locationFrom,currentList);
+                EventHandler.CallUpdateInventoryUIEvent(locationTarget,targetList);
+            }
         }
         /// <summary>
         /// 检查背包是否有空位
@@ -145,11 +196,11 @@ namespace Inventory
             }
         }
         /// <summary>
-        /// 移除背包内物品
+        /// 通过Id移除背包内物品
         /// </summary>
         /// <param name="id">物品ID</param>
         /// <param name="amount">要移除的数量</param>
-        private void RemoveItemByIndex(int id,int amount)
+        private void RemoveItemById(int id,int amount)
         {
             var index = GetItemIndexInBag(id);
 
@@ -168,12 +219,103 @@ namespace Inventory
 
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
+        /// <summary>
+        /// 交易
+        /// </summary>
+        /// <param name="item">物品信息</param>
+        /// <param name="amount">数量</param>
+        /// <param name="isSell">是否出售</param>
+        public void TradeItem(ItemDetails item,int amount,bool isSell)
+        {
+            int cost = item.itemPrice * amount;
+            int index = GetItemIndexInBag(item.itemId);
+            if (isSell)
+            {
+                if (playerBag_SO.inventoryItemList[index].itemAmount>=amount)
+                {
+                    RemoveItemById(item.itemId, amount);
+                   cost =  (int)(cost*item.sellPercentage);
+                    playerMoney += cost;
+                }
+            }
+            else if (playerMoney-cost>=0)
+            {
+                if (CheckBagCapacity())
+                {
+                    AddItemByIndex(item.itemId, index, amount);
+                    playerMoney -= cost;
+                }
+            }
 
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+
+        }
+        /// <summary>
+        /// 检查背包中是否有对应数量的道具
+        /// </summary>
+        /// <param name="id">图纸id</param>
+        /// <returns></returns>
+        public bool CheckStock(int id)
+        {
+            var blueprintDetails = blueprintDataList_SO.GetBlueprintDetails(id);
+            foreach (var resourceItem in blueprintDetails.resourceItem)
+            {
+                var itemStock = playerBag_SO.GetInventoryItem(resourceItem.itemId);
+                if (itemStock.itemAmount >= resourceItem.itemAmount)
+                {
+                    continue;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        /// <summary>
+        /// 根据位置类型获取数据列表
+        /// </summary>
+        /// <param name="location">背包类型</param>
+        /// <returns></returns>
+        private List<InventoryItem> GetItemList(E_InventoryLocation location)
+        {
+            return location switch
+            {
+                E_InventoryLocation.Player=>playerBag_SO.inventoryItemList,
+                E_InventoryLocation.Box=>currentBoxBag_SO.inventoryItemList,
+                _=>null,
+            };
+        }
+        /// <summary>
+        /// 查找对应箱子数据
+        /// </summary>
+        /// <param name="key">名字+索引</param>
+        /// <returns></returns>
+        private List<InventoryItem> GetBoxDataList(string key)
+        {
+            if (boxDataDic.ContainsKey(key))
+            {
+                return boxDataDic[key];
+            }
+            return null;
+        }
+        /// <summary>
+        /// 往字典中添加箱子数据
+        /// </summary>
+        /// <param name="box">箱子数据</param>
+        private void AddBoxDataDic(Box box)
+        {
+            var key = box.name + box.index;
+            if (!boxDataDic.ContainsKey(key))
+            {
+                boxDataDic.Add(key, box.boxBagData.inventoryItemList);
+            }
+        }
 
 
         private void OnDropItemInSceneEvent(int id, Vector3 pos, E_ItemType itemType)
         {
-            RemoveItemByIndex(id, 1);
+            RemoveItemById(id, 1);
         }
         private void OnHarvestAtPlayerPositionEvent(int itemId)
         {
@@ -182,6 +324,20 @@ namespace Inventory
 
             EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
+        private void OnBuildFurnitureEvent(int itemId, Vector3 mouseWorldPos)
+        {
+            RemoveItemById(itemId, 1);
+            var blueprint = InventoryMgr.Instance.blueprintDataList_SO.GetBlueprintDetails(itemId);
+            foreach (var item in blueprint.resourceItem)
+            {
+                RemoveItemById(item.itemId, item.itemAmount);
+            }
+        }
+        private void OnBaseBagOpenEvent(E_SlotType type, InventoryBag_SO boxData)
+        {
+            currentBoxBag_SO = boxData;
+        }
+
 
     }
 }

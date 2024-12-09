@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Inventory;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,6 +15,8 @@ public class ItemToolTip : MonoBehaviour
     [SerializeField] private Text descriptionText;
     [SerializeField] private Text sellMoneyText;
     [SerializeField] private GameObject bottomPart;
+    public GameObject resourcePanel;
+    [SerializeField] private Image resourceItemPrefab;
 
     private void Start()
     {
@@ -71,5 +74,37 @@ public class ItemToolTip : MonoBehaviour
             E_ItemType.WaterTool => "工具",
             _=>"无"
         };
+    }
+
+    /// <summary>
+    /// 设置建造资源面板
+    /// </summary>
+    /// <param name="blueprintDetails">蓝图信息</param>
+    public void SetResourcePanel(BlueprintDetails blueprintDetails)
+    {
+        for (int i = 0; i < resourcePanel.transform.childCount; i++)
+        {
+            Destroy(resourcePanel.transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < blueprintDetails.resourceItem.Length; i++)
+        {
+            Image resourceItem = Instantiate(resourceItemPrefab, resourcePanel.transform);
+            resourceItem.sprite = InventoryMgr.Instance.GetItemDetails(blueprintDetails.id).itemIcon;
+            resourceItem.transform.GetChild(0).GetComponent<Text>().text = blueprintDetails.resourceItem[i].itemAmount.ToString();
+        }
+    }
+    public void SetResourcePanel(int id)
+    {
+        for (int i = 0; i < resourcePanel.transform.childCount; i++)
+        {
+            Destroy(resourcePanel.transform.GetChild(i).gameObject);
+        }
+        var blueprintDetails = InventoryMgr.Instance.blueprintDataList_SO.GetBlueprintDetails(id);
+        for (int i = 0; i < blueprintDetails.resourceItem.Length; i++)
+        {
+            Image resourceItem = Instantiate(resourceItemPrefab, resourcePanel.transform);
+            resourceItem.sprite = InventoryMgr.Instance.GetItemDetails(blueprintDetails.resourceItem[i].itemId).itemIcon;
+            resourceItem.transform.GetChild(0).GetComponent<Text>().text = blueprintDetails.resourceItem[i].itemAmount.ToString();
+        }
     }
 }
