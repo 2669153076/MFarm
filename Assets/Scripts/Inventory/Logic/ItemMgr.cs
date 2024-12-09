@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static UnityEditor.Progress;
 
 namespace Inventory
 {
@@ -94,12 +95,16 @@ namespace Inventory
             List<SceneFurniture> curSceneFurnitureList = new List<SceneFurniture>();
             foreach (var item in FindObjectsOfType<Furniture>())
             {
-                SceneFurniture sceneItem = new SceneFurniture
+                SceneFurniture sceneFurniture = new SceneFurniture
                 {
                     id = item.itemId,
                     pos = new SerializableVector3(item.transform.position)
                 };
-                curSceneFurnitureList.Add(sceneItem);
+                if (item.GetComponent<Box>())
+                {
+                    sceneFurniture.boxIndex = item.GetComponent<Box>().index;
+                }
+                curSceneFurnitureList.Add(sceneFurniture);
             }
 
             if (sceneFurnitureDic.ContainsKey(SceneManager.GetActiveScene().name))
@@ -124,7 +129,12 @@ namespace Inventory
                 {
                     foreach (var sceneFurniture in curSceneFurnitureList)
                     {
-                        OnBuildFurnitureEvent(sceneFurniture.id,sceneFurniture.pos.ToVector3());
+                        var blueprint = InventoryMgr.Instance.blueprintDataList_SO.GetBlueprintDetails(sceneFurniture.id);
+                        var buildItem = Instantiate(blueprint.buildPrefab, sceneFurniture.pos.ToVector3(), Quaternion.identity, itemParent);
+                        if (buildItem.GetComponent<Box>())
+                        {
+                            buildItem.GetComponent<Box>().InitBox(sceneFurniture.boxIndex);
+                        }
                     }
                 }
             }
@@ -162,7 +172,11 @@ namespace Inventory
         {
             var blueprint = InventoryMgr.Instance.blueprintDataList_SO.GetBlueprintDetails(itemId);
             var buildItem =  Instantiate(blueprint.buildPrefab,mouseWorldPos, Quaternion.identity, itemParent);
-
+            if(buildItem.GetComponent<Box>())
+            {
+                //buildItem.GetComponent<Box>().index = InventoryMgr.Instance.BoxDataDicAmount;
+                buildItem.GetComponent<Box>().InitBox(InventoryMgr.Instance.BoxDataDicAmount);
+            }
         }
 
     }

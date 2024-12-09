@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -32,7 +32,7 @@ namespace Inventory{
                     slot.isSelected = !slot.isSelected;
                     if(slot.isSelected )
                     {
-                        slot.InventoryUI.UpdateBagHighlight(slot.slotIndex);
+                        slot.InventoryUI.UpdateBagHighlight(slot.curSlotIndex);
                     }
                     else
                     {

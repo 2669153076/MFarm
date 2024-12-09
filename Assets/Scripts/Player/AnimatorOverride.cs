@@ -53,6 +53,7 @@ public class AnimatorOverride : MonoBehaviour
             E_ItemType.ChopTool=>E_PartType.Chop,
             E_ItemType.BreakTool=>E_PartType.Break,
             E_ItemType.ReapTool=>E_PartType.Reap,
+            E_ItemType.Furniture=>E_PartType.Carry,
             _ => E_PartType.None,
         };
         if (!isSelected)

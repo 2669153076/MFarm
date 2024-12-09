@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +17,7 @@ namespace Inventory
 
         private void OnEnable()
         {
-            if(boxBagData == null)
+            if (boxBagData == null)
             {
                 boxBagData = Instantiate(boxBagTemplate);
             }
@@ -39,6 +39,24 @@ namespace Inventory
             {
                 EventHandler.CallBaseBagCloseEvent(E_SlotType.Box, boxBagData);
                 isOpen = false;
+            }
+        }
+
+        /// <summary>
+        /// 初始化箱子信息
+        /// 建造时调用
+        /// </summary>
+        public void InitBox(int boxIndex)
+        {
+            this.index  = boxIndex;
+            var key = this.name + index;
+            if (InventoryMgr.Instance.GetBoxDataList(key) != null)
+            {
+                boxBagData.inventoryItemList = InventoryMgr.Instance.GetBoxDataList(key);
+            }
+            else
+            {
+                InventoryMgr.Instance.AddBoxDataDic(this);
             }
         }
 

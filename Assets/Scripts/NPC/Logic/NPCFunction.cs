@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,12 +11,12 @@ public class NPCFunction : MonoBehaviour
     {
         if (isOpen && Input.GetKeyDown(KeyCode.Escape))
         {
-            CloseShop();
+            CloseShop(); 
         }
     }
 
     /// <summary>
-    /// 打开背包
+    /// 打开商店
     /// 被DialogueController拖曳调用
     /// </summary>
     public void OpenShop()
@@ -25,7 +25,9 @@ public class NPCFunction : MonoBehaviour
         EventHandler.CallBaseBagOpenEvent(E_SlotType.Shop,shopData);
         EventHandler.CallUpdateGameStateEvent(E_GameState.Pause);
     }
-
+    /// <summary>
+    /// 关闭商店
+    /// </summary>
     public void CloseShop()
     {
         isOpen = false;

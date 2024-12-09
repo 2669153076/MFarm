@@ -40,7 +40,7 @@ namespace Inventory
             bagUI.gameObject.SetActive(false);
             for (int i = 0; i < playerSlots.Length; i++)
             {
-                playerSlots[i].slotIndex = i;
+                playerSlots[i].curSlotIndex = i;
             }
             bagIsOpened = bagUI.activeInHierarchy;
             dragItemImage.enabled = false;
@@ -93,7 +93,7 @@ namespace Inventory
         {
             foreach (var slot in playerSlots)
             {
-                if (slot.isSelected && slot.slotIndex == index)
+                if (slot.isSelected && slot.curSlotIndex == index)
                 {
                     slot.slotHighlightImage.gameObject.SetActive(true);
                 }
@@ -126,7 +126,6 @@ namespace Inventory
                     }
                     break;
                 case E_InventoryLocation.Box:
-                    break;
                 case E_InventoryLocation.Shop:
                     for (int i = 0; i < baseBagSlotList.Count; i++)
                     {
@@ -140,6 +139,7 @@ namespace Inventory
                             baseBagSlotList[i].UpdateEmptySlot();
                         }
                     }
+
                     break;
             }
             playerMoneyText.text = InventoryMgr.Instance.playerMoney.ToString();
@@ -165,7 +165,7 @@ namespace Inventory
             for (int i = 0; i < bagData.inventoryItemList.Count; i++)
             {
                 var slot = Instantiate(prefab, baseBag.transform.GetChild(0)).GetComponent<SlotUI>();
-                slot.slotIndex = i;
+                slot.curSlotIndex = i;
                 baseBagSlotList.Add(slot);
             }
             //强制刷新

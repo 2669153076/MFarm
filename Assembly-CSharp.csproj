@@ -97,8 +97,8 @@
     <Compile Include="Assets\Scripts\NPC\Logic\NPCMovement.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Utilities\DataCollection.cs" />
-    <Compile Include="Assets\Scripts\AStar\GridNodes.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\Furniture.cs" />
+    <Compile Include="Assets\Scripts\AStar\GridNodes.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\Transition\TransitionMgr.cs" />
     <Compile Include="Assets\Scripts\NPC\Logic\NPCFunction.cs" />
@@ -459,6 +459,18 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Types">
+      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Types.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.Gradle">
+      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.Gradle.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Unity.Android.GradleProject">
+      <HintPath>D:\Unity\Editor\2022.3.37f1\Editor\Data\PlaybackEngines\AndroidPlayer\Unity.Android.GradleProject.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="netstandard">

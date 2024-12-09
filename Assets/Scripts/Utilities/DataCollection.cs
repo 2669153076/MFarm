@@ -166,5 +166,6 @@ public class SceneFurniture
 {
     public int id;
     public SerializableVector3 pos;
+    public int boxIndex;
 }
 

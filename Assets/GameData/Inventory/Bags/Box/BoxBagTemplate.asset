@@ -12,4 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0302d61b12899e44ca1a517cca6ef9ad, type: 3}
   m_Name: BoxBagTemplate
   m_EditorClassIdentifier: 
-  inventoryItemList: []
+  inventoryItemList:
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0
+  - itemId: 0
+    itemAmount: 0

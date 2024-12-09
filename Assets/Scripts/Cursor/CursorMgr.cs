@@ -158,6 +158,7 @@ public class CursorMgr : Singleton<CursorMgr>
                     if (currentTile.canPlaceFurniture&&InventoryMgr.Instance.CheckStock(currentItemDetails.itemId))
                     {
                         SetCursorValid();
+                        Debug.Log("可以放置");
                     }
                     else
                     {

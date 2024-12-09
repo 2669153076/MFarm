@@ -20,10 +20,10 @@ namespace Inventory{
         public E_SlotType slotType;
 
         public bool isSelected; //是否被选中
-        [HideInInspector]public int slotIndex;
+        [HideInInspector]public int curSlotIndex;  //当前格子索引
 
-        [HideInInspector]public ItemDetails itemDetails;
-        [HideInInspector]public int itemAmount;
+        [HideInInspector]public ItemDetails itemDetails;    //被选中的道具信息
+        [HideInInspector]public int itemAmount; //被选中的道具数量
 
         public InventoryUI InventoryUI => GetComponentInParent<InventoryUI>();
         public E_InventoryLocation Location
@@ -90,7 +90,7 @@ namespace Inventory{
                 return;
             }
             isSelected = !isSelected;
-            InventoryUI.UpdateBagHighlight(slotIndex);
+            InventoryUI.UpdateBagHighlight(curSlotIndex);
 
             //if (slotType == E_SlotType.Bag&&itemDetails.canCarried)       
             if (slotType == E_SlotType.Bag) 
@@ -110,7 +110,7 @@ namespace Inventory{
                 InventoryUI.dragItemImage.SetNativeSize();
 
                 isSelected = true;
-                InventoryUI.UpdateBagHighlight(slotIndex);
+                InventoryUI.UpdateBagHighlight(curSlotIndex);
             }
         }
         public void OnDrag(PointerEventData eventData)
@@ -128,12 +128,12 @@ namespace Inventory{
                     return;
                 }
                 var targetSlot = eventData.pointerCurrentRaycast.gameObject.GetComponent<SlotUI>();
-                int targetIndex = targetSlot.slotIndex;
+                int targetIndex = targetSlot.curSlotIndex;
 
                 if(slotType == E_SlotType.Bag&&targetSlot.slotType == E_SlotType.Bag)   //当前选中的是背包内的物品 并且 目标格子也是背包格子（只可以在背包内交换）
                 {
                     //交换物品
-                    InventoryMgr.Instance.SwapItem(slotIndex, targetIndex);
+                    InventoryMgr.Instance.SwapItem(curSlotIndex, targetIndex);
                 }else if (slotType == E_SlotType.Shop&&targetSlot.slotType == E_SlotType.Bag)       //购买
                 {
                     EventHandler.CallShowTradeUIEvent(itemDetails, false);
@@ -143,7 +143,7 @@ namespace Inventory{
                     EventHandler.CallShowTradeUIEvent(itemDetails, true);
                 }else if(slotType!=E_SlotType.Shop && targetSlot.slotType != E_SlotType.Shop && slotType != targetSlot.slotType)
                 {
-                    InventoryMgr.Instance.SwapItem(Location, slotIndex, targetSlot.Location, targetIndex);
+                    InventoryMgr.Instance.SwapItem(Location, curSlotIndex, targetSlot.Location, targetIndex);
                 }
             }
             //else  //如果将物品移到地图中

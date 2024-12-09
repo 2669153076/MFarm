@@ -31,7 +31,7 @@ namespace Inventory
 
                 if(slotUI.itemDetails.itemType == E_ItemType.Furniture) //如果物品类型是蓝图
                 {
-                    inventoryUI.itemToolTip.gameObject.SetActive(true);
+                    inventoryUI.itemToolTip.resourcePanel.SetActive(true);
                     inventoryUI.itemToolTip.SetResourcePanel(slotUI.itemDetails.itemId);
                 }
                 else

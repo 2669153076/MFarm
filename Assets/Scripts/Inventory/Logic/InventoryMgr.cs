@@ -20,6 +20,7 @@ namespace Inventory
         private InventoryBag_SO currentBoxBag_SO; 
 
         private Dictionary<string,List<InventoryItem>> boxDataDic = new Dictionary<string,List<InventoryItem>>();   //对应场景中所有箱子数据
+        public int BoxDataDicAmount => boxDataDic.Count;
 
         public int playerMoney; //角色持有金钱
 
@@ -291,7 +292,7 @@ namespace Inventory
         /// </summary>
         /// <param name="key">名字+索引</param>
         /// <returns></returns>
-        private List<InventoryItem> GetBoxDataList(string key)
+        public List<InventoryItem> GetBoxDataList(string key)
         {
             if (boxDataDic.ContainsKey(key))
             {
@@ -303,7 +304,7 @@ namespace Inventory
         /// 往字典中添加箱子数据
         /// </summary>
         /// <param name="box">箱子数据</param>
-        private void AddBoxDataDic(Box box)
+        public void AddBoxDataDic(Box box)
         {
             var key = box.name + box.index;
             if (!boxDataDic.ContainsKey(key))
