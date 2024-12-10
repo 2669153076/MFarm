@@ -168,4 +168,41 @@ public class SceneFurniture
     public SerializableVector3 pos;
     public int boxIndex;
 }
+/// <summary>
+/// 灯光信息
+/// </summary>
+[System.Serializable]
+public class LightDetails
+{
+    public E_Season season; //季节
+    public E_LightShift lightShift; //什么时辰
+    public Color lightColor;    //光颜色
+    public float lightIntensity;   //光强度
+}
 
+/// <summary>
+/// 音效信息
+/// </summary>
+[System.Serializable]
+public class SoundDetails
+{
+    public E_SoundName soundName;
+    public AudioClip soundClip;
+    [Range(0.1f, 1.5f)]
+    public float soundPitchMin;  //音调
+    [Range(0.1f, 1.5f)]
+    public float soundPitchMax;  //音调
+    [Range(0.1f, 1f)]
+    public float soundVolume;    //音量
+}
+/// <summary>
+/// 场景音乐
+/// </summary>
+[System.Serializable]
+public class SceneSoundItem
+{
+    public string sceneName;
+    public E_SoundName ambient; //音效
+    public E_SoundName music;   //背景音乐
+
+}

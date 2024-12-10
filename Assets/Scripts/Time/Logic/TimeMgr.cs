@@ -18,6 +18,8 @@ namespace GameTime
         public bool gameClockPause; //是否暂停
         private float tikTimer; //计时器
 
+        private float timeDifference;   //时间差
+
         public TimeSpan GameTime => new TimeSpan(gameHour, gameMinute, gameSecond);
 
         protected override void Awake()
@@ -40,6 +42,7 @@ namespace GameTime
             EventHandler.CallGameHourEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason);
             EventHandler.CallGameDayEvent(gameDay, gameSeason);
             EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason);
+            EventHandler.CallLightShiftChangeEvent(gameSeason, GetCurrentLightShift(), timeDifference);
         }
 
         private void Update()
@@ -135,9 +138,27 @@ namespace GameTime
                     EventHandler.CallGameHourEvent(gameHour, gameDay, gameMonth, gameYear, gameSeason); //小时变化带动日期变化
                 }
                 EventHandler.CallGameMinuteEvent(gameMinute, gameHour, gameDay, gameSeason); //分钟变化带动小时变化
+                EventHandler.CallLightShiftChangeEvent(gameSeason, GetCurrentLightShift(), timeDifference); //改变灯光
             }
         }
 
+        /// <summary>
+        /// 获取当前是白天还是晚上
+        /// </summary>
+        /// <returns></returns>
+        private E_LightShift GetCurrentLightShift()
+        {
+            if (GameTime >= Settings.morningTime && GameTime < Settings.nightTime)
+            {
+                timeDifference = (float)(GameTime - Settings.morningTime).TotalMinutes;
+                return E_LightShift.Morning;
+            }if(GameTime<Settings.morningTime || GameTime >= Settings.nightTime)
+            {
+                timeDifference = Mathf.Abs((float)(GameTime - Settings.nightTime).TotalMinutes);
+                return E_LightShift.Night;
+            }
+            return E_LightShift.Morning;
+        }
 
 
         private void OnBeforeSceneUnloadEvent()

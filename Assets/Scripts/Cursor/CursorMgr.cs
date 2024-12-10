@@ -72,7 +72,6 @@ public class CursorMgr : Singleton<CursorMgr>
             SetCursorImage(currentSprite);
             CheckCursorValid();
             CheckPlayerInput();
-            bulidImage.gameObject.SetActive(true);
         }
         else
         {
@@ -155,10 +154,10 @@ public class CursorMgr : Singleton<CursorMgr>
                     }
                     break;
                 case E_ItemType.Furniture:  //家具
+                    bulidImage.gameObject.SetActive(true);
                     if (currentTile.canPlaceFurniture&&InventoryMgr.Instance.CheckStock(currentItemDetails.itemId))
                     {
                         SetCursorValid();
-                        Debug.Log("可以放置");
                     }
                     else
                     {
@@ -303,7 +302,7 @@ public class CursorMgr : Singleton<CursorMgr>
             };
             cursorEnable = true;
 
-            if(itemDetails.itemType == E_ItemType.Furniture)
+            if(currentItemDetails.itemType == E_ItemType.Furniture)
             {
                 bulidImage.gameObject.SetActive(true);
                 bulidImage.sprite = itemDetails.itemOnWorldSprite;

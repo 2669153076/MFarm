@@ -58,6 +58,10 @@ namespace CropPlant{
                 }
 
                 //播放声音
+                if(this.cropDetails.soundEffectName != E_SoundName.None)
+                {
+                    EventHandler.CallPlaySoundEvent(this.cropDetails.soundEffectName);
+                }
             }
             if (harvestActionCount>=requireActionCount)
             {
@@ -76,6 +80,7 @@ namespace CropPlant{
                     {
                         animator.SetTrigger("FallingLeft");
                     }
+                    EventHandler.CallPlaySoundEvent(E_SoundName.TreeFalling);
                     StartCoroutine(HarvestAfterAnimation());
                 }
             }

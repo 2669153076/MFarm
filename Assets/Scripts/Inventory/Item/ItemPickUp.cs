@@ -16,7 +16,9 @@ namespace Inventory{
             {
                 if (item.itemDetails.canPickedUp)
                 {
-                    InventoryMgr.Instance.AddItem(item, true);
+                    InventoryMgr.Instance.AddItem(item, true);  //添加物品到背包中
+
+                    EventHandler.CallPlaySoundEvent(E_SoundName.Pickup);    //播放拾取音效
                 }
             }
         }

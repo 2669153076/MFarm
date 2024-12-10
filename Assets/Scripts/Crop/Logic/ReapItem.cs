@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace CropPlant{
+    /// <summary>
+    /// 收货
+    /// </summary>
     public class ReapItem : MonoBehaviour
     {
         private CropDetails cropDetails;
         private Transform PlayerTransform => FindObjectOfType<Player>().transform;
 
 
-
+        /// <summary>
+        /// 初始化农作物信息
+        /// </summary>
+        /// <param name="id"></param>
         public void InitCropData(int id)
         {
             cropDetails = CropMgr.Instance.GetCropDetails(id);

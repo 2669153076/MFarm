@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,4 +30,8 @@ public class Settings
     public const float pixelSize = 0.05f;   //单位像素距离   20*20 占 1 unit    
     public const float animationBreakTime = 5f;   //动画间隔时间
     public const float maxGridSize = 9999;  //格子最大尺寸
+
+    public const float lightChangeDuration = 25f;   //灯光切换过渡时间
+    public static TimeSpan morningTime = new TimeSpan(5, 0, 0);
+    public static TimeSpan nightTime = new TimeSpan(19, 0, 0);
 }

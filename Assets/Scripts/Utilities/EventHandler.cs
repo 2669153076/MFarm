@@ -33,6 +33,9 @@ public static class EventHandler
     public static event Action <E_GameState> UpdateGameStateEvent;  //更新游戏状态事件
     public static event Action<ItemDetails, bool> ShowTradeUIEvent; //显示交易UI
     public static event Action<int,Vector3> BuildFurnitureEvent;  //建造事件
+    public static event Action<E_Season, E_LightShift, float> LightShiftChangeEvent;    //灯光改变事件
+    public static event Action<SoundDetails> InitSoundEffectEvent;   //初始化音效事件
+    public static event Action<E_SoundName> PlaySoundEvent; //播放音效事件
 
 
     /// <summary>
@@ -250,5 +253,31 @@ public static class EventHandler
     public static void CallBuildFurnitureEvent(int id,Vector3 pos)
     {
         BuildFurnitureEvent?.Invoke(id,pos);
+    }
+    /// <summary>
+    /// 灯光改变事件
+    /// </summary>
+    /// <param name="season">季节</param>
+    /// <param name="lightShift">白天还是夜晚</param>
+    /// <param name="timeDifferent">时间差</param>
+    public static void CallLightShiftChangeEvent(E_Season season,E_LightShift lightShift,float timeDifferent)
+    {
+        LightShiftChangeEvent?.Invoke(season, lightShift, timeDifferent);
+    }
+    /// <summary>
+    /// 初始化音效事件
+    /// </summary>
+    /// <param name="soundDetails">音效信息</param>
+    public static void CallInitSoundEffectEvent(SoundDetails soundDetails)
+    {
+        InitSoundEffectEvent?.Invoke(soundDetails);
+    }
+    /// <summary>
+    /// 播放音效事件
+    /// </summary>
+    /// <param name="soundName">音效名字</param>
+    public static void CallPlaySoundEvent(E_SoundName soundName)
+    {
+        PlaySoundEvent?.Invoke(soundName);
     }
 }

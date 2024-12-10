@@ -306,7 +306,7 @@ namespace GridMap
 
             if (currentTile != null)
             {
-                Crop currentCrop = GetCropObject(mouseWorldPos);    //
+                Crop currentCrop = GetCropObject(mouseWorldPos);    //获取当前鼠标点击处的农作物
                 //WORKFLOW:物品使用实际功能
                 switch (itemDetails.itemType)
                 {
@@ -315,6 +315,7 @@ namespace GridMap
                     case E_ItemType.Seed:   //种子
                         EventHandler.CallPlantSeedEvent(itemDetails.itemId,currentTile);
                         EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
+                        EventHandler.CallPlaySoundEvent(E_SoundName.Plant); //种植音效
                         break;
                     case E_ItemType.Commodity:  //商品
                         EventHandler.CallDropItemInSceneEvent(itemDetails.itemId, mouseWorldPos,itemDetails.itemType);
@@ -330,6 +331,7 @@ namespace GridMap
                         currentTile.daysSinceDig = 0;
                         currentTile.canDig = false;
                         currentTile.canDropItem = false;
+                        EventHandler.CallPlaySoundEvent(E_SoundName.Hoe);   //挖坑音效
                         break;
                     case E_ItemType.BreakTool:  //十字镐   破碎石头
                     case E_ItemType.ChopTool:   //斧头    砍树
@@ -348,14 +350,15 @@ namespace GridMap
                                 break;
                             }
                         }
+                        EventHandler.CallPlaySoundEvent(E_SoundName.Reap);  //割草
                         break;
                     case E_ItemType.WaterTool:  //水壶
                         SetWaterGround(currentTile);
                         currentTile.daysSinceDig = 0;
+                        EventHandler.CallPlaySoundEvent(E_SoundName.Water); //浇水音效
                         break;
                     case E_ItemType.CollectTool:    //篮子
-                        //Crop currentCrop = GetCropObject(mouseWorldPos);
-                        //执行收割方法
+                        //执行采集方法
                         currentCrop?.ProcessToolAction(itemDetails,currentTile);
                         break;
                     case E_ItemType.ReapableScenery:

@@ -55,6 +55,8 @@ public class CropDetails
     public E_ParticaleEffectType particaleEffectType;   //特效
     public Vector3 effectPos;   //特效生成坐标
 
+    public E_SoundName soundEffectName; //音效
+
 
     /// <summary>
     /// 工具是否可用

@@ -88,6 +88,31 @@ public enum E_ParticaleEffectType
 public enum E_GameState
 {
     None,
-    Playing,Pause
+    Playing, Pause
 }
+/// <summary>
+/// 什么时候的灯光
+/// </summary>
+public enum E_LightShift
+{
+    None,
+    //早、晚
+    Morning,Night,
+}
+/// <summary>
+/// 音效名字
+/// </summary>
+public enum E_SoundName
+{
+    None,
+    //轻脚步、重脚步
+    FootStepSoft,FootStepHard,
+    //斧头、十字镐、锄头、镰刀、水壶、篮子
+    Axe,Pickaxe,Hoe,Reap,Water,Basket,
+    //砍树、捡起、种植、树倒下、穿过杂草
+    Chop,Pickup,Plant,TreeFalling,Rustle,
+    //乡村1、乡村2、平静BGM1、平静BGM2、平静BGM3、室内1
+    AmbientCountryside1, AmbientCountryside2,MusicCalm1,MusicCalm2,MusicCalm3,AmbientIndoor1,
+}
+
 
