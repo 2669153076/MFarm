@@ -4,49 +4,37 @@
         "m_EditorHideFlags": 0,
         "m_Name": "BuilderDocument",
         "m_EditorClassIdentifier": "UnityEditor.UIBuilderModule:Unity.UI.Builder:BuilderDocument",
-        "m_CurrentCanvasTheme": 0,
+        "m_CurrentCanvasTheme": 4,
         "m_CurrentCanvasThemeStyleSheetReference": {
-            "instanceID": 0
+            "fileID": -1456348168770453783,
+            "guid": "0000000000000000d000000000000000",
+            "type": 0
         },
         "m_CodePreviewVisible": true,
         "m_OpenUXMLFiles": [
             {
-                "m_OpenUSSFiles": [
-                    {
-                        "m_StyleSheet": {
-                            "fileID": 7433441132597879392,
-                            "guid": "31ede533a930ec049a8ac3c27b1aa994",
-                            "type": 3
-                        },
-                        "m_BackupStyleSheet": {
-                            "instanceID": 0
-                        },
-                        "m_OldPath": "Assets/Editor/UIBuilder/ItemEditor.uss"
-                    }
-                ],
-                "m_OpenendVisualTreeAssetOldPath": "Assets/Editor/UIBuilder/ItemEditor.uxml",
+                "m_OpenUSSFiles": [],
+                "m_OpenendVisualTreeAssetOldPath": "Assets/Editor/UIBuilder/ItemRowTemplate.uxml",
                 "m_VisualTreeAsset": {
                     "fileID": 9197481963319205126,
-                    "guid": "70378efba67a5314389c787ce2fac230",
+                    "guid": "816ca46b41de43a49b935b717c390194",
                     "type": 3
                 },
                 "m_ActiveStyleSheet": {
-                    "fileID": 7433441132597879392,
-                    "guid": "31ede533a930ec049a8ac3c27b1aa994",
-                    "type": 3
+                    "instanceID": 0
                 },
                 "m_Settings": {
-                    "UxmlGuid": "70378efba67a5314389c787ce2fac230",
-                    "UxmlPath": "Assets/Editor/UIBuilder/ItemEditor.uxml",
+                    "UxmlGuid": "816ca46b41de43a49b935b717c390194",
+                    "UxmlPath": "Assets/Editor/UIBuilder/ItemRowTemplate.uxml",
                     "CanvasX": 0,
                     "CanvasY": 0,
-                    "CanvasWidth": 653,
-                    "CanvasHeight": 500,
+                    "CanvasWidth": 350,
+                    "CanvasHeight": 450,
                     "MatchGameView": false,
                     "ZoomScale": 1.0,
                     "PanOffset": {
-                        "x": 123.5,
-                        "y": 153.0
+                        "x": 20.0,
+                        "y": 20.0
                     },
                     "ColorModeBackgroundOpacity": 1.0,
                     "ImageModeCanvasBackgroundOpacity": 1.0,
