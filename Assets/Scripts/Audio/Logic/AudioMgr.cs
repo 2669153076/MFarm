@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -29,12 +29,13 @@ public class AudioMgr : Singleton<AudioMgr>
     {
         EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         EventHandler.PlaySoundEvent += OnPlaySoundEvent;
+        EventHandler.EndGameEvent += OnEndGameEvent;
     }
-
     private void OnDisable()
     {
         EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
         EventHandler.PlaySoundEvent -= OnPlaySoundEvent;
+        EventHandler.EndGameEvent -= OnEndGameEvent;
     }
 
 
@@ -83,6 +84,17 @@ public class AudioMgr : Singleton<AudioMgr>
         return amount * 100 - 80;
     }
 
+    public void SetMasterVolume(float value)
+    {
+        //audioMixer.SetFloat("MasterVolume", (value * 100 - 80));
+        audioMixer.SetFloat("MusicVolume", (value * 100 - 80));
+        audioMixer.SetFloat("AmbientVolume", (value * 100 - 80));
+    }
+    public void SetEffectVolume(float value)
+    {
+        audioMixer.SetFloat("EffectVolume", (value * 100 - 80));
+    }
+
 
     private void OnAfterSceneLoadEvent()
     {
@@ -115,5 +127,15 @@ public class AudioMgr : Singleton<AudioMgr>
         }
 
     }
+
+    private void OnEndGameEvent()
+    {
+        if (soundRoutine!=null)
+        {
+            StopCoroutine(soundRoutine);
+        }
+        muteSnapshot.TransitionTo(1f);
+    }
+
 
 }

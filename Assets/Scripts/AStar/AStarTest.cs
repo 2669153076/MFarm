@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
-namespace AStarAlgorithm{
+namespace MFarm.AStarAlgorithm{
     /// <summary>
     /// A星寻路测试
     /// </summary>

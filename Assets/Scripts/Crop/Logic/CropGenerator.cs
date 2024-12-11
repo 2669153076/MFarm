@@ -1,9 +1,9 @@
-﻿using GridMap;
+﻿using MFarm.GridMap;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CropPlant{
+namespace MFarm.CropPlant{
     /// <summary>
     /// 作物生成管理器
     /// 初始化场景使用，在编辑模式下放置作物

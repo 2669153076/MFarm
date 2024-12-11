@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     public class TradeUI : MonoBehaviour
     {
         public Image itemIcon;

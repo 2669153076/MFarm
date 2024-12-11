@@ -49,3 +49,12 @@ MonoBehaviour:
     - sceneName: 03_Stall
       fromGridCell: {x: 9999, y: 9999}
       toGridCell: {x: -21, y: -35}
+  - fromSceneName: 00_Start
+    toSceneName: 01_Field
+    scenePathList:
+    - sceneName: 01_Field
+      fromGridCell: {x: -16, y: 13}
+      toGridCell: {x: 13, y: -14}
+    - sceneName: 00_Start
+      fromGridCell: {x: 9999, y: 9999}
+      toGridCell: {x: 9, y: 5}

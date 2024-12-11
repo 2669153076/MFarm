@@ -1,16 +1,17 @@
-﻿using Inventory;
+﻿using MFarm.Inventory;
+using MFarm.Save;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEditor.Progress;
 
-namespace Inventory
+namespace MFarm.Inventory
 {
     /// <summary>
     /// 道具管理类
     /// </summary>
-    public class ItemMgr : Singleton<ItemMgr>
+    public class ItemMgr : Singleton<ItemMgr>, ISaveable
     {
         public Item itemPerfab; //真正的场景中物体预制体
         public Item itemBouncePerfab; //角色扔道具时自由落体物体预制体
@@ -19,6 +20,9 @@ namespace Inventory
         private Dictionary<string, List<SceneItem>> sceneItemDic = new Dictionary<string, List<SceneItem>>(); //保存场景中的物品列表字典
         private Dictionary<string, List<SceneFurniture>> sceneFurnitureDic = new Dictionary<string, List<SceneFurniture>>();    //保存场景中的家具列表字典
         private Transform PlayerTransform => FindObjectOfType<Player>().transform;
+
+        public string GUID => GetComponent<DataGUID>().guid;
+
         private void OnEnable()
         {
             EventHandler.InstantiateItemInSceneEvent += OnInstantiateItemInScene;
@@ -26,6 +30,7 @@ namespace Inventory
             EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
             EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             EventHandler.BuildFurnitureEvent += OnBuildFurnitureEvent;
+            EventHandler.StartNewGameEvent += OnStartNewGameEvent;
         }
 
         private void OnDisable()
@@ -35,6 +40,12 @@ namespace Inventory
             EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
             EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             EventHandler.BuildFurnitureEvent -= OnBuildFurnitureEvent;
+            EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+        }
+        private void Start()
+        {
+            ISaveable saveable = this;
+            saveable.RegisterSaveable();
         }
 
         /// <summary>
@@ -178,6 +189,32 @@ namespace Inventory
                 buildItem.GetComponent<Box>().InitBox(InventoryMgr.Instance.BoxDataDicAmount);
             }
         }
+        private void OnStartNewGameEvent(int obj)
+        {
+            this.sceneItemDic.Clear();
+            this.sceneFurnitureDic.Clear();
+        }
 
+
+        public GameSaveData GenerateSaveData()
+        {
+            GetAllSceneItems();
+            GetAllSceneFurnitures();
+            GameSaveData saveData = new GameSaveData();
+            saveData.sceneItemDic = this.sceneItemDic;
+            saveData.furnitureDic = this.sceneFurnitureDic;
+
+            return saveData;
+
+        }
+
+        public void RestoreData(GameSaveData data)
+        {
+            this.sceneItemDic = data.sceneItemDic;
+            this.sceneFurnitureDic= data.furnitureDic;
+
+            ReCreateAllItems();
+            ReBuildFurnitures();
+        }
     }
 }

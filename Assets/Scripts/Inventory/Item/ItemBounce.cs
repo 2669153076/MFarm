@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     public class ItemBounce : MonoBehaviour
     {
         private Transform spriteTrans;  //物体坐标

@@ -66,11 +66,13 @@
     <Compile Include="Assets\Scripts\Player\AnimationEvent.cs" />
     <Compile Include="Assets\Scripts\Light\Data\LightPatternList_SO.cs" />
     <Compile Include="Assets\Scripts\AStar\Node.cs" />
+    <Compile Include="Assets\Scripts\Menu\Logic\UIMgr.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\Item.cs" />
     <Compile Include="Assets\Scripts\NPC\Logic\NPCMgr.cs" />
     <Compile Include="Assets\Scripts\Cursor\CursorMgr.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Logic\DialogueController.cs" />
     <Compile Include="Assets\Scripts\AStar\AStar.cs" />
+    <Compile Include="Assets\Scripts\Menu\UI\SaveSlotUI.cs" />
     <Compile Include="Assets\Scripts\Utilities\SwitchBounds.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\TradeUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Data_SO\InventoryBag_SO.cs" />
@@ -78,14 +80,17 @@
     <Compile Include="Assets\Scripts\Dialogue\Data\DialoguePiece.cs" />
     <Compile Include="Assets\Scripts\Map\Data\MapData_SO.cs" />
     <Compile Include="Assets\Scripts\Map\Logic\GridMapMgr.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\Logic\DataGUID.cs" />
     <Compile Include="Assets\Scripts\Utilities\Attribute\SceneNameAttribute.cs" />
     <Compile Include="Assets\Scripts\Audio\Data\SceneSoundList_SO.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\AStar\GridNodes.cs" />
+    <Compile Include="Assets\Scripts\Menu\UI\MenuUI.cs" />
     <Compile Include="Assets\Scripts\NPC\Logic\NPCFunction.cs" />
     <Compile Include="Assets\Scripts\Dialogue\UI\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemShadow.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemInteractive.cs" />
+    <Compile Include="Assets\Scripts\Timeline\DialogueBehaviour.cs" />
     <Compile Include="Assets\Scripts\Inventory\Data_SO\ItemDataList_SO.cs" />
     <Compile Include="Assets\Scripts\Utilities\Settings.cs" />
     <Compile Include="Assets\Scripts\Crop\Data\CropDataList_SO.cs" />
@@ -99,17 +104,23 @@
     <Compile Include="Assets\Scripts\Map\Logic\GridMap.cs" />
     <Compile Include="Assets\Scripts\Crop\Logic\CropMgr.cs" />
     <Compile Include="Assets\Scripts\Crop\Logic\ReapItem.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\Logic\ISaveable.cs" />
     <Compile Include="Assets\Scripts\Crop\Logic\Crop.cs" />
+    <Compile Include="Assets\Scripts\Timeline\TimelineMgr.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ShowItemToolTip.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\Data\GameSaveData.cs" />
     <Compile Include="Assets\Scripts\AStar\MoveMentStep.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\InventoryUI.cs" />
+    <Compile Include="Assets\Scripts\Timeline\DialogueClip.cs" />
     <Compile Include="Assets\Scripts\Time\Logic\TimeMgr.cs" />
     <Compile Include="Assets\Scripts\Utilities\Enums.cs" />
     <Compile Include="Assets\Scripts\Inventory\UI\ActionBarButton.cs" />
     <Compile Include="Assets\Scripts\AStar\AStarTest.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemFader.cs" />
     <Compile Include="Assets\Scripts\Inventory\Logic\InventoryMgr.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\Data\DataSlot.cs" />
     <Compile Include="Assets\Scripts\Audio\Logic\AudioMgr.cs" />
+    <Compile Include="Assets\Scripts\SaveLoad\Logic\SaveLoadMgr.cs" />
     <Compile Include="Assets\Scripts\Inventory\Logic\ItemMgr.cs" />
     <Compile Include="Assets\Scripts\Audio\Data\SoundDetailsList_SO.cs" />
     <Compile Include="Assets\Scripts\Utilities\Attribute\SceneNameDrawer.cs" />
@@ -121,6 +132,7 @@
     <Compile Include="Assets\Scripts\Inventory\Item\Furniture.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\Transition\TransitionMgr.cs" />
+    <Compile Include="Assets\Scripts\Timeline\DialogueTrack.cs" />
     <Compile Include="Assets\Scripts\NPC\Data\ScheduleDataList_SO.cs" />
     <Compile Include="Assets\Scripts\Transition\Teleport.cs" />
     <Compile Include="Assets\Scripts\Crop\Data\CropDetails.cs" />
@@ -467,6 +479,10 @@
     </Reference>
     <Reference Include="DOTween">
       <HintPath>Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1\Runtime\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

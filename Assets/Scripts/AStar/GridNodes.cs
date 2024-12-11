@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AStarAlgorithm
+namespace MFarm.AStarAlgorithm
 {
     /// <summary>
     /// 整个地图的数据类型

@@ -32,6 +32,9 @@ public class Settings
     public const float maxGridSize = 9999;  //格子最大尺寸
 
     public const float lightChangeDuration = 25f;   //灯光切换过渡时间
-    public static TimeSpan morningTime = new TimeSpan(5, 0, 0);
-    public static TimeSpan nightTime = new TimeSpan(19, 0, 0);
+    public static TimeSpan morningTime = new TimeSpan(5, 0, 0); //白天
+    public static TimeSpan nightTime = new TimeSpan(19, 0, 0);  //夜晚
+
+    public static Vector3 startPlayerPos = new Vector3(9f, -14f, 0);    //角色初始坐标
+    public const int playerStartMoney = 100;    //角色初始金钱
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CropPlant
+namespace MFarm.CropPlant
 {
     /// <summary>
     /// 作物管理类

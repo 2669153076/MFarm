@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Dialogue
+namespace MFarm.Dialogue
 {
     /// <summary>
     /// 对话UI

@@ -1,14 +1,15 @@
-﻿using System.Collections;
+﻿using MFarm.Save;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
-namespace Inventory
+namespace MFarm.Inventory
 {
     /// <summary>
     /// 库存管理类
     /// </summary>
-    public class InventoryMgr : Singleton<InventoryMgr>
+    public class InventoryMgr : Singleton<InventoryMgr>, ISaveable
     {
         [Header("物品数据")]
         public ItemDataList_SO itemDataList_SO;
@@ -17,10 +18,14 @@ namespace Inventory
         [Header("建造蓝图")]
         public BlueprintDataList_SO blueprintDataList_SO;
         [Header("箱子")]
-        private InventoryBag_SO currentBoxBag_SO; 
+        private InventoryBag_SO currentBoxBag_SO;
+
+        public InventoryBag_SO playerBagTemp;
 
         private Dictionary<string,List<InventoryItem>> boxDataDic = new Dictionary<string,List<InventoryItem>>();   //对应场景中所有箱子数据
         public int BoxDataDicAmount => boxDataDic.Count;
+
+        public string GUID => GetComponent<DataGUID>().guid;
 
         public int playerMoney; //角色持有金钱
 
@@ -30,6 +35,7 @@ namespace Inventory
             EventHandler.HarvestAtPlayerPositionEvent += OnHarvestAtPlayerPositionEvent;
             EventHandler.BuildFurnitureEvent += OnBuildFurnitureEvent;
             EventHandler.BaseBagOpenEvent += OnBaseBagOpenEvent;
+            EventHandler.StartNewGameEvent += OnStartNewGameEvent;
         }
         private void OnDisable()
         {
@@ -37,10 +43,13 @@ namespace Inventory
             EventHandler.HarvestAtPlayerPositionEvent -= OnHarvestAtPlayerPositionEvent;
             EventHandler.BuildFurnitureEvent -= OnBuildFurnitureEvent;
             EventHandler.BaseBagOpenEvent -= OnBaseBagOpenEvent;
+            EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
         }
         private void Start()
         {
-            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
+            ISaveable saveable = this;
+            saveable.RegisterSaveable();
+            //EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, playerBag_SO.inventoryItemList);
         }
 
         /// <summary>
@@ -338,8 +347,43 @@ namespace Inventory
         {
             currentBoxBag_SO = boxData;
         }
+        private void OnStartNewGameEvent(int obj)
+        {
+            this.playerBag_SO = Instantiate(this.playerBagTemp);
+            this.playerMoney = Settings.playerStartMoney;
+            this.boxDataDic.Clear();
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, this.playerBag_SO.inventoryItemList);
+        }
 
 
+        public GameSaveData GenerateSaveData()
+        {
+            GameSaveData saveData = new GameSaveData();
+            saveData.playerMoney = playerMoney;
+
+            saveData.inventoryItemDic = new Dictionary<string, List<InventoryItem>>();
+            saveData.inventoryItemDic.Add(playerBag_SO.name, playerBag_SO.inventoryItemList);
+            foreach (var item in boxDataDic)
+            {
+                saveData.inventoryItemDic.Add(item.Key, item.Value);
+            }
+            return saveData;
+        }
+
+        public void RestoreData(GameSaveData data)
+        {
+            this.playerMoney = data.playerMoney;
+            this.playerBag_SO = Instantiate(this.playerBagTemp);
+            this.playerBag_SO.inventoryItemList = data.inventoryItemDic[playerBag_SO.name];
+            foreach (var item in data.inventoryItemDic)
+            {
+                if (this.boxDataDic.ContainsKey(item.Key))
+                {
+                    this.boxDataDic[item.Key] = item.Value;
+                }
+            }
+            EventHandler.CallUpdateInventoryUIEvent(E_InventoryLocation.Player, this.playerBag_SO.inventoryItemList);
+        }
     }
 }
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     [RequireComponent(typeof(SlotUI))]
     public class ActionBarButton : MonoBehaviour
     {

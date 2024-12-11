@@ -1,5 +1,7 @@
-﻿using AStarAlgorithm;
-using GameTime;
+﻿using DG.Tweening;
+using MFarm.AStarAlgorithm;
+using MFarm.GameTime;
+using MFarm.Save;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +14,7 @@ using UnityEngine.SceneManagement;
 /// </summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Animator))]
-public class NPCMovement : MonoBehaviour
+public class NPCMovement : MonoBehaviour, ISaveable
 {
     public ScheduleDataList_SO scheduleData;
     private SortedSet<ScheduleDetails> scheduleSet;
@@ -46,6 +48,8 @@ public class NPCMovement : MonoBehaviour
     private bool npcMove;   //npc是否移动
     private bool sceneLoaded;   //场景已经是否加载
     public bool interactable;   //是否可以互动
+    public bool isFirstLoad;    //是否第一次加载NPC
+    private E_Season currentSeason; //当前季节
 
     private float animationBreakTimer;  //动画间隔计时器
     private bool canPlayStopAnimation;  //能否播放停止动画
@@ -53,8 +57,11 @@ public class NPCMovement : MonoBehaviour
     public AnimationClip blankAnimationClip;    //空动画切片
     private AnimatorOverrideController animatorOverride;
 
+    private Coroutine npcMoveRoutine;   //移动协程
+
     private TimeSpan GameTime => TimeMgr.Instance.GameTime;
 
+    public string GUID => GetComponent<DataGUID>().guid;
 
     private void Awake()
     {
@@ -80,16 +87,25 @@ public class NPCMovement : MonoBehaviour
         EventHandler.BeforeSceneUnloadEvent += OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
         EventHandler.GameMinuteEvent += OnGameMinuteEvent;
+        EventHandler.EndGameEvent += OnEndGameEvent;
+        EventHandler.StartNewGameEvent += OnStartNewGameEvent;
 
     }
-
     private void OnDisable()
     {
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
         EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
         EventHandler.GameMinuteEvent -= OnGameMinuteEvent;
+        EventHandler.EndGameEvent -= OnEndGameEvent;
+        EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
     }
 
+
+    private void Start()
+    {
+        ISaveable saveable = this;
+        saveable.RegisterSaveable();
+    }
     private void Update()
     {
         if (sceneLoaded)
@@ -172,7 +188,7 @@ public class NPCMovement : MonoBehaviour
     /// <param name="stepTime"></param>
     private void MoveToGridPosition(Vector3Int gridPos, TimeSpan stepTime)
     {
-        StartCoroutine(MoveToGridPositionRoutine(gridPos, stepTime));
+        npcMoveRoutine = StartCoroutine(MoveToGridPositionRoutine(gridPos, stepTime));
     }
     private IEnumerator MoveToGridPositionRoutine(Vector3Int gridPos, TimeSpan stepTime)
     {
@@ -218,6 +234,7 @@ public class NPCMovement : MonoBehaviour
         currentScheduleDetails = schedule;
         targetGridPosition = (Vector3Int)schedule.targetGridPosition;
         stopAnimationClip = schedule.clipAtStop;
+        targetScene = schedule.targetScene;
 
         this.interactable = schedule.interactable;
         
@@ -404,10 +421,19 @@ public class NPCMovement : MonoBehaviour
             isInitialised = true;
         }
         sceneLoaded = true;
+
+        if(!isFirstLoad)
+        {
+            currentGridPosition = currentGrid.WorldToCell(transform.position);
+            var schedule = new ScheduleDetails(0, 0, 0, 0, currentSeason, targetScene, (Vector2Int)targetGridPosition, stopAnimationClip, interactable);
+            BuildPath(schedule);
+            isFirstLoad = true;
+        }
     }
     private void OnGameMinuteEvent(int minute, int hour,int day , E_Season season)
     {
         int time = (hour * 100) + minute;
+        currentSeason = season;
         
         ScheduleDetails matchSchedule = null;
         foreach (var schedule in scheduleSet)
@@ -434,5 +460,64 @@ public class NPCMovement : MonoBehaviour
             BuildPath(matchSchedule);
         }
     }
+
+    private void OnEndGameEvent()
+    {
+        sceneLoaded = false;
+        npcMove = false;
+        if (npcMoveRoutine != null)
+        {
+            StopCoroutine(npcMoveRoutine);
+        }
+    }
+    private void OnStartNewGameEvent(int obj)
+    {
+        isInitialised = false;
+        isFirstLoad = true;
+    }
+
     #endregion
+
+    public GameSaveData GenerateSaveData()
+    {
+        GameSaveData data = new GameSaveData();
+        data.characterPosDic = new Dictionary<string, SerializableVector3>();
+        data.characterPosDic.Add("targetGridPosition", new SerializableVector3(targetGridPosition));
+        data.characterPosDic.Add("currentPosition", new SerializableVector3(transform.position));
+        data.dataSceneName = currentScene;
+        data.targetScene = this.targetScene;
+        if (stopAnimationClip != null)
+        {
+            data.animationInstanceId = stopAnimationClip.GetInstanceID();
+        }
+        data.interactable = this.interactable;
+
+        data.timeDic = new Dictionary<string, int>();
+        data.timeDic.Add("currentSeason", (int)currentSeason);
+        return data;
+    }
+
+    public void RestoreData(GameSaveData data)
+    {
+        this.isInitialised = true;
+        this.isFirstLoad = false;
+
+        currentScene = data.dataSceneName;
+        targetScene = data.targetScene;
+
+        Vector3 pos = data.characterPosDic["currentPosition"].ToVector3();
+        Vector3Int gridPos = (Vector3Int)data.characterPosDic["targetGridPosition"].ToVector2Int();
+
+        transform.position = pos;
+        targetGridPosition = gridPos;
+
+
+
+        if (data.animationInstanceId != 0)
+        {
+            this.stopAnimationClip = Resources.InstanceIDToObject(data.animationInstanceId) as AnimationClip;
+        }
+        this.interactable = data.interactable;
+        this.currentSeason = (E_Season)data.timeDic["currentSeason"];
+    }
 }

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -8,6 +8,7 @@ using UnityEngine;
 /// 需要输入场景时将其改为下拉菜单
 /// 方式场景名字输入错误
 /// </summary>
+#if UNITY_EDITOR
 [CustomPropertyDrawer(typeof(SceneNameAttribute))]
 public class SceneNameDrawer : PropertyDrawer
 {
@@ -86,3 +87,4 @@ public class SceneNameDrawer : PropertyDrawer
         property.stringValue = sceneNames[sceneIndex].text;
     }
 }
+#endif

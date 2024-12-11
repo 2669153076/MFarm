@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace CropPlant{
+namespace MFarm.CropPlant{
     /// <summary>
     /// 生成的作物
     /// </summary>

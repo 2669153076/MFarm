@@ -15,6 +15,15 @@ public class NPCMgr : Singleton<NPCMgr>
         InitSceneRouteDic();
     }
 
+    private void OnEnable()
+    {
+        EventHandler.StartNewGameEvent += OnStartNewGameEvent;
+    }
+    private void OnDisable()
+    {
+        EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+    }
+
     /// <summary>
     /// 初始化路径字典
     /// </summary>
@@ -48,4 +57,15 @@ public class NPCMgr : Singleton<NPCMgr>
     {
         return sceneRouteDic[fromsceneName + tosceneName];
     }
+
+
+    private void OnStartNewGameEvent(int obj)
+    {
+        foreach (var npcPos in npcPositionList)
+        {
+            npcPos.npc.position = npcPos.pos;
+            npcPos.npc.GetComponent<NPCMovement>().StartScene = npcPos.startScene;
+        }
+    }
+
 }

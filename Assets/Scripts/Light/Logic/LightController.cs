@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-namespace Light{
+namespace MFarm.Light{
     public class LightController : MonoBehaviour
     {
         public LightPatternList_SO lightPatternData;

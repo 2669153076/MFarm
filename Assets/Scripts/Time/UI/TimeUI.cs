@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace GameTime
+namespace MFarm.GameTime
 {
     /// <summary>
     /// 时间UI

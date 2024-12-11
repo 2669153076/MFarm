@@ -1,16 +1,17 @@
-﻿using CropPlant;
+﻿using MFarm.CropPlant;
+using MFarm.Save;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
-namespace GridMap
+namespace MFarm.GridMap
 {
     /// <summary>
     /// 瓦片地图管理器
     /// </summary>
-    public class GridMapMgr : Singleton<GridMapMgr>
+    public class GridMapMgr : Singleton<GridMapMgr>, ISaveable
     {
         [Header("种地瓦片切换信息")]
         public RuleTile digTile;
@@ -30,6 +31,8 @@ namespace GridMap
 
         private List<ReapItem> itemsInRadius;   //可收割道具列表
 
+        public string GUID => GetComponent<DataGUID>().guid;
+
         private void OnEnable()
         {
             EventHandler.ExecuteActionAfterAnimationEvent += OnExecuteActionAfterAnimation;
@@ -48,11 +51,16 @@ namespace GridMap
 
         private void Start()
         {
+            ISaveable saveable = this;
+            saveable.RegisterSaveable();
+
             foreach (var mapdata in mapDataList)
             {
                 firstLoadDic.Add(mapdata.sceneName, true);
                 InitTileDetailsDic(mapdata);
             }
+
+
         }
 
         /// <summary>
@@ -375,7 +383,7 @@ namespace GridMap
             waterTileMap = GameObject.FindWithTag("Water").GetComponent<Tilemap>();
 
             //DisplayMap(SceneManager.GetActiveScene().name);
-            if (firstLoadDic[SceneManager.GetActiveScene().name])
+            if (SceneManager.GetActiveScene().name!="PersistentScene"&& SceneManager.GetActiveScene().name!="UI"&& firstLoadDic[SceneManager.GetActiveScene().name])
             {
                 EventHandler.CallGenerateCropEvent();   //预先生成农作物
                 firstLoadDic[SceneManager.GetActiveScene().name] = false;
@@ -419,5 +427,18 @@ namespace GridMap
             RefreshMap();
         }
 
+        public GameSaveData GenerateSaveData()
+        {
+            GameSaveData saveData = new GameSaveData();
+            saveData.tileDetailsDic = this.tileDetailsDic;
+            saveData.firstLoadDic = this.firstLoadDic;
+            return saveData;
+        }
+
+        public void RestoreData(GameSaveData data)
+        {
+            this.tileDetailsDic = data.tileDetailsDic;
+            this.firstLoadDic = data.firstLoadDic;
+        }
     }
 }

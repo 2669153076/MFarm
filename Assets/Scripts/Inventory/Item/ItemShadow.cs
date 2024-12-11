@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     /// <summary>
     /// 物品阴影
     /// </summary>

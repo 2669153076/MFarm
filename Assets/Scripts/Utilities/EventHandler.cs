@@ -1,4 +1,4 @@
-﻿using Dialogue;
+﻿using MFarm.Dialogue;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -36,6 +36,8 @@ public static class EventHandler
     public static event Action<E_Season, E_LightShift, float> LightShiftChangeEvent;    //灯光改变事件
     public static event Action<SoundDetails> InitSoundEffectEvent;   //初始化音效事件
     public static event Action<E_SoundName> PlaySoundEvent; //播放音效事件
+    public static event Action<int> StartNewGameEvent;  //开始新游戏事件
+    public static event Action EndGameEvent;    //结束游戏事件
 
 
     /// <summary>
@@ -279,5 +281,21 @@ public static class EventHandler
     public static void CallPlaySoundEvent(E_SoundName soundName)
     {
         PlaySoundEvent?.Invoke(soundName);
+    }
+
+    /// <summary>
+    /// 开始新游戏
+    /// </summary>
+    /// <param name="id">存档id</param>
+    public static void CallStartNewGameEvent(int id)
+    {
+        StartNewGameEvent?.Invoke(id);
+    }
+    /// <summary>
+    /// 结束游戏事件
+    /// </summary>
+    public static void CallEndGameEvent()
+    {
+        EndGameEvent?.Invoke();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     /// <summary>
     /// 格子UI
     /// </summary>

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Transition
+namespace MFarm.Transition
 {
     /// <summary>
     /// 跳转事件

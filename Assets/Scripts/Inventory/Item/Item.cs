@@ -1,9 +1,9 @@
-﻿using CropPlant;
+﻿using MFarm.CropPlant;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     /// <summary>
     /// 世界中物品相关
     /// </summary>

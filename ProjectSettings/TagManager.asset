@@ -11,6 +11,7 @@ TagManager:
   - Water
   - CropParent
   - NPC
+  - MenuCanvas
   layers:
   - Default
   - TransparentFX

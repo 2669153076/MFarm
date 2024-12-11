@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AStarAlgorithm
+namespace MFarm.AStarAlgorithm
 {
     /// <summary>
     /// 单个格子属性

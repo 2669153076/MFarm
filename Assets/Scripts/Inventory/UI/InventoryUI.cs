@@ -1,11 +1,11 @@
 ﻿using DG.Tweening;
-using Inventory;
+using MFarm.Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Inventory
+namespace MFarm.Inventory
 {
     /// <summary>
     /// 库存UI

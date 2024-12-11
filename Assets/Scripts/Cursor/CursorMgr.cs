@@ -1,6 +1,6 @@
-﻿using CropPlant;
-using GridMap;
-using Inventory;
+﻿using MFarm.CropPlant;
+using MFarm.GridMap;
+using MFarm.Inventory;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -155,7 +155,8 @@ public class CursorMgr : Singleton<CursorMgr>
                     break;
                 case E_ItemType.Furniture:  //家具
                     bulidImage.gameObject.SetActive(true);
-                    if (currentTile.canPlaceFurniture&&InventoryMgr.Instance.CheckStock(currentItemDetails.itemId))
+                    var blueprintDetails = InventoryMgr.Instance.blueprintDataList_SO.GetBlueprintDetails(currentItemDetails.itemId);
+                    if (currentTile.canPlaceFurniture && InventoryMgr.Instance.CheckStock(currentItemDetails.itemId) && !HaveFurnitureRadius(blueprintDetails))
                     {
                         SetCursorValid();
                     }
@@ -268,6 +269,30 @@ public class CursorMgr : Singleton<CursorMgr>
         if (Input.GetMouseButtonDown(0) && cursorPositionValid)
         {
             EventHandler.CallMouseClickedEvent(mouseWorldPos, currentItemDetails);
+        }
+    }
+    /// <summary>
+    /// 判断鼠标周围是否有家具
+    /// </summary>
+    /// <param name="blueprintDetails"></param>
+    /// <returns>
+    /// true 有
+    /// false 无
+    /// </returns>
+    private bool HaveFurnitureRadius(BlueprintDetails blueprintDetails)
+    {
+        var buildItem = blueprintDetails.buildPrefab;
+        Vector2 point = mouseWorldPos;
+        var size = buildItem.GetComponent<BoxCollider2D>().size;
+
+        var otherColl = Physics2D.OverlapBox(point, size, 0);
+        if (otherColl != null)
+        {
+            return otherColl.GetComponent<Furniture>();
+        }
+        else
+        {
+            return false;
         }
     }
 

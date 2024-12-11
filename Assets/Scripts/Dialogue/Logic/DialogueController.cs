@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Dialogue
+namespace MFarm.Dialogue
 {
     /// <summary>
     /// 对话控制器

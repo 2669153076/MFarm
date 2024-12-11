@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Inventory{
+namespace MFarm.Inventory{
     /// <summary>
     /// 拾取物品
     /// </summary>

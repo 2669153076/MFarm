@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Dialogue
+namespace MFarm.Dialogue
 {
     /// <summary>
     /// 对话数据

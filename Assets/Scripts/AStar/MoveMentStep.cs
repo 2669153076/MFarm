@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AStarAlgorithm{
+namespace MFarm.AStarAlgorithm{
     /// <summary>
     /// NPC指定移动的点的信息
     /// </summary>

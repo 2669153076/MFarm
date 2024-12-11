@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Inventory
+namespace MFarm.Inventory
 {
     /// <summary>
     /// 显示提示面板

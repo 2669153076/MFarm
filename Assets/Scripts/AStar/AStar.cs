@@ -1,9 +1,9 @@
-using GridMap;
+using MFarm.GridMap;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AStarAlgorithm{
+namespace MFarm.AStarAlgorithm{
     /// <summary>
     /// A星寻路
     /// </summary>

@@ -1,13 +1,14 @@
-﻿using System.Collections;
+﻿using MFarm.Save;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Transition{
+namespace MFarm.Transition{
     /// <summary>
     /// 场景跳转管理
     /// </summary>
-    public class TransitionMgr : Singleton<TransitionMgr>
+    public class TransitionMgr : Singleton<TransitionMgr>, ISaveable
     {
         [SceneName]
         public string startSceneName = string.Empty;
@@ -15,22 +16,32 @@ namespace Transition{
         private CanvasGroup fadeCanvasGroup;    //场景加载面板
         private bool isFade;
 
-        private IEnumerator Start()
+        public string GUID => GetComponent<DataGUID>().guid;
+
+        protected override void Awake()
         {
-            //StartCoroutine(LoadSceneSetActive(startSceneName));
-            fadeCanvasGroup = FindObjectOfType<CanvasGroup>();
-            yield return LoadSceneSetActive(startSceneName);
-            EventHandler.CallAfterSceneLoadEvent();
+            SceneManager.LoadScene("UI", LoadSceneMode.Additive);
         }
 
+        private void Start()
+        {
+            ISaveable saveable = this;
+            saveable.RegisterSaveable();
+
+            fadeCanvasGroup = FindObjectOfType<CanvasGroup>();
+        }
         private void OnEnable()
         {
             EventHandler.TransitionEvent += OnTransitionEvent;
-            
+            EventHandler.StartNewGameEvent += OnStartNewGameEvent;
+            EventHandler.EndGameEvent += OnEndGameEvent;
+
         }
         private void OnDisable()
-        {;
+        {
             EventHandler.TransitionEvent -= OnTransitionEvent;
+            EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+            EventHandler.EndGameEvent -= OnEndGameEvent;
         }
 
         /// <summary>
@@ -84,6 +95,29 @@ namespace Transition{
             isFade = false;
         }
 
+        private IEnumerator LoadSaveDataScene(string sceneName)
+        {
+            yield return Fade(1f);
+
+            if(SceneManager.GetActiveScene().name != "PersistentScene")
+            {
+                EventHandler.CallBeforeSceneUnloadEvent();
+                yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            }
+            yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            //yield return SceneManager.LoadSceneAsync(sceneName);
+            EventHandler.CallAfterSceneLoadEvent();
+            yield return Fade(0f);
+        }
+
+        private IEnumerator UnloadScene()
+        {
+            EventHandler.CallBeforeSceneUnloadEvent();
+            yield return Fade(1f);
+            yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            yield return Fade(0f);
+        }
+
 
         private void OnTransitionEvent(string sceneName, Vector3 pos)
         {
@@ -92,6 +126,29 @@ namespace Transition{
                 StartCoroutine(Transition(sceneName, pos));
             }
         }
+        private void OnStartNewGameEvent(int obj)
+        {
+            StartCoroutine(LoadSaveDataScene(startSceneName));
+        }
 
+        private void OnEndGameEvent()
+        {
+            StartCoroutine(UnloadScene());
+        }
+
+
+
+        public GameSaveData GenerateSaveData()
+        {
+            GameSaveData data = new GameSaveData();
+            data.dataSceneName = SceneManager.GetActiveScene().name;
+
+            return data;
+        }
+
+        public void RestoreData(GameSaveData data)
+        {
+            StartCoroutine(LoadSaveDataScene(data.dataSceneName));
+        }
     }
 }

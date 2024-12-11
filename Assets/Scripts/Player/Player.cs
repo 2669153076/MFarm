@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using MFarm.Save;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
 /// 玩家角色相关
 /// </summary>
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, ISaveable
 {
     private Rigidbody2D rigidbody2d;
 
@@ -24,10 +25,13 @@ public class Player : MonoBehaviour
     private float mouseY;   //鼠标Y轴方向
     private bool isUseTool; //是否使用工具
 
+    public string GUID => GetComponent<DataGUID>().guid;
+
     private void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         animatorArray = GetComponentsInChildren<Animator>();
+        inputIsDisable = true;
     }
 
     private void OnEnable()
@@ -37,7 +41,10 @@ public class Player : MonoBehaviour
         EventHandler.MoveToPositionEvent += OnMoveToPositionEvent;
         EventHandler.MouseClickedEvent += OnMouseClickedEvent;
         EventHandler.UpdateGameStateEvent += OnUpdateGameStateEvent;
+        EventHandler.StartNewGameEvent += OnStartNewGameEvent;
+        EventHandler.EndGameEvent += OnEndGameEvent;
     }
+
     private void OnDisable()
     {
         EventHandler.BeforeSceneUnloadEvent -= OnBeforeSceneUnloadEvent;
@@ -45,8 +52,15 @@ public class Player : MonoBehaviour
         EventHandler.MoveToPositionEvent -= OnMoveToPositionEvent;
         EventHandler.MouseClickedEvent -= OnMouseClickedEvent;
         EventHandler.UpdateGameStateEvent -= OnUpdateGameStateEvent;
+        EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
+        EventHandler.EndGameEvent -= OnEndGameEvent;
     }
 
+    private void Start()
+    {
+        ISaveable saveable = this;
+        saveable.RegisterSaveable();
+    }
 
     private void Update()
     {
@@ -204,6 +218,36 @@ public class Player : MonoBehaviour
                 break;
         }
     }
+    private void OnStartNewGameEvent(int obj)
+    {
+        this.inputIsDisable = false;
+        transform.position = Settings.startPlayerPos;
+    }
 
+    private void OnEndGameEvent()
+    {
+        inputIsDisable = true;
+    }
 
+    /// <summary>
+    /// 保存数据
+    /// </summary>
+    /// <returns></returns>
+    public GameSaveData GenerateSaveData()
+    {
+        GameSaveData saveData = new GameSaveData();
+        saveData.characterPosDic = new Dictionary<string, SerializableVector3>();
+        saveData.characterPosDic.Add(this.name, new SerializableVector3(transform.position));
+        return saveData;
+    }
+
+    /// <summary>
+    /// 读取数据
+    /// </summary>
+    /// <param name="saveData"></param>
+    public void RestoreData(GameSaveData saveData)
+    {
+        var targetPosition = saveData.characterPosDic[this.name].ToVector3();
+        transform.position = targetPosition;
+    }
 }
