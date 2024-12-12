@@ -20,6 +20,7 @@ namespace MFarm.Transition{
 
         protected override void Awake()
         {
+            base.Awake();
             SceneManager.LoadScene("UI", LoadSceneMode.Additive);
         }
 
@@ -104,7 +105,7 @@ namespace MFarm.Transition{
                 EventHandler.CallBeforeSceneUnloadEvent();
                 yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
             }
-            yield return SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+            yield return LoadSceneSetActive(sceneName);
             //yield return SceneManager.LoadSceneAsync(sceneName);
             EventHandler.CallAfterSceneLoadEvent();
             yield return Fade(0f);

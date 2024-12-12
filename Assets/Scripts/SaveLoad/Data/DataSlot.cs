@@ -18,7 +18,7 @@ namespace MFarm.Save{
                 if (gameDataDic.ContainsKey(key))
                 {
                     var timeData = gameDataDic[key];
-                    return timeData.timeDic["gameYear"] + "年/" + timeData.timeDic["gameSeason"] + "/" + timeData.timeDic["gameMonth"] + "月/" + timeData.timeDic["gameDay"] + "日/" + timeData.timeDic["gameHour"] + "时/" + timeData.timeDic["gameMinute"] + "分/" + timeData.timeDic["gameSecond"] + "秒";
+                    return timeData.timeDic["gameYear"] + "年/" + (E_Season)timeData.timeDic["gameSeason"] + "/" + timeData.timeDic["gameMonth"] + "月/" + timeData.timeDic["gameDay"] + "日/" + timeData.timeDic["gameHour"] + "时/" + timeData.timeDic["gameMinute"] + "分/" + timeData.timeDic["gameSecond"] + "秒";
                 }
                 else
                 {
@@ -38,10 +38,10 @@ namespace MFarm.Save{
 
                     return transitionData.dataSceneName switch
                     {
-                        "00.Start" => "海边",
-                        "01.Field" => "农场",
-                        "02.Home" => "小木屋",
-                        "03.Stall" => "市场",
+                        "00_Start" => "海边",
+                        "01_Field" => "农场",
+                        "02_Home" => "小木屋",
+                        "03_Stall" => "市场",
                         _ => string.Empty
                     };
                 }

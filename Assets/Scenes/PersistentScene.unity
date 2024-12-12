@@ -1909,7 +1909,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 746411757}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf219a3cf6a2fd049a9df75263a57f53, type: 3}
   m_Name: 
@@ -2174,7 +2174,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!320 &831966883
 PlayableDirector:
   m_ObjectHideFlags: 0
@@ -6204,16 +6204,16 @@ SceneRoots:
   - {fileID: 954002346}
   - {fileID: 811404064}
   - {fileID: 1655987642}
-  - {fileID: 368828261}
   - {fileID: 1451270984}
   - {fileID: 2131799283}
   - {fileID: 1894719953}
   - {fileID: 1301201665}
   - {fileID: 1317227537}
   - {fileID: 746411760}
-  - {fileID: 81296848}
   - {fileID: 346877590}
   - {fileID: 1777354892}
+  - {fileID: 81296848}
+  - {fileID: 368828261}
   - {fileID: 1990238083}
   - {fileID: 189178972}
   - {fileID: 1531844975}

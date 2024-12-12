@@ -18,6 +18,7 @@ namespace MFarm.Save{
         public string targetScene;  //NPC目标场景
         public bool interactable;   //NPC是否可以互动
         public int animationInstanceId; //NPC动画Id
+
         
     }
 }

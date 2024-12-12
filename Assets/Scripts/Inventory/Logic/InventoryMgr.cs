@@ -1,7 +1,6 @@
 ﻿using MFarm.Save;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 namespace MFarm.Inventory

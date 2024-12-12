@@ -12,32 +12,19 @@ namespace MFarm.Light{
 
         private void OnEnable()
         {
-            EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
             EventHandler.LightShiftChangeEvent += OnLightShiftChangeEvent;
             EventHandler.StartNewGameEvent += OnStartNewGameEvent;
         }
 
         private void OnDisable()
         {
-            EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
             EventHandler.LightShiftChangeEvent -= OnLightShiftChangeEvent;
             EventHandler.StartNewGameEvent -= OnStartNewGameEvent;
         }
 
-
-        private void OnAfterSceneLoadEvent()
-        {
-            sceneLights = FindObjectsOfType<LightController>();
-            if (sceneLights != null)
-            {
-                foreach (var light in sceneLights)
-                {
-                    light.ChangeLightShift(currentSeason, currentLightShift, timeDifference);
-                }
-            }
-        }
         private void OnLightShiftChangeEvent(E_Season season, E_LightShift lightShift, float timeDifference)
         {
+            sceneLights = FindObjectsOfType<LightController>();
             currentSeason = season;
             this.timeDifference = timeDifference;
             if (currentLightShift != lightShift&&sceneLights!=null)

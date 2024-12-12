@@ -383,7 +383,7 @@ namespace MFarm.GridMap
             waterTileMap = GameObject.FindWithTag("Water").GetComponent<Tilemap>();
 
             //DisplayMap(SceneManager.GetActiveScene().name);
-            if (SceneManager.GetActiveScene().name!="PersistentScene"&& SceneManager.GetActiveScene().name!="UI"&& firstLoadDic[SceneManager.GetActiveScene().name])
+            if (firstLoadDic[SceneManager.GetActiveScene().name])
             {
                 EventHandler.CallGenerateCropEvent();   //预先生成农作物
                 firstLoadDic[SceneManager.GetActiveScene().name] = false;

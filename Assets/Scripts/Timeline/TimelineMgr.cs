@@ -14,6 +14,8 @@ public class TimelineMgr : Singleton<TimelineMgr>
     private bool isDone;    //是否完成对话
     public bool IsDone { set { isDone = value; } }
 
+    private bool isFirst;
+
     protected override void Awake()
     {
         base.Awake();
@@ -23,13 +25,14 @@ public class TimelineMgr : Singleton<TimelineMgr>
     private void OnEnable()
     {
         EventHandler.AfterSceneLoadEvent += OnAfterSceneLoadEvent;
+        EventHandler.StartNewGameEvent += OnStartNewGameEvent;
     }
 
     private void OnDisable()
     {
         EventHandler.AfterSceneLoadEvent -= OnAfterSceneLoadEvent;
+        EventHandler.StartNewGameEvent += OnStartNewGameEvent;
     }
-
 
     private void Update()
     {
@@ -50,9 +53,16 @@ public class TimelineMgr : Singleton<TimelineMgr>
     private void OnAfterSceneLoadEvent()
     {
         currentDirector = FindObjectOfType<PlayableDirector>();
-        if(currentDirector != null)
+        if(currentDirector != null&& isFirst)
         {
             currentDirector.Play();
+            isFirst = false;
         }
     }
+
+    private void OnStartNewGameEvent(int obj)
+    {
+        isFirst = true;
+    }
+
 }

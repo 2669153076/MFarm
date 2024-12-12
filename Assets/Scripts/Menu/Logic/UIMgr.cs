@@ -28,9 +28,9 @@ public class UIMgr : Singleton<UIMgr>
     {
         menuCanvas = GameObject.FindWithTag("MenuCanvas");
         Instantiate(menuPrefab, menuCanvas.transform);
-            settingBtn.onClick.AddListener(TogglePausePanel);
-            musicSlider.onValueChanged.AddListener(AudioMgr.Instance.SetMasterVolume);
-            soundSlider.onValueChanged.AddListener(AudioMgr.Instance.SetEffectVolume);
+        settingBtn.onClick.AddListener(TogglePausePanel);
+        musicSlider.onValueChanged.AddListener(AudioMgr.Instance.SetMasterVolume);
+        soundSlider.onValueChanged.AddListener(AudioMgr.Instance.SetEffectVolume);
     }
 
 

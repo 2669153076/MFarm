@@ -339,11 +339,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 0.30000000000000426
+    m_PostExtrapolationTime: 0.1999999999999993
     m_PreExtrapolationTime: 0
     m_DisplayName: HairIdleDown
   - m_Version: 1
-    m_Start: 19.300000000000004
+    m_Start: 19.2
     m_ClipIn: 0
     m_Asset: {fileID: -5862125009440123783}
     m_Duration: 1
@@ -857,11 +857,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 0.30000000000000426
+    m_PostExtrapolationTime: 0.1999999999999993
     m_PreExtrapolationTime: 0
     m_DisplayName: BodyIdleDown
   - m_Version: 1
-    m_Start: 19.300000000000004
+    m_Start: 19.2
     m_ClipIn: 0
     m_Asset: {fileID: -8531519253718530359}
     m_Duration: 1
@@ -1174,11 +1174,11 @@ MonoBehaviour:
     m_Recordable: 0
     m_PostExtrapolationMode: 1
     m_PreExtrapolationMode: 1
-    m_PostExtrapolationTime: 0.30000000000000426
+    m_PostExtrapolationTime: 0.1999999999999993
     m_PreExtrapolationTime: 0
     m_DisplayName: ArmIdleDown
   - m_Version: 1
-    m_Start: 19.300000000000004
+    m_Start: 19.2
     m_ClipIn: 0
     m_Asset: {fileID: -8390554252319683210}
     m_Duration: 1

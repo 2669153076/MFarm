@@ -39,6 +39,10 @@ namespace MFarm.Save{
             {
                 Save(currentDataIndex);
             }
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                Load(currentDataIndex);
+            }
         }
 
         public void RegisterSaveable(ISaveable saveable)

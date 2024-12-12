@@ -48,7 +48,7 @@ public class DialogueBehaviour : PlayableBehaviour
 
     public override void OnGraphStop(Playable playable)
     {
-        EventHandler.CallShowDialogueEvent(null);
+        //EventHandler.CallShowDialogueEvent(null);
         EventHandler.CallUpdateGameStateEvent(E_GameState.Playing);
     }
 
@@ -56,4 +56,6 @@ public class DialogueBehaviour : PlayableBehaviour
     {
         EventHandler.CallUpdateGameStateEvent(E_GameState.Pause);
     }
+
+   
 }
