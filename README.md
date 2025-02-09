@@ -1,3 +1,3 @@
 # MFarm
  麦田物语
- <p>音效系统未开发完毕，若要添加音效，将CallPlaySoundEvent()解除注释，并添加音效文件</p>
+ <p>音效系统未开发完毕，需要将CallPlaySoundEvent()注释。或者添加并设置对应音效文件</p>
